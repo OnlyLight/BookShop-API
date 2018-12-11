@@ -1,0 +1,15 @@
+.back-top {
+    right: 0px;
+    bottom: 5%;
+    position: fixed;
+    z-index: 1000;
+}
+.back-top button {
+    padding: 8px 12px 8px 12px;
+    background: darkred;
+    color: white;
+    border: none;
+}
+.back-top button:hover {
+    background: red;
+}

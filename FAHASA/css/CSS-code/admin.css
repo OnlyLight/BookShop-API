@@ -1,0 +1,32 @@
+#admin-crud .link-top {
+    padding-left: 220px;
+    background: white;
+}
+
+#admin-crud .tb-theloai {
+    width: 50%;
+    margin: auto;
+}
+
+#admin-crud table, #admin-crud tr, #admin-crud th, #admin-crud td {
+    border: 1px solid #d5d5d5;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#admin-crud .tb-khosach {
+    width: 100%;
+    height: auto;
+}
+
+#add-theloai .input-group {
+    width: 100%;
+}
+#add-theloai input {
+    width: 100%;
+}
+
+#add-theloai .content {
+    padding: 10px 0 20px 0;
+    background: #bce8f1;
+}

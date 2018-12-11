@@ -1,0 +1,319 @@
+body {
+    font-family: "Microsoft Sans Serif";
+    background: #E8E8E8;
+}
+.header2 .icon {
+    font-size: 35px;
+    padding-right: 10px;
+    color: #5e5e5e;
+}
+.header2 .icon-text {
+    padding-top: 5px;
+}
+.header2 .icon, .header2 .text {
+    float: left;
+}
+.header2 .text {
+    font-weight: 600;
+}
+.header2 a {
+    color: black;
+    font-weight: 600;
+}
+.header2 .active>a, .header2 .active>a:focus, .header2 a:hover {
+    color: orange;
+    background: none !important;
+}
+.header3 .form-control {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    border-radius: 0;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+    border-left: 2px solid orange;
+    border-right: none !important;
+}
+.header3 .btn {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    border-radius: 0;
+    background: white !important;
+    border: 2px solid orange;
+    font-size: 20px;
+    color: orange;
+}
+.header3 .link-cart {
+    padding: 8px 0 7px 0;
+    font-size: 15px;
+    text-align: center;
+    background: #458B00;
+    border-radius: 4px;
+}
+.header3 .glyphicon-shopping-cart {
+    font-size: 25px;
+}
+.header3 .link-cart a {
+    text-decoration: none !important;
+    color: white;
+}
+.header4 .danhmucsach {
+    padding: 15px;
+    background: #5e5e5e;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.header4 .drop-left {
+    width: 263px;
+    padding: 0 !important;
+}
+.header4 .link-left {
+    color: #5e5e5e;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+.header4 .link-left:hover {
+    background: orange !important;
+    color: white;
+}
+.header4 .link-right {
+    color: #5e5e5e;
+    font-size: 15px;
+    font-weight: 500;
+}
+.header4 .link-right:hover {
+    background: none !important;
+    color: orange;
+}
+.header4 .drop-vanhoc {
+    width: 650px;
+    padding: 30px !important;
+    border: 2px solid orange;
+}
+.header4 .drop-top-100 {
+    width: 700px;
+    padding: 30px !important;
+    border: 2px solid orange;
+}
+.header4 .drop-nhacungcap {
+    width: 680px;
+    padding: 30px !important;
+    border: 2px solid orange;
+}
+.header4 .drop-nhacungcap .title {
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+}
+.header4 .drop-vanhoc a, .header4 .drop-top-100 a, .header4 .drop-nhacungcap a {
+    color: #5e5e5e;
+    font-size: 12px;
+    padding: 5px 0 5px 0 !important;
+}
+.header4 .drop-vanhoc a:hover, .header4 .drop-top-100 a:hover, .header4 .drop-nhacungcap a:hover {
+    background: none !important;
+    color: black;
+}
+
+/*LOGIN*/
+#login .modal-header {
+    background: cornflowerblue;
+}
+#login .glyphicon-user {
+    color: white;
+    font-size: 20px;
+}
+.close {
+    font-size: 30px;
+    padding: 3px 10px 3px 10px !important;
+}
+.close:hover {
+    background: red;
+    color: white;
+}
+
+#login .title-dangnhap {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+#login .input-group {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+#login .button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#login .modal-footer {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    background: gainsboro;
+}
+#login img {
+    width: 40px;
+    height: auto;
+}
+/*/LOGIN*/
+
+/*RESPONSIVE*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .header2 .icon {
+        font-size: 25px;
+    }
+    .header2 .text {
+        font-size: 11px;
+    }
+    .header2 a {
+        font-size: 11px;
+    }
+    .header3 .form-control {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+    .header3 .btn {
+        font-size: 14px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .header3 .link-cart {
+        font-size: 11px;
+    }
+    .header3 .glyphicon-shopping-cart {
+        font-size: 16px;
+    }
+    .header4 .danhmucsach {
+        font-size: 12px;
+        padding: 11px;
+    }
+    .header4 .drop-left {
+        width: 150px;
+    }
+    .header4 .link-left {
+        font-size: 11px;
+        padding: 6px 0 7px 11px !important;
+    }
+    .header4 .link-right {
+        font-size: 11px;
+        padding-top: 11px !important;
+        padding-bottom: 10px !important;
+    }
+    .header4 .drop-vanhoc {
+        width: 520px;
+        padding: 10px !important;
+    }
+    .header4 .drop-top-100 {
+        width: 500px;
+        padding: 10px !important;
+    }
+    .header4 .drop-nhacungcap {
+        width: 370px;
+        padding: 10px !important;
+    }
+    .header4 .drop-vanhoc a, .header4 .drop-top-100 a, .header4 .drop-nhacungcap a {
+        font-size: 10px;
+    }
+    .header4 .drop-nhacungcap .title {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .header2 .icon {
+        font-size: 30px;
+    }
+    .header2 .text {
+        font-size: 13px;
+    }
+    .header2 a {
+        font-size: 13px;
+    }
+    .header3 .form-control {
+        padding-top: 17px !important;
+        padding-bottom: 17px !important;
+    }
+    .header3 .btn {
+        font-size: 14px;
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
+    }
+    .header3 .link-cart {
+        font-size: 13px;
+    }
+    .header3 .glyphicon-shopping-cart {
+        font-size: 18px;
+    }
+    .header4 .danhmucsach {
+        font-size: 14px;
+        padding: 13px;
+    }
+    .header4 .drop-left {
+        width: 213px;
+    }
+    .header4 .link-left {
+        font-size: 13px;
+        padding: 9px 0 9px 11px !important;
+    }
+    .header4 .link-right {
+        font-size: 11px;
+        padding-top: 13px !important;
+        padding-bottom: 13px !important;
+    }
+    .header4 .drop-vanhoc {
+        width: 600px;
+        padding: 20px !important;
+    }
+    .header4 .drop-top-100 {
+        width: 580px;
+        padding: 20px !important;
+    }
+    .header4 .drop-nhacungcap {
+        width: 500px;
+        padding: 20px !important;
+    }
+    .header4 .drop-vanhoc a, .header4 .drop-top-100 a, .header4 .drop-nhacungcap a {
+        font-size: 11px;
+    }
+    .header4 .drop-nhacungcap .title {
+        font-size: 11px;
+    }
+}
+/*/RESPONSIVE*/
+
+/*HEADER-XS*/
+    .header-xs-1 {
+        padding-bottom: 10px;
+    }
+    .header-xs-2 .glyphicon-align-justify, .header-xs-2 .glyphicon-briefcase {
+        font-size: 20px;
+        color: orange;
+    }
+    .header-xs-2 a:hover {
+        color: orange;
+    }
+    .header-xs-2 .badge {
+        font-size: 10px !important;
+    }
+    .header-xs-2 .dropdown-menu {
+        padding: 0px !important;
+    }
+    .header-xs-2 .link-left {
+        font-size: 12px;
+        padding: 6px !important;
+    }
+    .header-xs-2 .link-left:hover {
+        background: orange !important;
+        color: white;
+    }
+    .header-xs-3 .form-control {
+        border-radius: 0px;
+        border-top: 1px solid orange;
+        border-left: 1px solid orange;
+        border-bottom: 1px solid orange;
+    }
+    .header-xs-3 .btn {
+        border-radius: 0px;
+        border: 1px solid orange;
+        background: white;
+    }
+/*/HEADER-XS*/

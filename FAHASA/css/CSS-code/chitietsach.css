@@ -1,0 +1,190 @@
+#content-detail .content1 {
+    background: white;
+    padding: 30px;
+}
+
+#content-detail .link-col-right {
+    padding-left: 15px;
+}
+
+#content-detail .col-right {
+    background: #e2e2e2;
+}
+
+#content-detail .tensach, .gia {
+    font-size: 20px;
+    font-weight: 600;
+}
+#content-detail .gia {
+    color: #5e5e5e;
+}
+
+#content-detail .content1 input[type="text"] {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    width: 50px;
+}
+#content-detail .mua {
+    padding: 15px;
+    width: 100px;
+    background: orange;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    margin-left: 10px;
+}
+
+#content-detail .yeuthich, .edit {
+    text-decoration: none !important;
+    color: #5e5e5e;
+}
+#content-detail .yeuthich {
+    margin-right: 50px;
+}
+#content-detail .yeuthich:hover {
+    color: red;
+}
+
+#content-detail .nav a:hover {
+    background: none !important;
+    color: #5e5e5e !important;
+}
+#content-detail .nav a {
+    color: #5e5e5e !important;
+}
+
+#content-detail .link-end {
+    color: orange;
+    font-weight: 600;
+}
+
+
+#content-detail .bangchitiet {
+    background: white;
+    padding: 15px;
+}
+#content-detail .bangchitiet table {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+}
+#content-detail .bangchitiet tr {
+    height: 50px;
+    border: 1px solid #d5d5d5;
+}
+#content-detail .bangchitiet th {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #d5d5d5;
+}
+
+#content-detail .thongtinkhac {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+#content-detail .nhanxet-customer {
+    padding: 10px 30px 30px 30px;
+    background: white;
+}
+#content-detail .customer {
+    color: red;
+}
+#content-detail .like, #content-detail .baocao {
+    text-decoration: none !important;
+    color: #3c3c3c;
+}
+#content-detail .like:hover {
+    color: blue;
+}
+#content-detail .baocao:hover {
+    color: red;
+}
+#content-detail .div-nhanxet {
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3c3c3c;
+    border-bottom-style: dashed;
+}
+#content-detail .form-nhanxet {
+    padding: 50px 20px 30px 20px;
+    background: white;
+}
+#content-detail .form-nhanxet table {
+    border: 1px solid #adadad;
+    width: 50%;
+}
+#content-detail .form-nhanxet tr {
+    border: 1px solid #adadad;
+}
+#content-detail .form-nhanxet th, #content-detail .form-nhanxet td {
+    border: 1px solid #adadad;
+    text-align: center;
+}
+#content-detail .form-nhanxet .tieuchidanhgia {
+    border: 1px solid orange;
+    padding: 20px;
+}
+#content-detail .form-nhanxet .tieuchidanhgia ul {
+    color: #5e5e5e;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #content-detail .tensach, #content-detail .gia {
+        font-size: 16px;
+    }
+    #content-detail .review {
+        font-size: 12px;
+    }
+    #content-detail .link-col-right {
+        font-size: 11px;
+    }
+    #content-detail .nav a {
+        font-size: 11px;
+    }
+    #content-detail .link-end {
+        padding-left: 10px;
+        font-size: 10px;
+    }
+    #content-detail .form-nhanxet .tieuchidanhgia ul {
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #content-detail .tensach, #content-detail .gia {
+        font-size: 18px;
+    }
+    #content-detail .review {
+        font-size: 13px;
+    }
+    #content-detail .link-col-right {
+        font-size: 12px;
+    }
+    #content-detail .nav a {
+        font-size: 12px;
+    }
+    #content-detail .link-end {
+        padding-left: 12px;
+        font-size: 12px;
+    }
+    #content-detail .form-nhanxet .tieuchidanhgia ul {
+        font-size: 13px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    #content-detail .content1 {
+        padding: 20px 10px 20px 10px;
+    }
+    #content-detail .content1 img {
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    #content-detail .form-nhanxet .tieuchidanhgia ul {
+        font-size: 10px;
+    }
+}

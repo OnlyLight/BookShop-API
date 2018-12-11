@@ -1,0 +1,23 @@
+#content-info-user .user-left {
+    padding: 20px 10px 20px;
+    background: white;
+}
+#content-info-user .nav a {
+    color: #5e5e5e;
+}
+#content-info-user .nav a:hover {
+    color: darkred;
+    background: none !important;
+}
+#content-info-user .icon-bar {
+    background: black;
+}
+
+#content-info-user .user-right {
+    padding: 20px 30px 30px 30px;
+    background: white;
+}
+#content-info-user .thongtin {
+    padding: 20px;
+    background: #dca7a7;
+}

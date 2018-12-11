@@ -1,0 +1,42 @@
+#content-cart .giohang {
+    color: darkred;
+}
+
+#content-cart table {
+    width: 100%;
+}
+
+#content-cart table, #content-cart tr, #content-cart th, #content-cart td {
+    border: 1px solid #d5d5d5;
+}
+
+#content-cart th, #content-cart td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#content-cart .img-cart {
+    width: 80px;
+    height: auto;
+}
+
+#content-cart input[type="text"] {
+    width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#content-cart .tong {
+    padding: 20px 20px 50px 20px;
+    background: white;
+    border:  3px solid orange;
+}
+
+#content-cart .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5e5e5e;
+    border-bottom: 1px solid #d5d5d5;
+}

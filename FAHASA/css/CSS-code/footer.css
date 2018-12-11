@@ -1,0 +1,175 @@
+.footer1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    background: #5e5e5e;
+}
+.footer1 .title {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer2-3 {
+    background: white !important;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.footer2 .title {
+    margin-left: 10px;
+    color: black;
+    font-size: 16px;
+}
+.footer2 a {
+    color: #5e5e5e;
+    font-size: 13px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 1px solid #d5d5d5;
+}
+.footer2 a:hover {
+    background: none !important;
+    color: black;
+}
+.footer2 .icon {
+    font-size: 15px;
+    padding: 8px;
+    border: 2px solid #d5d5d5;
+    margin-right: 10px;
+}
+.footer3 {
+    padding-left: 30px;
+}
+.footer3 .img-footer {
+    width: 120px;
+    height: auto;
+}
+.footer3 .logo {
+    margin-bottom: 5px;
+}
+.footer3 .text {
+    padding-bottom: 5px;
+    font-size: 13px;
+}
+.footer3 .img {
+    width: 40px;
+    height: auto;
+}
+.footer3 .img2 {
+    width: 150px;
+    height: auto;
+}
+.footer3 .text-end-footer {
+    color: #adadad;
+}
+
+.footer4 {
+    padding: 30px;
+    background: #3c3c3c;
+    color: white;
+    font-size: 16px;
+    font-family: cursive;
+}
+
+/*Responsive*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .footer2-3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .footer2 .title {
+        margin-left: 0px;
+    }
+    .footer2 {
+        padding-left:  30px;
+        padding-right: 30px;
+    }
+    .footer2 .cotduoi {
+        margin-top: 20px;
+    }
+    .footer2 .icon {
+        padding: 0;
+        border: none;
+    }
+    .footer3 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer3 .text {
+        font-size: 8px;
+    }
+    .footer3 .img {
+        width: 25px;
+        height: auto;
+    }
+    .footer3 .img2 {
+        width: 90px;
+        height: auto;
+    }
+    .footer2-3 .text-end-footer {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .footer2 .title {
+        font-size: 14px;
+    }
+    .footer2 a {
+        font-size: 12px;
+    }
+    .footer3 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer3 .img2 {
+        width: 125px;
+        height: auto;
+    }
+    .footer3 .text {
+        font-size: 11px;
+    }
+}
+/*/Responsive*/
+
+/*FOOTER-XS*/
+.footer-xs-1 {
+    padding: 15px;
+    margin-top: 20px;
+    background: #5e5e5e;
+}
+.footer-xs-1 .title {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer-xs-2 {
+    padding: 30px;
+    background: white;
+}
+.footer-xs-2 .logo-dathongbao {
+    width: 150px;
+    height: auto;
+}
+.footer-xs-2 .div-img {
+    width: 260px;
+    margin: auto;
+}
+.footer-xs-2 .img2 {
+    width: 127px;
+    height: auto;
+}
+.footer-xs-2 .div-img2 {
+    width: 260px;
+    margin: auto;
+}
+.footer-xs-3 {
+    padding: 20px;
+    background: #3c3c3c;
+    color: white;
+    font-size: 10px;
+    font-family: cursive;
+}
+.footer-xs-2 {
+    font-size: 12px;
+}
+/*/FOOTER-XS*/

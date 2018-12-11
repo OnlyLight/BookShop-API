@@ -1,0 +1,149 @@
+.stv-left {
+    background: white;
+}
+.stv-left .title {
+    padding-top: 20px;
+    font-size: 18px;
+    color: red;
+    font-weight: 600;
+}
+.stv-left .title2 {
+    font-weight: 600;
+}
+.stv-left .link-left {
+    color: #5e5e5e !important;
+}
+.stv-left .link-left:hover {
+    background: none !important;
+    color: coral !important;
+}
+.stv-left input[type="text"] {
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #5e5e5e;
+}
+.stv-left .box {
+    padding: 10px 0 0 20px;
+}
+.stv-left input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+.list-logo {
+    background: white;
+}
+.stv-right {
+    background: white;
+}
+.stv-right .dropdown-menu a {
+    padding: 0!important;
+    font-size: 13px;
+}
+.stv-right .dropdown-menu a:hover {
+    background: #2aabd2;
+    color: white;
+}
+.stv-right .dropdown-menu {
+    padding: 0!important;
+}
+.pagination {
+    margin-top: 0px !important;
+}
+.stv-right {
+    padding: 20px;
+}
+.stv-right .caption {
+    padding-bottom: 50px;
+}
+
+
+.drop-menu-khoa img {
+    width: 220px;
+    height: auto;
+}
+.drop-menu-khoa a {
+    background: none !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .stv-left .title {
+        font-size: 16px;
+    }
+    .stv-left .link-left {
+        font-size: 10px;
+    }
+    .stv-left input[type="text"] {
+        width: 50px;
+        padding: 5px;
+    }
+    .stv-left .title2 {
+        font-size: 12px;
+    }
+    .stv-left .text-check {
+        font-size: 12px;
+    }
+    .stv-left label {
+        font-size: 12px;
+    }
+    .stv-right .caption {
+        font-size: 12px;
+    }
+
+    .drop-menu-khoa img {
+        width: 110px;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .stv-left .title {
+        font-size: 17px;
+    }
+    .stv-left .link-left {
+        font-size: 13px;
+    }
+    .stv-left input[type="text"] {
+        width: 75px;
+        padding: 7px;
+    }
+    .stv-left .title2 {
+        font-size: 13px;
+    }
+    .stv-left .text-check {
+        font-size: 12px;
+    }
+    .stv-left label {
+        font-size: 12px;
+    }
+    .stv-right .caption {
+        font-size: 13px;
+    }
+
+    .drop-menu-khoa img {
+        width: 170px;
+        height: auto;
+    }
+}
+
+#content-stv-xs .sach-top-xs {
+    padding: 20px 15px 20px 15px;
+    background: white;
+}
+#content-stv-xs a {
+    text-decoration: none !important;
+    color: #3c3c3c;
+}
+#content-stv-xs a:hover {
+    color: orange;
+}
+#content-stv-xs .dropdown-menu {
+    padding: 0!important;
+}
+#content-stv-xs .dropdown-menu a {
+    padding: 0!important;
+    font-size: 13px;
+}
+#content-stv-xs .dropdown-menu a:hover {
+    background: #2aabd2;
+    color: white;
+}

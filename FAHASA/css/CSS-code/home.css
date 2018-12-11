@@ -1,0 +1,124 @@
+#content-home .danhmuc {
+    padding-top: 5px;
+    background: white;
+}
+#content-home .danhmucsach-item-home a {
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    font-size: 15px;
+}
+#content-home .danhmucsach-item-home a:hover {
+    color: orange;
+}
+#content-home .quangcao-1 {
+    padding-right: 18px;
+}
+#content-home a {
+    color: #5e5e5e;
+    text-decoration: none !important;
+}
+#content-home a:hover {
+    background: none !important;
+    color: orange;
+}
+#content-home .carousel-control {
+    background: none !important;
+}
+#content-home .carousel-control.left .glyphicon-chevron-left {
+    left: 0;
+    margin-left: 5px;
+}
+#content-home .carousel-control.right .glyphicon-chevron-right {
+    right: 0;
+    margin-right: 5px;
+}
+#content-home .top-sach {
+    border-bottom: 1px solid #adadad;
+}
+#content-home .bottom-sach {
+    padding: 20px 15px 20px 15px;
+}
+#content-home .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+#content-home .icon-bar {
+    background: black;
+}
+#content-home .sachtiengviet {
+    background: white;
+}
+#content-home .sachnoibat {
+    background: white;
+}
+#content-home .sachnuocngoai {
+    background: white;
+}
+#content-home .sachvanhoc-kinang {
+    background: white;
+}
+#content-home .sachkinhte-nuoidaycon {
+    background: white;
+}
+#content-home .sachvanhoc-kinang .carousel {
+    padding-left: 45px;
+}
+#content-home .sachkinhte-nuoidaycon .carousel {
+    padding-right: 45px;
+}
+
+#content-home .bottom-sach .visible-xs {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #content-home .quangcao-1 {
+        padding-right: 27px;
+    }
+    #content-home .sachnuocngoai .nav a {
+        padding-left: 5px !important;
+    }
+    #content-home .danhmuc {
+        padding-top: 3px;
+    }
+    #content-home .danhmucsach-item-home a {
+        padding-top: 6px !important;
+        padding-bottom: 7px !important;
+        padding-left: 10px !important;
+        font-size: 10px;
+    }
+    #content-home .sachvanhoc-kinang .carousel {
+        padding-left: 10px;
+    }
+    #content-home .sachvanhoc-kinang .bottom-sach span, #content-home .sachkinhte-nuoidaycon .bottom-sach span {
+        font-size: 12px;
+    }
+    #content-home .sachkinhte-nuoidaycon .carousel {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #content-home .quangcao-1 {
+        padding-right: 20px;
+    }
+    #content-home .danhmuc {
+        padding-top: 7px;
+    }
+    #content-home .danhmucsach-item-home a {
+        padding-top: 9px !important;
+        padding-bottom: 9px !important;
+        padding-left: 12px !important;
+        font-size: 12px;
+    }
+    #content-home .sachvanhoc-kinang .carousel {
+        padding-left: 25px;
+    }
+    #content-home .sachvanhoc-kinang .bottom-sach span, #content-home .sachkinhte-nuoidaycon .bottom-sach span {
+        font-size: 13px;
+    }
+    #content-home .sachkinhte-nuoidaycon .carousel {
+        padding-right: 25px;
+    }
+}

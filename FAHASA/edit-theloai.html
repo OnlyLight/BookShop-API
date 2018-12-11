@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/Library/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Library/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/CSS-code/header.css">
+    <link rel="stylesheet" href="css/CSS-code/footer.css">
+    <link rel="stylesheet" href="css/CSS-code/back-to-top.css">
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <script src="js/Library/jquery-3.3.1.min.js"></script>
+    <script src="js/Library/bootstrap.min.js"></script>
+    <script src="js/JS-code/js-pages.js"></script>
+    <script src="js/JS-code/back-to-top.js"></script>
+    <title>FAHASA.com</title>
+    <link rel="stylesheet" href="css/CSS-code/admin.css">
+</head>
+<body>
+<!--HEADER-->
+<div id="header" class="hidden-xs">
+    <div class="container">
+        <div class="header1">
+            <a href=""><img src="../uploads/images/quangcao/Single-Day.jpg" class="img-responsive"></a>
+        </div>
+        <div class="header2">
+            <div class="row row2">
+                <div class="col-sm-3">
+                    <div class="icon-text">
+                        <span class="glyphicon glyphicon-earphone icon"></span>
+                        <span class="text">Hotline</span><br>
+                        <span class="text">1900636467</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="icon-text">
+                        <span class="glyphicon glyphicon-send icon"></span>
+                        <span class="text">Miễn phí giao hàng</span><br>
+                        <span class="text" style="color: #737373">Tận nơi toàn quốc</span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#" class="link-menu">HOME</a></li>
+                        <li><a href="dang-ki.html">ĐĂNG KÝ</a></li>
+                        <li><a href="#" id="dangnhap">ĐĂNG NHẬP</a></li>
+                        <li><a href="#">ĐĂNG XUẤT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header3">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="home.html"><img src="../uploads/images/logo/logo.png" class="img-responsive"></a>
+                </div>
+                <div class="col-sm-7">
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <input type="text" name="search" placeholder="Tìm kiếm cuốn sách bạn mong muốn" autocomplete="off" class="form-control">
+                            <div class="input-group-btn">
+                                <button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                    <div class="link-cart">
+                        <a href=""><span class="glyphicon glyphicon-shopping-cart"></span> 0 Sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="header4">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="dropdown danhmucsach">
+                        <span class="dropdown-toggle" data-toggle="dropdown">Danh Mục Sách</span>
+                        <ul class="dropdown-menu nav drop-left">
+                            <li><a href="sach-hoc-ngoai-ngu.html" class="link-left">Học Ngoại Ngữ</a></li>
+                            <li><a href="sach-kinh-te.html" class="link-left">Kinh Tế</a></li>
+                            <li><a href="sach-khoa-hoc.html" class="link-left">Khoa Học Kĩ Thuật</a></li>
+                            <li><a href="" class="link-left">Nuôi Dạy Con</a></li>
+                            <li><a href="sach-giao-khoa.html" class="link-left">Sách Giáo Khoa - Giáo Trình</a></li>
+                            <li><a href="" class="link-left">Sách Tham Khảo</a></li>
+                            <li><a href="" class="link-left">Sách Thiếu Nhi</a></li>
+                            <li><a href="sach-ki-nang-song.html" class="link-left">Tâm Lý - Kỹ Năng Sống</a></li>
+                            <li><a href="#" class="link-left">Từ Điển</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="link-right dropdown-toggle" data-toggle="dropdown">Văn Học</a>
+                            <ul class="dropdown-menu drop-vanhoc">
+                                <li class="col-sm-5">
+                                    <ul class="nav">
+                                        <li><a href="#">Tiểu Thuyết</a></li>
+                                        <li><a href="#">Truyện Ngắn</a></li>
+                                        <li><a href="#">Truyện Trinh Thám, Viễn Tưởng</a></li>
+                                        <li><a href="#">Thơ Ca, Tục Ngữ, Ca Dao, Thành Ngữ</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-4">
+                                    <ul class="nav">
+                                        <li><a href="#">Văn Học Dịch</a></li>
+                                        <li><a href="#">Phóng Sự, Ký Sự, Hồi Ký</a></li>
+                                        <li><a href="#">Tác Giả - Tác Phẩm</a></li>
+                                        <li><a href="#">Thể Loại Khác</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="#"><img src="../uploads/images/vanhoc/vanhoc.png" class="img-responsive"></a>
+                                </li>
+                                <br>
+                                <li class="col-sm-12">
+                                    <a href="#"><img src="../uploads/images/vanhoc/footer-van-hoc.jpg" class="img-responsive"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="link-right dropdown-toggle" data-toggle="dropdown">Top 100 Best Seller</a>
+                            <ul class="dropdown-menu drop-top-100">
+                                <li class="col-sm-3">
+                                    <ul class="nav">
+                                        <li><a href="#">Văn Học</a></li>
+                                        <li><a href="#">Kinh Tế</a></li>
+                                        <li><a href="#">Kỹ Năng Sống</a></li>
+                                        <li><a href="#">Nuôi Dạy Con</a></li>
+                                        <li><a href="#">Thiếu Nhi</a></li>
+                                        <li><a href="#">Ngoại Ngữ</a></li>
+                                        <li><a href="#">Nữ Công Gia Chánh</a></li>
+                                        <li><a href="#">Chính Trị - Triết Học</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul class="nav">
+                                        <li><a href="#">Fiction</a></li>
+                                        <li><a href="#">Romance</a></li>
+                                        <li><a href="#">Dictionaries</a></li>
+                                        <li><a href="#">Children's Books</a></li>
+                                        <li><a href="#">Biography</a></li>
+                                        <li><a href="#">Food - Drink</a></li>
+                                        <li><a href="#">Japanese</a></li>
+                                        <li><a href="#">Mind Body Spirit</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="#"><img src="../uploads/images/top-100/Top100-quoc-van.jpg" class="img-responsive"></a>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="#"><img src="../uploads/images/top-100/Top-100-ngoai-van.jpg" class="img-responsive"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="link-right">Daily Deals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/HEADER-->
+
+<!--LOGIN-->
+<div id="login">
+    <div class="container">
+        <div class="modal fade" role="dialog" id="modal-client">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <span class="glyphicon glyphicon-user"></span> &nbsp;&nbsp;
+                        <span class="title-dangnhap">ĐĂNG NHẬP</span>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="post">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </div>
+                                <input type="email" name="email" placeholder="Nhập địa chỉ email của bạn" autocomplete="off" class="form-control">
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-lock"></span>
+                                </div>
+                                <input type="password" name="passclient" placeholder="Mật khẩu" class="form-control">
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="remember" checked> Lưu tài khoản</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="">Quên mật khẩu?</a>
+                            </div>
+                            <div class="button">
+                                <button type="submit" class="btn btn-success btn-block">ĐĂNG NHẬP</button>
+                            </div>
+                            <p>Chưa có tài khoản vui lòng <a href=""> ĐĂNG KÝ</a></p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href=""><img src="../uploads/images/login/google.png"></a>
+                        <a href=""><img src="../uploads/images/login/facebook.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--LOGIN-->
+
+<!--HEADER-XS-->
+<div id="header-xs" class="visible-xs">
+    <div class="header-xs-1">
+        <a href=""><img src="../uploads/images/quangcao/Single-Day.jpg" class="img-responsive"></a>
+    </div>
+    <div class="container-fluid">
+        <div class="header-xs-2">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-align-justify"></span></a>
+                        <ul class="dropdown-menu nav">
+                            <li><a href="dang-ki.html" class="link-left">ĐĂNG KÝ</a></li>
+                            <li><a href="#" id="dangnhap-xs" class="link-left">ĐĂNG NHẬP</a></li>
+                            <li><a href="" class="link-left">ĐĂNG XUẤT</a></li>
+                            <hr>
+                            <li><a href="sach-hoc-ngoai-ngu.html" class="link-left">Học Ngoại Ngữ</a></li>
+                            <li><a href="sach-kinh-te.html" class="link-left">Kinh Tế</a></li>
+                            <li><a href="sach-khoa-hoc.html" class="link-left">Khoa Học Kĩ Thuật</a></li>
+                            <li><a href="#" class="link-left">Nuôi Dạy Con</a></li>
+                            <li><a href="sach-giao-khoa.html" class="link-left">Sách Giáo Khoa - Giáo Trình</a></li>
+                            <li><a href="#" class="link-left">Sách Tham Khảo</a></li>
+                            <li><a href="#" class="link-left">Sách Thiếu Nhi</a></li>
+                            <li><a href="sach-ki-nang-song.html" class="link-left">Tâm Lý - Kỹ Năng Sống</a></li>
+                            <li><a href="#" class="link-left">Từ Điển</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <a href="home.html"><img src="../uploads/images/logo/logo.png" class="img-responsive"></a>
+                </div>
+                <div class="col-xs-4 text-right">
+                    <a href="#"><span class="glyphicon glyphicon-briefcase"></span><sup class="badge">0</sup></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="header-xs-3">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <input type="text" name="search" placeholder="Tìm kiếm cuốn sách bạn mong muốn" autocomplete="off" class="form-control">
+                            <div class="input-group-btn">
+                                <button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!--HEADER-XS-->
+
+<!--CONTENT-->
+<br>
+<div id="add-theloai" class="hidden-xs">
+    <div class="container">
+        <h3 class="text-center">Chỉnh Sửa Loại Sách</h3>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <form action="" method="post">
+                    <div class="input-group">
+                        <label>Tên Thể Loại Sách</label><br>
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="tentheloai" value="Value...">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-right"><button type="submit" class="btn btn-sm btn-warning">Sửa</button></div>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+</div>
+<!--/CONTENT-->
+
+<!--FOOTER-->
+<div id="footer" class="hidden-xs">
+    <div class="container">
+        <div class="footer1">
+            <div class="row">
+                <div class="col-md-3 col-sm-2"></div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="title">
+                        <span>ĐĂNG KÝ NHẬN BẢNG TIN</span>
+                    </div>
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </div>
+                            <input class="form-control" type="text" name="dangkiemail" placeholder="Your email" autocomplete="off">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-info">Đăng ký</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-2"></div>
+            </div>
+        </div>
+        <div class="footer2-3">
+            <div class="footer2">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <span class="title">DỊCH VỤ</span>
+                        <ul class="nav">
+                            <li><a href="">Điều khoản sử dụng</a></li>
+                            <li><a href="">Chính sách bảo mật</a></li>
+                            <li><a href="">Giới thiệu Fahasa</a></li>
+                            <li><a href="">Hệ thống trung tâm - nhà sách</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <span class="title">HỖ TRỢ</span>
+                        <ul class="nav">
+                            <li><a href="">Chính sách đổi trả - hoàn tiền</a></li>
+                            <li><a href="">Chính sách khách sỉ</a></li>
+                            <li><a href="">Phương thức vận chuyển</a></li>
+                            <li><a href="">Phương thức thanh toán</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 cotduoi">
+                        <span class="title">TÀI KHOẢN CỦA TÔI</span>
+                        <ul class="nav">
+                            <li><a href="">Đăng nhập/Tạo mới tài khoản</a></li>
+                            <li><a href="">Thay đổi địa chỉ khách hàng</a></li>
+                            <li><a href="">Chi tiết tài khoản</a></li>
+                            <li><a href="">Lịch sử mua hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 cotduoi">
+                        <span class="title">LIÊN HỆ</span>
+                        <ul class="nav">
+                            <li><a href=""><span class="glyphicon glyphicon-map-marker icon"></span><strong>Địa chỉ: </strong>Q1 - TP. HCM</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-envelope icon"></span><strong>Email: </strong>info@fahasa.com</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-earphone icon"></span><strong>Phone: </strong>1900636467</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="footer3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo">
+                            <img src="../uploads/images/footer/logo.png" class="img-responsive">
+                        </div>
+                        <div class="text">
+                            <span>Lầu 7, 387-389 Hai Bà Trưng Quận 3 TP HCM</span><br>
+                            <span>Công Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA</span><br>
+                            <span>60 - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam</span><br>
+                            <span>
+                                    Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi,
+                                    và KHÔNG hỗ trợ mua và nhận hàng trực tiếp tại văn phòng hoặc trung tâm xử lý đơn hàng tại đia chỉ trên.
+                                </span>
+                        </div>
+                        <div>
+                            <a href=""><img src="../uploads/images/footer/logo-da-thong-bao.png" class="img-footer"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <a href=""><img src="../uploads/images/footer/Facebook-on.png" class="img"></a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <a href=""><img src="../uploads/images/footer/Insta-on.png" class="img"></a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <a href=""><img src="../uploads/images/footer/Youtube-on.png" class="img"></a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <a href=""><img src="../uploads/images/footer/tumblr-on.png" class="img"></a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <a href=""><img src="../uploads/images/footer/twitter-on.png" class="img"></a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <a href=""><img src="../uploads/images/footer/pinterest-on.png" class="img"></a>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <a href=""><img src="../uploads/images/footer/android.png" class="img2"></a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href=""><img src="../uploads/images/footer/appstore.png" class="img2"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-3"></div>
+                            <div class="col-md-8 col-sm-9">
+                                <a href=""><img src="../uploads/images/footer/Ninja-1.png" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-3"></div>
+                            <div class="col-md-8 col-sm-9">
+                                <a href=""><img src="../uploads/images/footer/Speedlink-1.png" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-3"></div>
+                            <div class="col-md-8 col-sm-9">
+                                <a href=""><img src="../uploads/images/footer/Vietnampost-1.png" class="img-responsive"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-sm-12 text-center">
+                    <span class="text-end-footer">Giấy chứng nhận Đăng ký Kinh doanh số **0304132047** do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 28/11/2012.</span>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="footer4 text-center">
+            <span>&copy; Copyright 11-2018</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">Information Team Ocs Chos</a>
+        </div>
+    </div>
+</div>
+<!--/FOOTER-->
+
+<!--FOOTER-XS-->
+<div class="visible-xs" id="footer-xs">
+    <div class="container-fluid">
+        <div class="footer-xs-1">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="title">
+                        <span>ĐĂNG KÝ NHẬN BẢNG TIN</span>
+                    </div>
+                    <form action="" method="post">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </div>
+                            <input class="form-control" type="text" name="dangkiemail" placeholder="Your email" autocomplete="off">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-info">Đăng ký</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-xs-2">
+            <div>
+                <img src="../uploads/images/footer/logo.png">
+            </div>
+            <br>
+            <div class="text">
+                <span>Lầu 7, 387-389 Hai Bà Trưng Quận 3 TP HCM</span><br>
+                <span>Công Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA</span><br>
+                <span>60 - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam</span><br>
+                <span>
+                        Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi.
+                        KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.
+                    </span>
+            </div>
+            <br>
+            <div>
+                <a href=""><img src="../uploads/images/footer/logo-da-thong-bao.png" class="logo-dathongbao"></a>
+            </div>
+            <br>
+            <div class="div-img">
+                <a href=""><img src="../uploads/images/footer/Facebook-on.png" class="img"></a>
+                <a href=""><img src="../uploads/images/footer/Insta-on.png" class="img"></a>
+                <a href=""><img src="../uploads/images/footer/Youtube-on.png" class="img"></a>
+                <a href=""><img src="../uploads/images/footer/tumblr-on.png" class="img"></a>
+                <a href=""><img src="../uploads/images/footer/twitter-on.png" class="img"></a>
+                <a href=""><img src="../uploads/images/footer/pinterest-on.png" class="img"></a>
+            </div>
+            <br>
+            <div class="div-img2">
+                <a href=""><img src="../uploads/images/footer/android.png" class="img2"></a>
+                <a href=""><img src="../uploads/images/footer/android.png" class="img2"></a>
+            </div>
+        </div>
+        <div class="footer-xs-3 text-center">
+            <span>&copy; Copyright 11-2018</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">Information Team Ocs Chos</a>
+        </div>
+    </div>
+</div>
+<!--/FOOTER-XS-->
+<div class="back-top">
+    <button><span class="glyphicon glyphicon-chevron-up"></span></button>
+</div>
+</body>
+</html>
