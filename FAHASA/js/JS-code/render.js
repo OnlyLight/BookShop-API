@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 	getUser().then(function(values) {
 		console.log(values);
-		// render(values);
+		render(values);
 	}).catch(function(err) {
 		console.log(err);
 	});
