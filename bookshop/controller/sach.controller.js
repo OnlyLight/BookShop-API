@@ -37,7 +37,7 @@ module.exports.searchName = function (req, res) {
 
 module.exports.filter = function (req, res) {
 	var matheloai = req.query.matheloai;
-	var sql = "SELECT * FROM giohang WHERE matheloai = "+matheloai+"";
+	var sql = "SELECT * FROM sach WHERE matheloai = "+matheloai+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

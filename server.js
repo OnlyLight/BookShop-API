@@ -18,7 +18,7 @@ const Role = db.role;
 //require('./app/route/project.route.js')(app);
  
 // Create a Server
-var server = app.listen(8080, function () {
+var server = app.listen(3000, function () {
  
   var host = server.address().address
   var port = server.address().port
@@ -31,6 +31,12 @@ var users = require('./bookshop/route/users.route'); // done
 var nhanxet = require('./bookshop/route/nhanxet.route'); // done
 var sach = require('./bookshop/route/sach.route');
 var theloaisach = require('./bookshop/route/theloaisach.route');
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use("/api/giohang", giohang);
 app.use("/api/users", users);
