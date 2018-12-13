@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	getBookData().then(function(values) {
+	getBookDetail().then(function(values) {
 		console.log(values);
 		render(values);
 	}).catch(function(err) {
@@ -8,7 +8,7 @@ $(document).ready(function() {
 	// async - await
 });
 
-async function getBookData() {
+async function getBookDetail() {
 	var id = GetURLParameter('id');
 	console.log(id);
 	var url = "http://localhost:3000/api/sach/list/"+id+"";

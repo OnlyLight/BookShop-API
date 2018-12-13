@@ -47,7 +47,7 @@ module.exports.filter = function (req, res) {
 };
 
 module.exports.pager = function (req, res) {
-	var matheloai = req.body.matheloai;
+	var matheloai = req.query.matheloai;
 	var _limit = req.query._limit;
 	var _page = req.query._page;
 	var sql = "SELECT * FROM sach WHERE matheloai = "+matheloai+" ORDER BY matheloai DESC LIMIT "+_page+", "+_limit+"";
