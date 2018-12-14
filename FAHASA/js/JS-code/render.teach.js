@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	getDetail().then(function(values) {
-		console.log(values);
+		// console.log(values);
 		render(values);
 	}).catch(function(err) {
 		console.log(err);
@@ -10,6 +10,13 @@ $(document).ready(function() {
 	getSize().then(function(values) {
 		// console.log(values.length);
 		renderPag(values)
+	}).catch(function(err) {
+		console.log(err);
+	});
+
+	getListCategory().then(function(values) {
+		// console.log(values);
+		renderListCategory(values);
 	}).catch(function(err) {
 		console.log(err);
 	});
@@ -28,6 +35,21 @@ async function getSize() {
 	var url = "http://localhost:3000/api/sach/filter?matheloai="+_category+"";
 	const res = await axios.get(url);
 	return res.data;
+}
+
+async function getListCategory() {
+	var url = "http://localhost:3000/api/theloaisach/list";
+	const res = await axios.get(url);
+	return res.data;
+}
+
+function renderListCategory(items) {
+	var content = '';
+	for(var item of items) {
+		content += '<li><a href="sach-nuoi-day-con.html?category='+item.matheloai+'" class="link-left">'+item.tentheloai+'</a></li>';
+	}
+
+	$('.list-category').html(content);
 }
 
 function renderPag(items) {

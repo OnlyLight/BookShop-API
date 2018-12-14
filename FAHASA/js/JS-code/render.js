@@ -33,7 +33,7 @@ function renderListCategory(items) {
 		content += '<li><a href="sach-nuoi-day-con.html?category='+item.matheloai+'" class="link-left">'+item.tentheloai+'</a></li>';
 	}
 
-	$('#list-category').html(content);
+	$('.list-category').html(content);
 }
 
 function render(items) {
