@@ -1,0 +1,1290 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/Library/owl.carousel.min.css')
+  link(rel='stylesheet', href='css/Library/owl.theme.default.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/home.css')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  link(rel='shortcut icon', href='uploads/images/logo/favicon.ico', type='image/x-icon')
+  script(src='http://www.google.com/jsapi')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/Library/owl.carousel.min.js')
+  script(src='js/JS-code/js-home.js')
+  script(src='js/JS-code/owl-slide.js')
+  script(src='js/JS-code/back-to-top.js')
+  script(src='js/Library/axios.min.js')
+  script(src='js/JS-code/render.js')
+  script(src='js/JS-code/login.js')
+  title FAHASA.com
+
+include header
+
+include login
+// CONTENT
+#content-home
+  .container
+    .row
+      .col-sm-3.hidden-xs
+        .danhmuc
+          .danhmucsach-item-home
+            ul.nav.list-category
+              li
+                a.link-left(href='sach-hoc-ngoai-ngu.html') H&#x1ECD;c Ngo&#x1EA1;i Ng&#x1EEF;
+              li
+                a.link-left(href='sach-kinh-te.html') Kinh T&#x1EBF;
+              li
+                a.link-left(href='sach-khoa-hoc.html') Khoa H&#x1ECD;c K&itilde; Thu&#x1EAD;t
+              li
+                a.link-left(href='sach-nuoi-day-con.html') Nu&ocirc;i D&#x1EA1;y Con
+              li
+                a.link-left(href='sach-giao-khoa.html') S&aacute;ch Gi&aacute;o Khoa - Gi&aacute;o Tr&igrave;nh
+              li
+                a.link-left(href='sach-tham-khao.html') S&aacute;ch Tham Kh&#x1EA3;o
+              li
+                a.link-left(href='sach-thieu-nhi.html') S&aacute;ch Thi&#x1EBF;u Nhi
+              li
+                a.link-left(href='sach-ki-nang-song.html') T&acirc;m L&yacute; - K&#x1EF9; N&abreve;ng S&#x1ED1;ng
+              li
+                a.link-left(href='tu-dien.html') T&#x1EEB; &Dstrok;i&#x1EC3;n
+      .col-sm-9.col-xs-12
+        #slide-top.carousel.slide(data-ride='carousel')
+          .carousel-inner
+            .item.active
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/DAIGIA-1.jpg')
+            .item
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/MuaSam-2.png')
+            .item
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/Thu3-3.jpg')
+            .item
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/Cung-hoang-dao-4.jpg')
+            .item
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/NCC-BachViet-5.jpg')
+            .item
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/NCC-IPM-mua-mua-sam-dien-cuong-6.jpg')
+            .item
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/New-Arrivals-7.jpg')
+            .item
+              a(href='#')
+                img.img-responsive(src='uploads/images/slide/BTS-8.jpg')
+          a.left.carousel-control(href='#slide-top', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+          a.right.carousel-control(href='#slide-top', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+  .container.hidden-xs
+    br
+    .row
+      .col-sm-6.quangcao-1.col-xs-12
+        a(href='')
+          img.img-responsive(src='uploads/images/quangcao/MA-GIAM-GIA-NGOAI-VAN.jpg')
+      .col-sm-3.col-xs-6
+        a(href='')
+          img.img-responsive(src='uploads/images/quangcao/DAIGIA-270.png')
+      .col-sm-3.col-xs-6
+        a(href='')
+          img.img-responsive(src='uploads/images/quangcao/Phuc-Long-T10.jpg')
+  br
+  .container
+    .sachtiengviet
+      .top-sach
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu1')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.title.navbar-brand DEALS 24H - S&Aacute;CH TI&#x1EBE;NG VI&#x1EC6;T
+        #menu1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='') V&abreve;n h&#x1ECD;c
+            li
+              a(href='') T&acirc;m l&yacute; - K&#x1EF9; n&abreve;ng
+            li
+              a(href='') Nu&ocirc;i d&#x1EA1;y con
+            li
+              a(href='') Kinh t&#x1EBF;
+      .bottom-sach
+        #render-sachtv.owl-carousel.owl-theme
+          .item
+            a(href='detail-book.html')
+              img.thumbnail(src='uploads/images/sachtiengviet/cauchuyenbennoilau.jpg')
+              .caption
+                span C&acirc;u Chuy&#x1EC7;n B&ecirc;n N&#x1ED3;i L&#x1EAB;u
+                br
+                span 63.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/chungtadauchisongchoriengminh.jpg')
+              .caption
+                span Ch&uacute;ng Ta &Dstrok;&acirc;u Ch&#x1EC9; S&#x1ED1;ng Cho Ri&ecirc;ng M&igrave;nh
+                br
+                span 82.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/cubinhtinh.jpg')
+              .caption
+                span C&#x1EE9; B&igrave;nh T&itilde;nh
+                br
+                span 82.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/danong.jpg')
+              .caption
+                span &Dstrok;&agrave;n &Ocirc;ng +
+                br
+                span 86.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/lonlensekhac.jpg')
+              .caption
+                span L&#x1EDB;n L&ecirc;n S&#x1EBD; Kh&aacute;c
+                br
+                span 89.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/me-embevabo.jpg')
+              .caption
+                span M&#x1EB9; - Em B&eacute; V&agrave; B&#x1ED1;
+                br
+                span 89.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/nha.jpg')
+              .caption
+                span Nh&agrave;
+                br
+                span 109.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/nuocnhatnhintunhungthubinhthuong.jpg')
+              .caption
+                span N&#x1B0;&#x1EDB;c Nh&#x1EAD;t Nh&igrave;n T&#x1EEB; Nh&#x1EEF;ng Th&#x1EE9; B&igrave;nh Th&#x1B0;&#x1EDD;ng
+                br
+                span 76.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachtiengviet/yeusaodekhongdau.jpg')
+              .caption
+                span Y&ecirc;u Sao &Dstrok;&#x1EC3; Kh&ocirc;ng &Dstrok;au
+                br
+                span 86.000&dstrok;
+        .text-center
+          a(href='sach-tieng-viet.html') Xem th&ecirc;m
+    br
+    .sachnoibat
+      .top-sach
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu2')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.title.navbar-brand S&Aacute;CH N&#x1ED4;I B&#x1EAC;T
+        #menu2.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='') Combo N&#x1ED5;i B&#x1EAD;t
+            li
+              a(href='') S&aacute;ch HOT - Gi&#x1EA3;m S&#x1ED1;c
+      .bottom-sach
+        .owl-carousel.owl-theme
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/athomwithmadamechic.jpg')
+              .caption
+                span At Home With Madame Chic
+                br
+                span 100.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/banchicansongtottroixanhtuanbai.jpg')
+              .caption
+                span B&#x1EA1;n Ch&#x1EC9; C&#x1EA7;n S&#x1ED1;ng T&#x1ED1;t, Tr&#x1EDD;i Xanh T&#x1EF1; An B&agrave;i
+                br
+                span 86.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/bimatdothai-khoidaytainangtre.png')
+              .caption
+                span B&iacute; M&#x1EAD;t Do Th&aacute;i - Kh&#x1A1;i D&#x1EAD;y T&agrave;i N&abreve;ng Tr&#x1EBB;
+                br
+                span 109.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/caychuoinondigiayxanh.png')
+              .caption
+                span C&acirc;y Chu&#x1ED1;i Non &Dstrok;i Gi&agrave;y Xanh
+                br
+                span 89.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/dacquyencuagaihu.jpg')
+              .caption
+                span &Dstrok;&#x1EB7;c Quy&#x1EC1;n C&#x1EE7;a G&aacute;i H&#x1B0;
+                br
+                span 78.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/hanhphucdichthuc.jpg')
+              .caption
+                span H&#x1EA1;nh Ph&uacute;c &Dstrok;&iacute;ch Th&#x1EF1;c
+                br
+                span 90.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/khihoithohoathinhkhong.jpg')
+              .caption
+                span Khi H&#x1A1;i Th&#x1EDF; H&oacute;a Thinh Kh&ocirc;ng
+                br
+                span 92.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/khongdietkhongsinhdungsohai.jpg')
+              .caption
+                span Kh&ocirc;ng Di&#x1EC7;t Kh&ocirc;ng Sinh - &Dstrok;&#x1EEB;ng S&#x1EE3; H&atilde;i
+                br
+                span 98.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/lanhdaobangcauhoi.jpg')
+              .caption
+                span L&atilde;nh &Dstrok;&#x1EA1;o B&#x1EB1;ng C&acirc;u H&#x1ECF;i
+                br
+                span 102.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnoibat/minhlanangvieccuaminhlachoichang.jpg')
+              .caption
+                span M&igrave;nh L&agrave; N&#x1EAF;ng, Vi&#x1EC7;c C&#x1EE7;a M&igrave;nh L&agrave; Ch&oacute;i Chang
+                br
+                span 120.000&dstrok;
+        .text-center
+          a(href='sach-tieng-viet.html') Xem th&ecirc;m
+    br
+    .sachnuocngoai
+      .top-sach
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu3')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.title.navbar-brand FOREIGN BOOKS
+        #menu3.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='') New Fiction
+            li
+              a(href='') New Business Books
+            li
+              a(href='') New Self-help Books
+            li
+              a(href='') New Children&apos;s Books
+      .bottom-sach
+        .owl-carousel.owl-theme
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/airbnb_story.jpg')
+              .caption
+                span Airbnb Story
+                br
+                span 220.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/great-at-work.jpg')
+              .caption
+                span Great At Work
+                br
+                span 160.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/how-successful-people-grow-15-ways-to-get.jpg')
+              .caption
+                span How Successful People Grow: 15 Ways To Get
+                br
+                span 225.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/how-successfull-people-lead-taking-your.jpg')
+              .caption
+                span How Successful People Lead: Taking Your
+                br
+                span 225.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/organize-your-team-today-the-mental.jpg')
+              .caption
+                span Organize Your Team Today The Mental
+                br
+                span 180.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/power-of-moments.jpg')
+              .caption
+                span Power Of Moment
+                br
+                span 175.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/the-5-levels-of-leadership-proven-steps.jpg')
+              .caption
+                span The 5 Levels Of Leadership Proven Steps
+                br
+                span 330.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/the-best-team-wins.jpg')
+              .caption
+                span The Best Team Wins
+                br
+                span 200.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/the-carrot-principle.jpg')
+              .caption
+                span The Carrot Principle
+                br
+                span 180.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/the-trust-edge.jpg')
+              .caption
+                span The Trust Edge
+                br
+                span 250.000&dstrok;
+          .item
+            a(href='')
+              img.thumbnail(src='uploads/images/sachnuocngoai/too-many-bosses-too-few-leaders.jpg')
+              .caption
+                span Too Many Bosses, Too Few Leaders
+                br
+                span 250.000&dstrok;
+        .text-center
+          a(href='sach-hoc-ngoai-ngu.html') Xem th&ecirc;m
+    br
+    .sachvanhoc-kinang
+      .top-sach
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu4')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.title.navbar-brand S&Aacute;CH V&Abreve;N H&#x1ECC;C
+        #menu4.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='') S&#x1EAF;p ph&aacute;t h&agrave;nh
+            li
+              a(href='') B&aacute;n ch&#x1EA1;y
+            li
+              a(href='') N&#x1ED5;i b&#x1EAD;t
+      .bottom-sach
+        .row.hidden-xs
+          .col-sm-4
+            a(href='')
+              img.img-responsive(src='uploads/images/vanhoc/Co-Dinh-Mot-Dam-May350x415.jpg')
+          .col-sm-8
+            #slide-2.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .item.active
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/artemis-fowl-tap1.jpg')
+                    .col-sm-3
+                      span Artemis Fowl T&#x1EAD;p 1
+                      br
+                      span 130.000
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/bonghinhcuagio.jpg')
+                    .col-sm-3
+                      span B&oacute;ng H&igrave;nh C&#x1EE7;a Gi&oacute;
+                      br
+                      span 89.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/chuyendicuathanhxuan.jpg')
+                    .col-sm-3
+                      span Chuy&#x1EBF;n &Dstrok;i C&#x1EE7;a Thanh Xu&acirc;n
+                      br
+                      span 109.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/henhovoiparis.jpg')
+                    .col-sm-3
+                      span H&#x1EB9;n H&ograve; V&#x1EDB;i Paris
+                      br
+                      span 209.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/mavuongkientao-hamnguckienconhat.jpg')
+                    .col-sm-3
+                      span Ma V&#x1B0;&#x1A1;ng Ki&#x1EBF;n T&#x1EA1;o
+                      br
+                      span 100.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/ngamngoiphophuong.jpg')
+                    .col-sm-3
+                      span Ng&#x1EAF;m Ng&#x1A1;i Ph&#x1ED1; Ph&#x1B0;&#x1EDD;ng
+                      br
+                      span 79.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/roitrongchoivoi.jpg')
+                    .col-sm-3
+                      span R&#x1A1;i Trong Ch&#x1A1;i V&#x1A1;i
+                      br
+                      span 99.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/shosha.jpg')
+                    .col-sm-3
+                      span Sosha
+                      br
+                      span 179.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/thanhphophale-phan3.jpg')
+                    .col-sm-3
+                      span Th&agrave;nh Ph&#x1ED1; Pha L&ecirc;
+                      br
+                      span 100.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/thunghiemhoangdai.jpg')
+                    .col-sm-3
+                      span Th&#x1EED; Nghi&#x1EC7;m Hoang D&#x1EA1;i
+                      br
+                      span 79.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/trangiangnhintusaulung.png')
+                    .col-sm-3
+                      span Tr&#x1EA7;n Giang Nh&igrave;n T&#x1EEB; Sau L&#x1B0;ng
+                      br
+                      span 99.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.img-responsive.thumbnail(src='uploads/images/vanhoc/truyenthuykieu.jpg')
+                    .col-sm-3
+                      span Truy&#x1EC7;n Th&uacute;y Ki&#x1EC1;u
+                      br
+                      span 179.000&dstrok;
+              a.left.carousel-control(href='#slide-2', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left
+              a.right.carousel-control(href='#slide-2', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right
+        .row.visible-xs
+          .owl-carousel.owl-theme
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/artemis-fowl-tap1.jpg')
+                .caption
+                  span Artemis Fowl T&#x1EAD;p 1
+                  br
+                  span 130.000
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/bonghinhcuagio.jpg')
+                .caption
+                  span B&oacute;ng H&igrave;nh C&#x1EE7;a Gi&oacute;
+                  br
+                  span 89.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/chuyendicuathanhxuan.jpg')
+                .caption
+                  span Chuy&#x1EBF;n &Dstrok;i C&#x1EE7;a Thanh Xu&acirc;n
+                  br
+                  span 109.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/henhovoiparis.jpg')
+                .caption
+                  span H&#x1EB9;n H&ograve; V&#x1EDB;i Paris
+                  br
+                  span 209.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/mavuongkientao-hamnguckienconhat.jpg')
+                .caption
+                  span Ma V&#x1B0;&#x1A1;ng Ki&#x1EBF;n T&#x1EA1;o
+                  br
+                  span 100.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/ngamngoiphophuong.jpg')
+                .caption
+                  span Ng&#x1EAF;m Ng&#x1A1;i Ph&#x1ED1; Ph&#x1B0;&#x1EDD;ng
+                  br
+                  span 79.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/roitrongchoivoi.jpg')
+                .caption
+                  span R&#x1A1;i Trong Ch&#x1A1;i V&#x1A1;i
+                  br
+                  span 99.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/shosha.jpg')
+                .caption
+                  span Sosha
+                  br
+                  span 179.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/thanhphophale-phan3.jpg')
+                .caption
+                  span Th&agrave;nh Ph&#x1ED1; Pha L&ecirc;
+                  br
+                  span 100.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/thunghiemhoangdai.jpg')
+                .caption
+                  span Th&#x1EED; Nghi&#x1EC7;m Hoang D&#x1EA1;i
+                  br
+                  span 79.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/trangiangnhintusaulung.png')
+                .caption
+                  span Tr&#x1EA7;n Giang Nh&igrave;n T&#x1EEB; Sau L&#x1B0;ng
+                  br
+                  span 99.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/vanhoc/truyenthuykieu.jpg')
+                .caption
+                  span Truy&#x1EC7;n Th&uacute;y Ki&#x1EC1;u
+                  br
+                  span 179.000&dstrok;
+        .text-center
+          a(href='sach-tieng-viet.html') Xem th&ecirc;m
+    br
+    .sachkinhte-nuoidaycon
+      .top-sach
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu5')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.title.navbar-brand S&Aacute;CH KINH T&#x1EBE;
+        #menu5.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='') S&#x1EAF;p ph&aacute;t h&agrave;nh
+            li
+              a(href='') B&aacute;n ch&#x1EA1;y
+            li
+              a(href='') N&#x1ED5;i b&#x1EAD;t
+      .bottom-sach
+        .row.hidden-xs
+          .col-sm-8
+            #slide-3.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .item.active
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/chuyen-nha-dr-thanh.jpg')
+                    .col-sm-3
+                      span Chuy&#x1EC7;n Nh&agrave; Dr. Thanh
+                      br
+                      span 99.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/kelamthaydoicuocchoi.png')
+                    .col-sm-3
+                      span K&#x1EBB; L&agrave;m Thay &Dstrok;&#x1ED5;i Cu&#x1ED9;c Ch&#x1A1;i
+                      br
+                      span 109.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/khoinghieptinhgon.jpg')
+                    .col-sm-3
+                      span Kh&#x1EDF;i Nghi&#x1EC7;p Tinh G&#x1ECD;n
+                      br
+                      span 159.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/kinhtehocvimo.jpg')
+                    .col-sm-3
+                      span Kinh T&#x1EBF; H&#x1ECD;c V&itilde; M&ocirc;
+                      br
+                      span 219.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/lanhdaodichthuc.jpg')
+                    .col-sm-3
+                      span L&atilde;nh &Dstrok;&#x1EA1;o &Dstrok;&iacute;ch Th&#x1EF1;c
+                      br
+                      span 68.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/neutoibietduockhicon20.jpg')
+                    .col-sm-3
+                      span N&#x1EBF;u T&ocirc;i Bi&#x1EBF;t &Dstrok;&#x1B0;&#x1EE3;c Khi C&ograve;n 20
+                      br
+                      span 120.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/nhungchienluocmarketingtaoraloinhuan.png')
+                    .col-sm-3
+                      span Nh&#x1EEF;ng Chi&#x1EBF;n L&#x1B0;&#x1EE3;c Marketing T&#x1EA1;o Ra L&#x1EE3;i Nhu&#x1EAD;n
+                      br
+                      span 179.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/phungsudedandau.jpg')
+                    .col-sm-3
+                      span Ph&#x1EE5;ng S&#x1EF1; &Dstrok;&#x1EC3; D&#x1EAB;n &Dstrok;&#x1EA7;u
+                      br
+                      span 88.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/quantringuonnhanluc.jpg')
+                    .col-sm-3
+                      span Qu&#x1EA3;n Tr&#x1ECB; Ngu&#x1ED3;n Nh&acirc;n L&#x1EF1;c
+                      br
+                      span 98.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/sucmanhthuyetphuc.jpg')
+                    .col-sm-3
+                      span S&#x1EE9;c M&#x1EA1;nh Thuy&#x1EBF;t Ph&#x1EE5;c
+                      br
+                      span 97.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/thuonghieucamxuc.jpg')
+                    .col-sm-3
+                      span Th&#x1B0;&#x1A1;ng Hi&#x1EC7;u C&#x1EA3;m X&uacute;c
+                      br
+                      span 87.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachkinhte/tuzerodenzera.jpg')
+                    .col-sm-3
+                      span T&#x1EEB; Zero &Dstrok;&#x1EBF;n Zera
+                      br
+                      span 81.000d
+              a.left.carousel-control(href='#slide-3', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left
+              a.right.carousel-control(href='#slide-3', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right
+          .col-sm-4
+            a(href='')
+              img.img-responsive(src='uploads/images/sachkinhte/MARKETING-DE-CANH-TRANH-TU-CHAU-A-VUON-RA-THE-GIOI-TRONG-KY-NGUYEN-TIEU-DUNG-SO-350x415.jpg')
+        .row.visible-xs
+          .owl-carousel.owl-theme
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/chuyen-nha-dr-thanh.jpg')
+                .caption
+                  span Chuy&#x1EC7;n Nh&agrave; Dr. Thanh
+                  br
+                  span 99.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/kelamthaydoicuocchoi.png')
+                .caption
+                  span K&#x1EBB; L&agrave;m Thay &Dstrok;&#x1ED5;i Cu&#x1ED9;c Ch&#x1A1;i
+                  br
+                  span 109.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/khoinghieptinhgon.jpg')
+                .caption
+                  span Kh&#x1EDF;i Nghi&#x1EC7;p Tinh G&#x1ECD;n
+                  br
+                  span 159.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/kinhtehocvimo.jpg')
+                .caption
+                  span Kinh T&#x1EBF; H&#x1ECD;c V&itilde; M&ocirc;
+                  br
+                  span 219.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/lanhdaodichthuc.jpg')
+                .caption
+                  span L&atilde;nh &Dstrok;&#x1EA1;o &Dstrok;&iacute;ch Th&#x1EF1;c
+                  br
+                  span 68.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/neutoibietduockhicon20.jpg')
+                .caption
+                  span N&#x1EBF;u T&ocirc;i Bi&#x1EBF;t &Dstrok;&#x1B0;&#x1EE3;c Khi C&ograve;n 20
+                  br
+                  span 120.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/nhungchienluocmarketingtaoraloinhuan.png')
+                .caption
+                  span Nh&#x1EEF;ng Chi&#x1EBF;n L&#x1B0;&#x1EE3;c Marketing T&#x1EA1;o Ra L&#x1EE3;i Nhu&#x1EAD;n
+                  br
+                  span 179.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/phungsudedandau.jpg')
+                .caption
+                  span Ph&#x1EE5;ng S&#x1EF1; &Dstrok;&#x1EC3; D&#x1EAB;n &Dstrok;&#x1EA7;u
+                  br
+                  span 88.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/quantringuonnhanluc.jpg')
+                .caption
+                  span Qu&#x1EA3;n Tr&#x1ECB; Ngu&#x1ED3;n Nh&acirc;n L&#x1EF1;c
+                  br
+                  span 98.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/sucmanhthuyetphuc.jpg')
+                .caption
+                  span S&#x1EE9;c M&#x1EA1;nh Thuy&#x1EBF;t Ph&#x1EE5;c
+                  br
+                  span 97.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/thuonghieucamxuc.jpg')
+                .caption
+                  span Th&#x1B0;&#x1A1;ng Hi&#x1EC7;u C&#x1EA3;m X&uacute;c
+                  br
+                  span 87.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/sachkinhte/tuzerodenzera.jpg')
+                .caption
+                  span T&#x1EEB; Zero &Dstrok;&#x1EBF;n Zera
+                  br
+                  span 81.000d
+        .text-center
+          a(href='sach-kinh-te.html') Xem th&ecirc;m
+    br
+    .sachvanhoc-kinang
+      .top-sach
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu6')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.navbar-brand.title S&Aacute;CH T&Acirc;M L&Yacute; - K&#x1EF8; N&Abreve;NG
+        #menu6.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='') S&#x1EAF;p ph&aacute;t h&agrave;nh
+            li
+              a(href='') B&aacute;n ch&#x1EA1;y
+            li
+              a(href='') N&#x1ED5;i b&#x1EAD;t
+      .bottom-sach
+        .row.hidden-xs
+          .col-sm-4
+            a(href='')
+              img.img-responsive(src='uploads/images/kinangsong/Hanh-phuc-350x415.jpg')
+          .col-sm-8
+            #slide-4.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .item.active
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/bia_bandatgiabaonhieu_full.jpg')
+                    .col-sm-3
+                      span B&#x1EA1;n &Dstrok;&#x1EAF;t Gi&aacute; Bao Nhi&ecirc;u
+                      br
+                      span 80.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/dacnhantam.jpg')
+                    .col-sm-3
+                      span &Dstrok;&#x1EAF;c Nh&acirc;n T&acirc;m
+                      br
+                      span 76.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/doi-ngan-dung-ngu-dai-bia.jpg')
+                    .col-sm-3
+                      span &Dstrok;&#x1EDD;i Ng&#x1EAF;n &Dstrok;&#x1EEB;ng Ng&#x1EE7; D&agrave;i
+                      br
+                      span 99.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/emkhongcogidemac.jpg')
+                    .col-sm-3
+                      span Em Kh&ocirc;ng C&oacute; G&igrave; &Dstrok;&#x1EC3; M&#x1EB7;c?
+                      br
+                      span 102.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/haihuocmotchutthegioisekhacdi.jpg')
+                    .col-sm-3
+                      span H&agrave;i H&#x1B0;&#x1EDB;c M&#x1ED9;t Ch&uacute;t Th&#x1EBF; Gi&#x1EDB;i S&#x1EBD; Kh&aacute;c &Dstrok;i
+                      br
+                      span 129.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/nghethuatnhinnguoidoantinhcach.jpg')
+                    .col-sm-3
+                      span Ngh&#x1EC7; Thu&#x1EAD;t Nh&igrave;n Ng&#x1B0;&#x1EDD;i &Dstrok;o&aacute;n T&iacute;nh C&aacute;ch
+                      br
+                      span 98.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/nghidongiansongdonthuan.jpg')
+                    .col-sm-3
+                      span Ngh&itilde; &Dstrok;&#x1A1;n Gi&#x1EA3;n S&#x1ED1;ng &Dstrok;&#x1A1;n Thu&#x1EA7;n
+                      br
+                      span 87.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/oparis.png')
+                    .col-sm-3
+                      span &#x1EDE; Paris
+                      br
+                      span 189.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/songlaukhongbangsongsau.jpg')
+                    .col-sm-3
+                      span S&#x1ED1;ng L&acirc;u Kh&ocirc;ng B&#x1EB1;ng S&#x1ED1;ng S&acirc;u
+                      br
+                      span 74.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/songmotcuocdoikhonghoihan.jpg')
+                    .col-sm-3
+                      span S&#x1ED1;ng M&#x1ED9;t Cu&#x1ED9;c &Dstrok;&#x1EDD;i Kh&ocirc;ng H&#x1ED1;i H&#x1EAD;n
+                      br
+                      span 77.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/thaycachmacdoicuocdoi_1_1.jpg')
+                    .col-sm-3
+                      span Thay C&aacute;ch M&#x1EB7;c &Dstrok;&#x1ED5;i Cu&#x1ED9;c &Dstrok;&#x1EDD;i
+                      br
+                      span 100.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/kinangsong/tuoitredanggiabaonhieu.jpg')
+                    .col-sm-3
+                      span Tu&#x1ED5;i Tr&#x1EBB; &Dstrok;&aacute;ng Gi&aacute; Bao Nhi&ecirc;u
+                      br
+                      span 70.000&dstrok;
+              a.left.carousel-control(href='#slide-4', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left
+              a.right.carousel-control(href='#slide-4', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right
+        .row.visible-xs
+          .owl-carousel.owl-theme
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/bia_bandatgiabaonhieu_full.jpg')
+                .caption
+                  span B&#x1EA1;n &Dstrok;&#x1EAF;t Gi&aacute; Bao Nhi&ecirc;u
+                  br
+                  span 80.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/dacnhantam.jpg')
+                .caption
+                  span &Dstrok;&#x1EAF;c Nh&acirc;n T&acirc;m
+                  br
+                  span 76.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/doi-ngan-dung-ngu-dai-bia.jpg')
+                .caption
+                  span &Dstrok;&#x1EDD;i Ng&#x1EAF;n &Dstrok;&#x1EEB;ng Ng&#x1EE7; D&agrave;i
+                  br
+                  span 99.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/emkhongcogidemac.jpg')
+                .caption
+                  span Em Kh&ocirc;ng C&oacute; G&igrave; &Dstrok;&#x1EC3; M&#x1EB7;c?
+                  br
+                  span 102.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/haihuocmotchutthegioisekhacdi.jpg')
+                .caption
+                  span H&agrave;i H&#x1B0;&#x1EDB;c M&#x1ED9;t Ch&uacute;t Th&#x1EBF; Gi&#x1EDB;i S&#x1EBD; Kh&aacute;c &Dstrok;i
+                  br
+                  span 129.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/nghethuatnhinnguoidoantinhcach.jpg')
+                .caption
+                  span Ngh&#x1EC7; Thu&#x1EAD;t Nh&igrave;n Ng&#x1B0;&#x1EDD;i &Dstrok;o&aacute;n T&iacute;nh C&aacute;ch
+                  br
+                  span 98.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/nghidongiansongdonthuan.jpg')
+                .caption
+                  span Ngh&itilde; &Dstrok;&#x1A1;n Gi&#x1EA3;n S&#x1ED1;ng &Dstrok;&#x1A1;n Thu&#x1EA7;n
+                  br
+                  span 87.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/oparis.png')
+                .caption
+                  span &#x1EDE; Paris
+                  br
+                  span 189.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/songlaukhongbangsongsau.jpg')
+                .caption
+                  span S&#x1ED1;ng L&acirc;u Kh&ocirc;ng B&#x1EB1;ng S&#x1ED1;ng S&acirc;u
+                  br
+                  span 74.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/songmotcuocdoikhonghoihan.jpg')
+                .caption
+                  span S&#x1ED1;ng M&#x1ED9;t Cu&#x1ED9;c &Dstrok;&#x1EDD;i Kh&ocirc;ng H&#x1ED1;i H&#x1EAD;n
+                  br
+                  span 77.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/thaycachmacdoicuocdoi_1_1.jpg')
+                .caption
+                  span Thay C&aacute;ch M&#x1EB7;c &Dstrok;&#x1ED5;i Cu&#x1ED9;c &Dstrok;&#x1EDD;i
+                  br
+                  span 100.000&dstrok;
+            .item
+              a(href='')
+                img.img-responsive.thumbnail(src='uploads/images/kinangsong/tuoitredanggiabaonhieu.jpg')
+                .caption
+                  span Tu&#x1ED5;i Tr&#x1EBB; &Dstrok;&aacute;ng Gi&aacute; Bao Nhi&ecirc;u
+                  br
+                  span 70.000&dstrok;
+        .text-center
+          a(href='sach-ki-nang-song.html') Xem th&ecirc;m
+    br
+    .sachkinhte-nuoidaycon
+      .top-sach
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu7')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.title.navbar-brand S&Aacute;CH NU&Ocirc;I D&#x1EA0;Y CON
+        #menu7.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='') M&#x1EDB;i - S&#x1EAF;p ph&aacute;t h&agrave;nh
+            li
+              a(href='') B&aacute;n ch&#x1EA1;y
+            li
+              a(href='') N&#x1ED5;i b&#x1EAD;t
+      .bottom-sach
+        .row.hidden-xs
+          .col-sm-8
+            #slide-5.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .item.active
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/baihatdanhchotremamnon.jpg')
+                    .col-sm-3
+                      span B&agrave;i H&aacute;t D&agrave;nh Cho Tr&#x1EBB; M&#x1EA7;m Non
+                      br
+                      span 60.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/biancuanaophai.jpg')
+                    .col-sm-3
+                      span B&iacute; &#x1EA8;n C&#x1EE7;a N&atilde;o Ph&#x1EA3;i
+                      br
+                      span 144.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/cho-den-mau-giao-thi-da-muon.jpg')
+                    .col-sm-3
+                      span Ch&#x1EDD; &Dstrok;&#x1EBF;n M&#x1EAB;u Gi&aacute;o Th&igrave; &Dstrok;&atilde; Mu&#x1ED9;n
+                      br
+                      span 74.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/combo-nuoiconkhongphailacuocchien.jpg')
+                    .col-sm-3
+                      span Combo Nu&ocirc;i Con Kh&ocirc;ng Ph&#x1EA3;i L&agrave; Cu&#x1ED9;c Chi&#x1EBF;n
+                      br
+                      span 80.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/combomebietluoiconnennguoi+mebinh.jpg')
+                    .col-sm-3
+                      span Combo M&#x1EB9; Bi&#x1EBF;t L&#x1B0;&#x1EDD;i Con N&ecirc;n Ng&#x1B0;&#x1EDD;i
+                      br
+                      span 99.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/connghidimekhongbiet.jpg')
+                    .col-sm-3
+                      span Con Ngh&itilde; &Dstrok;i M&#x1EB9; Kh&ocirc;ng Bi&#x1EBF;t
+                      br
+                      span 77.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/dayconyeusach-gieomamtinhcach.jpg')
+                    .col-sm-3
+                      span D&#x1EA1;y Con Y&ecirc;u S&aacute;ch Gieo M&#x1EA7;m T&iacute;nh C&aacute;ch
+                      br
+                      span 78.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/deconduocom.jpg')
+                    .col-sm-3
+                      span &Dstrok;&#x1EC3; Con &Dstrok;&#x1B0;&#x1EE3;c &#x1ED0;m
+                      br
+                      span 76.000&dstrok;
+                .item
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/nguoimethongminhselamthenay.jpg')
+                    .col-sm-3
+                      span Ng&#x1B0;&#x1EDD;i M&#x1EB9; Th&ocirc;ng Minh S&#x1EBD; L&agrave;m Th&#x1EBF; N&agrave;y
+                      br
+                      span 102.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/nguoimetothonlanguoithaytot.jpg')
+                    .col-sm-3
+                      span Ng&#x1B0;&#x1EDD;i M&#x1EB9; T&#x1ED1;t H&#x1A1;n L&agrave; Ng&#x1B0;&#x1EDD;i Th&#x1EA7;y T&#x1ED1;t
+                      br
+                      span 67.000&dstrok;
+                  .row
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/thoiquencuamenuoicontugiachoctap.jpg')
+                    .col-sm-3
+                      span Th&oacute;i Quen C&#x1EE7;a M&#x1EB9; Nu&ocirc;i Con T&#x1EF1; Gi&aacute;c H&#x1ECD;c T&#x1EAD;p
+                      br
+                      span 77.000&dstrok;
+                    .col-sm-3
+                      a(href='')
+                        img.thumbnail.img-responsive(src='uploads/images/sachnuoidaycon/vocungtannhanvocungyeuthuong.jpg')
+                    .col-sm-3
+                      span V&ocirc; C&ugrave;ng T&agrave;n Nh&#x1EAB;n V&ocirc; C&ugrave;ng Y&ecirc;u Th&#x1B0;&#x1A1;ng
+                      br
+                      span 82.000&dstrok;
+              a.left.carousel-control(href='#slide-5', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left
+              a.right.carousel-control(href='#slide-5', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right
+          .col-sm-4
+            a(href='')
+              img.img-responsive(src='uploads/images/sachnuoidaycon/WHO-350x415.jpg')
+        .row.visible-xs
+          .owl-carousel.owl-theme
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/baihatdanhchotremamnon.jpg')
+              .caption
+                span B&agrave;i H&aacute;t D&agrave;nh Cho Tr&#x1EBB; M&#x1EA7;m Non
+                br
+                span 60.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/biancuanaophai.jpg')
+              .caption
+                span B&iacute; &#x1EA8;n C&#x1EE7;a N&atilde;o Ph&#x1EA3;i
+                br
+                span 144.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/cho-den-mau-giao-thi-da-muon.jpg')
+              .caption
+                span Ch&#x1EDD; &Dstrok;&#x1EBF;n M&#x1EAB;u Gi&aacute;o Th&igrave; &Dstrok;&atilde; Mu&#x1ED9;n
+                br
+                span 74.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/combo-nuoiconkhongphailacuocchien.jpg')
+              .caption
+                span Combo Nu&ocirc;i Con Kh&ocirc;ng Ph&#x1EA3;i L&agrave; Cu&#x1ED9;c Chi&#x1EBF;n
+                br
+                span 80.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/combomebietluoiconnennguoi+mebinh.jpg')
+              .caption
+                span Combo M&#x1EB9; Bi&#x1EBF;t L&#x1B0;&#x1EDD;i Con N&ecirc;n Ng&#x1B0;&#x1EDD;i
+                br
+                span 99.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/connghidimekhongbiet.jpg')
+              .caption
+                span Con Ngh&itilde; &Dstrok;i M&#x1EB9; Kh&ocirc;ng Bi&#x1EBF;t
+                br
+                span 77.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/dayconyeusach-gieomamtinhcach.jpg')
+              .caption
+                span D&#x1EA1;y Con Y&ecirc;u S&aacute;ch Gieo M&#x1EA7;m T&iacute;nh C&aacute;ch
+                br
+                span 78.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/deconduocom.jpg')
+              .caption
+                span &Dstrok;&#x1EC3; Con &Dstrok;&#x1B0;&#x1EE3;c &#x1ED0;m
+                br
+                span 76.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/nguoimethongminhselamthenay.jpg')
+              .caption
+                span Ng&#x1B0;&#x1EDD;i M&#x1EB9; Th&ocirc;ng Minh S&#x1EBD; L&agrave;m Th&#x1EBF; N&agrave;y
+                br
+                span 102.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/nguoimetothonlanguoithaytot.jpg')
+              .caption
+                span Ng&#x1B0;&#x1EDD;i M&#x1EB9; T&#x1ED1;t H&#x1A1;n L&agrave; Ng&#x1B0;&#x1EDD;i Th&#x1EA7;y T&#x1ED1;t
+                br
+                span 67.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/thoiquencuamenuoicontugiachoctap.jpg')
+              .caption
+                span Th&oacute;i Quen C&#x1EE7;a M&#x1EB9; Nu&ocirc;i Con T&#x1EF1; Gi&aacute;c H&#x1ECD;c T&#x1EAD;p
+                br
+                span 77.000&dstrok;
+            .item
+              img.img-responsive.thumbnail(src='uploads/images/sachnuoidaycon/vocungtannhanvocungyeuthuong.jpg')
+              .caption
+                span V&ocirc; C&ugrave;ng T&agrave;n Nh&#x1EAB;n V&ocirc; C&ugrave;ng Y&ecirc;u Th&#x1B0;&#x1A1;ng
+                br
+                span 82.000&dstrok;
+        .text-center
+          a(href='sach-nuoi-day-con.html') Xem th&ecirc;m
+    br
+    #slide-6.carousel.slide(data-ride='carousel')
+      .carousel-inner
+        .item.active
+          .row
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/conan-1.png')
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/One-Piece-2.png')
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/Doremon-3.png')
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/Shin-4.png')
+        .item
+          .row
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/Thamtu-Kindaichi-5.png')
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/YoGiOh-6.png')
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/Dragon-ball-7.png')
+            .col-xs-3
+              a(href='')
+                img.img-responsive(src='uploads/images/hoathinh/Pokemon-8.png')
+      a.left.carousel-control(href='#slide-6', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href='#slide-6', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+    br
+    .quangcao-2
+      .row
+        .col-xs-6
+          a(href='')
+            img.img-responsive(src='uploads/images/quangcao/van-phong-pham-570.png')
+        .col-xs-6
+          a(href='')
+            img.img-responsive(src='uploads/images/quangcao/dochoi-570x186.jpg')
+    br
+    .nhataitro
+      .row
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/cambridge.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/cengage.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/hachette.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/Harper-Collins.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/macgrawhill.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/macmillan.jpg')
+      br
+      .row
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/oxford.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/paragon.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/pearson---longman.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/penguin.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/sterling.jpg')
+        .col-xs-2
+          a(href='')
+            img.img-responsive(src='uploads/images/nhataitro/usborn.jpg')
+// /CONTENT
+
+include footer

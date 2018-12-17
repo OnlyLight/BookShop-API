@@ -1,0 +1,384 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/sach-items.css')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  link(rel='shortcut icon', href='img/logo/favicon.ico', type='image/x-icon')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/back-to-top.js')
+  script(src='https://unpkg.com/axios/dist/axios.min.js')
+  script(src='js/JS-code/render.js')
+  script(src='js/JS-code/render.teach.js')
+  script(src='js/JS-code/login.js')
+  title FAHASA.com
+include header
+
+include login
+// CONTENT
+#content-sachnuoidaycon.hidden-xs
+  br
+  .container
+    .row
+      .col-sm-3
+        .stv-left
+          .title
+            span MUA THEO
+            hr
+          br
+          div
+            span.title2 GI&Aacute;
+            br
+            br
+            label T&#x1EEB; 
+            input(type='text', name='giaduoi', autocomplete='off')
+            label  &dstrok;&#x1EBF;n 
+            input(type='text', name='giatrên', autocomplete='off')
+          br
+          br
+          span.title2 TH&#x1AF;&#x1A0;NG HI&#x1EC6;U
+          br
+          .box
+            input(type='checkbox')
+            span.text-check MCBooks
+          br
+          span.title2 H&Igrave;NH TH&#x1EE8;C
+          br
+          .box
+            input(type='checkbox')
+            span.text-check B&Igrave;A M&#x1EC0;M
+            br
+            input(type='checkbox')
+            span.text-check B&Igrave;A C&#x1EE8;NG
+            br
+          br
+          span.title2 XU&#x1EA4;T X&#x1EE8; TH&#x1AF;&#x1A0;NG HI&#x1EC6;U
+          br
+          .box
+            input(type='checkbox')
+            span.text-check Vi&#x1EC7;t Nam
+          br
+          span.title2 NH&Agrave; CUNG C&#x1EA4;P
+          br
+          .box
+            input(type='checkbox')
+            span.text-check FIRST NEWS
+            br
+            input(type='checkbox')
+            span.text-check Alpha Books
+            br
+            input(type='checkbox')
+            span.text-check NXB Ph&#x1EE5; N&#x1EEF;
+            br
+            input(type='checkbox')
+            span.text-check MCBooks
+            br
+            input(type='checkbox')
+            span.text-check &Dstrok;inh T&#x1EF5;
+            br
+            input(type='checkbox')
+            span.text-check Th&aacute;i H&agrave; Books
+            br
+            input(type='checkbox')
+            span.text-check Minh Long
+            br
+            input(type='checkbox')
+            span.text-check Kim &Dstrok;&#x1ED3;ng
+            br
+            ul.nav
+              li
+                a.text-right.link-left(href='') Xem th&ecirc;m
+        br
+        a(href='')
+          img.img-responsive(src='img/quangcao/REVIEW-270x176.jpg')
+        br
+        a(href='')
+          img.img-responsive(src='img/quangcao/Ma-gioi-thieu-270x176.jpg')
+      .col-sm-9
+        .stv-right
+          .row
+            .col-sm-2
+              .dropdown
+                button.btn.btn-default.dropdown-toggle.btn1(data-toggle='dropdown') S&#x1EAF;p x&#x1EBF;p...
+                ul.dropdown-menu.nav.drop-sapxep
+                  li
+                    a(href='') B&aacute;n ch&#x1EA1;y tu&#x1EA7;n
+                  li
+                    a(href='') B&aacute;n ch&#x1EA1;y th&aacute;ng
+                  li
+                    a(href='') B&aacute;n ch&#x1EA1;y n&abreve;m
+                  li
+                    a(href='') N&#x1ED5;i b&#x1EAD;t tu&#x1EA7;n
+                  li
+                    a(href='') N&#x1ED5;i b&#x1EAD;t th&aacute;ng
+                  li
+                    a(href='') N&#x1ED5;i b&#x1EAD;t n&abreve;m
+                  li
+                    a(href='') Chi&#x1EBF;t kh&#x1EA5;u
+                  li
+                    a(href='') Gi&aacute; b&aacute;n
+                  li
+                    a(href='') M&#x1EDB;i nh&#x1EA5;t
+            .col-sm-2
+              .dropdown
+                button.btn.btn-default.dropdown-toggle.btn2(data-toggle='dropdown') S&#x1EA3;n ph&#x1EA9;m
+                ul.dropdown-menu.nav.drop-sanpham
+                  li
+                    a(href='') 12 S&#x1EA3;n ph&#x1EA9;m
+                  li
+                    a(href='') 24 S&#x1EA3;n ph&#x1EA9;m
+                  li
+                    a(href='') 48 S&#x1EA3;n ph&#x1EA9;m
+          br
+          br
+          #render-teach.row
+            .col-sm-3
+              a(href='')
+                img.thumbnail.img-responsive(src='img/sachnuoidaycon/deconduocom.jpg')
+              .caption
+                span &Dstrok;&#x1EC3; Con &Dstrok;&#x1B0;&#x1EE3;c &#x1ED0;m
+                br
+                span 76.000&dstrok;
+            .col-sm-3
+              a(href='')
+                img.thumbnail.img-responsive(src='img/sachnuoidaycon/vocungtannhanvocungyeuthuong.jpg')
+              .caption
+                span V&ocirc; C&ugrave;ng T&agrave;n Nh&#x1EAB;n V&ocirc; C&ugrave;ng Y&ecirc;u Th&#x1B0;&#x1A1;ng
+                br
+                span 82.000&dstrok;
+            .col-sm-3
+              a(href='')
+                img.thumbnail.img-responsive(src='img/sachnuoidaycon/nguoimetothonlanguoithaytot.jpg')
+              .caption
+                span Ng&#x1B0;&#x1EDD;i M&#x1EB9; T&#x1ED1;t H&#x1A1;n L&agrave; Ng&#x1B0;&#x1EDD;i Th&#x1EA7;y T&#x1ED1;t
+                br
+                span 67.000&dstrok;
+            .col-sm-3
+              a(href='')
+                img.thumbnail.img-responsive(src='img/sachnuoidaycon/connghidimekhongbiet.jpg')
+              .caption
+                span Con Ngh&itilde; &Dstrok;i M&#x1EB9; Kh&ocirc;ng Bi&#x1EBF;t
+                br
+                span 77.000&dstrok;
+          .row
+            .col-sm-2
+              .dropdown
+                button.btn.btn-default.dropdown-toggle.btn3(data-toggle='dropdown') S&#x1EAF;p x&#x1EBF;p...
+                ul.dropdown-menu.nav.drop-sapxep1
+                  li
+                    a(href='') B&aacute;n ch&#x1EA1;y tu&#x1EA7;n
+                  li
+                    a(href='') B&aacute;n ch&#x1EA1;y th&aacute;ng
+                  li
+                    a(href='') B&aacute;n ch&#x1EA1;y n&abreve;m
+                  li
+                    a(href='') N&#x1ED5;i b&#x1EAD;t tu&#x1EA7;n
+                  li
+                    a(href='') N&#x1ED5;i b&#x1EAD;t th&aacute;ng
+                  li
+                    a(href='') N&#x1ED5;i b&#x1EAD;t n&abreve;m
+                  li
+                    a(href='') Chi&#x1EBF;t kh&#x1EA5;u
+                  li
+                    a(href='') Gi&aacute; b&aacute;n
+                  li
+                    a(href='') M&#x1EDB;i nh&#x1EA5;t
+            .col-sm-2
+              .dropdown
+                button.btn.btn-default.dropdown-toggle.btn4(data-toggle='dropdown') S&#x1EA3;n ph&#x1EA9;m
+                ul.dropdown-menu.nav.drop-sanpham1
+                  li
+                    a(href='') 12 S&#x1EA3;n ph&#x1EA9;m
+                  li
+                    a(href='') 24 S&#x1EA3;n ph&#x1EA9;m
+                  li
+                    a(href='') 48 S&#x1EA3;n ph&#x1EA9;m
+            .col-sm-8
+              ul#render-pag.pagination.navbar-right
+                li.active
+                  a.link-page(href='') 1
+                li
+                  a.link-page(href='') 2
+                li
+                  a.link-page(href='') 3
+                li
+                  a.link-page(href='') 4
+                li
+                  a.link-page(href='') 5
+#content-stv-xs.visible-xs
+  .container-fluid
+    .sach-top-xs
+      .row
+        .col-xs-12
+          .dropdown
+            button.btn.btn-default.dropdown-toggle.btn1(data-toggle='dropdown') S&#x1EAF;p x&#x1EBF;p...
+            ul.dropdown-menu.nav.drop-sapxep
+              li
+                a(href='') B&aacute;n ch&#x1EA1;y tu&#x1EA7;n
+              li
+                a(href='') B&aacute;n ch&#x1EA1;y th&aacute;ng
+              li
+                a(href='') B&aacute;n ch&#x1EA1;y n&abreve;m
+              li
+                a(href='') N&#x1ED5;i b&#x1EAD;t tu&#x1EA7;n
+              li
+                a(href='') N&#x1ED5;i b&#x1EAD;t th&aacute;ng
+              li
+                a(href='') N&#x1ED5;i b&#x1EAD;t n&abreve;m
+              li
+                a(href='') Chi&#x1EBF;t kh&#x1EA5;u
+              li
+                a(href='') Gi&aacute; b&aacute;n
+              li
+                a(href='') M&#x1EDB;i nh&#x1EA5;t
+      br
+      br
+      .row
+        .col-xs-6
+          a(href='')
+            img.thumbnail.img-responsive(src='img/sachnuoidaycon/deconduocom.jpg')
+            .caption
+              span &Dstrok;&#x1EC3; Con &Dstrok;&#x1B0;&#x1EE3;c &#x1ED0;m
+              br
+              span 76.000&dstrok;
+        .col-xs-6
+          a(href='')
+            img.thumbnail.img-responsive(src='img/sachnuoidaycon/vocungtannhanvocungyeuthuong.jpg')
+            .caption
+              span V&ocirc; C&ugrave;ng T&agrave;n Nh&#x1EAB;n V&ocirc; C&ugrave;ng Y&ecirc;u Th&#x1B0;&#x1A1;ng
+              br
+              span 82.000&dstrok;
+      br
+      .row
+        .col-xs-6
+          a(href='')
+            img.thumbnail.img-responsive(src='img/sachnuoidaycon/nguoimetothonlanguoithaytot.jpg')
+            .caption
+              span Ng&#x1B0;&#x1EDD;i M&#x1EB9; T&#x1ED1;t H&#x1A1;n L&agrave; Ng&#x1B0;&#x1EDD;i Th&#x1EA7;y T&#x1ED1;t
+              br
+              span 67.000&dstrok;
+        .col-xs-6
+          a(href='')
+            img.thumbnail.img-responsive(src='img/sachnuoidaycon/connghidimekhongbiet.jpg')
+            .caption
+              span Con Ngh&itilde; &Dstrok;i M&#x1EB9; Kh&ocirc;ng Bi&#x1EBF;t
+              br
+              span 77.000&dstrok;
+      br
+      .row
+        br
+        .col-xs-12
+          ul.pagination.navbar-right
+            li.active
+              a.link-page(href='') 1
+            li
+              a.link-page(href='') 2
+            li
+              a.link-page(href='') 3
+            li
+              a.link-page(href='') 4
+            li
+              a.link-page(href='') 5
+    .sach-bottom-xs
+      .stv-left
+        .title
+          hr
+          span MUA THEO
+          hr
+        div
+          span.title2 NH&Oacute;M S&#x1EA2;N PH&#x1EA8;M
+          br
+          span(style='color: #737373') S&aacute;ch Ti&#x1EBF;ng Vi&#x1EC7;t
+          br
+          span.title2(style='color: orange') S&aacute;ch t&acirc;m l&yacute; - k&itilde; n&abreve;ng s&#x1ED1;ng
+          ul.nav
+            li
+              a.link-left(href='') K&itilde; N&abreve;ng S&#x1ED1;ng
+            li
+              a.link-left(href='') R&egrave;n Luy&#x1EC7;n Nh&acirc;n C&aacute;ch
+            li
+              a.link-left(href='') T&acirc;m L&yacute;
+            li
+              a.link-left(href='') S&aacute;ch Cho Tu&#x1ED5;i M&#x1EDB;i L&#x1EDB;n
+            li
+              a.link-left(href='') Chicken Soup - H&#x1EA1;t Gi&#x1ED1;ng T&acirc;m H&#x1ED3;n
+        hr
+        div
+          span.title2 GI&Aacute;
+          br
+          br
+          label T&#x1EEB; 
+          input(type='text', name='giaduoi', autocomplete='off')
+          label  &dstrok;&#x1EBF;n 
+          input(type='text', name='giatrên', autocomplete='off')
+        br
+        br
+        span.title2 TH&#x1AF;&#x1A0;NG HI&#x1EC6;U
+        br
+        .box
+          input(type='checkbox')
+          span.text-check MCBooks
+        br
+        span.title2 H&Igrave;NH TH&#x1EE8;C
+        br
+        .box
+          input(type='checkbox')
+          span.text-check B&Igrave;A M&#x1EC0;M
+          br
+          input(type='checkbox')
+          span.text-check B&Igrave;A C&#x1EE8;NG
+          br
+        br
+        span.title2 XU&#x1EA4;T X&#x1EE8; TH&#x1AF;&#x1A0;NG HI&#x1EC6;U
+        br
+        .box
+          input(type='checkbox')
+          span.text-check Vi&#x1EC7;t Nam
+        br
+        span.title2 NH&Agrave; CUNG C&#x1EA4;P
+        br
+        .box
+          input(type='checkbox')
+          span.text-check FIRST NEWS
+          br
+          input(type='checkbox')
+          span.text-check Alpha Books
+          br
+          input(type='checkbox')
+          span.text-check NXB Ph&#x1EE5; N&#x1EEF;
+          br
+          input(type='checkbox')
+          span.text-check MCBooks
+          br
+          input(type='checkbox')
+          span.text-check &Dstrok;inh T&#x1EF5;
+          br
+          input(type='checkbox')
+          span.text-check Th&aacute;i H&agrave; Books
+          br
+          input(type='checkbox')
+          span.text-check Minh Long
+          br
+          input(type='checkbox')
+          span.text-check Kim &Dstrok;&#x1ED3;ng
+          br
+          ul.nav
+            li
+              a.text-right.link-left(href='') Xem th&ecirc;m
+      br
+      .row
+        .col-xs-6
+          a(href='')
+            img.img-responsive(src='img/quangcao/REVIEW-270x176.jpg')
+        .col-xs-6
+          a(href='')
+            img.img-responsive(src='img/quangcao/Ma-gioi-thieu-270x176.jpg')
+// /CONTENT
+include footer

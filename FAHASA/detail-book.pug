@@ -1,0 +1,202 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/chitietsach.css')
+  link(rel='shortcut icon', href='img/logo/favicon.ico', type='image/x-icon')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/back-to-top.js')
+  script(src='https://unpkg.com/axios/dist/axios.min.js')
+  script(src='js/JS-code/render.js')
+  script(src='js/JS-code/render.detail.js')
+  script(src='js/JS-code/login.js')
+  title FAHASA.com
+include header
+
+include login
+// CONTENT
+#content-detail
+  .container
+    .content1
+      .row
+        #show-img.col-sm-3.col-xs-12
+          img.img-responsive(src='uploads/images/sachtiengviet/cauchuyenbennoilau.jpg')
+        .col-sm-6.col-xs-12
+          #show-detail
+            span.tensach C&acirc;u Chuy&#x1EC7;n B&ecirc;n N&#x1ED3;i L&#x1EAB;u
+            br
+            span.gia 63.000&dstrok;
+          br
+          div
+            label S&#x1ED1; l&#x1B0;&#x1EE3;ng: 
+            input(type='number', name='soluong', value='1', autocomplete='off', maxlength='2')
+            a.mua(href='') CH&#x1ECC;N MUA
+            br
+            br
+            a.yeuthich(href='')
+              span.glyphicon.glyphicon-heart
+              |  Y&ecirc;u th&iacute;ch
+            a.edit(href='')
+              span.glyphicon.glyphicon-edit
+              |  Th&ecirc;m nh&#x1EAD;n x&eacute;t c&#x1EE7;a b&#x1EA1;n
+          br
+          .review
+            span Review m&#x1ED9;t &dstrok;o&#x1EA1;n &dstrok;&#x1EA7;u trong cu&#x1ED1;n s&aacute;ch
+        .col-sm-3.col-right.hidden-xs
+          br
+          .link-col-right
+            span T&ecirc;n Nh&agrave; cung c&#x1EA5;p: 
+          hr
+          .link-col-right
+            span H&igrave;nh th&#x1EE9;c: 
+          hr
+          .link-col-right
+            span T&igrave;nh tr&#x1EA1;ng: 
+          hr
+          ul.link-end
+            li Top 100 s&aacute;ch b&aacute;n ch&#x1EA1;y
+            li Th&ocirc;ng tin m&atilde; gi&#x1EA3;m gi&aacute;
+            li &#x1AF;u &dstrok;&atilde;i H&#x1ECD;c Sinh Sinh Vi&ecirc;n
+            li Review hay, nh&#x1EAD;n F-Point
+  br
+  .container
+    .bangchitiet
+      .thongtinkhac
+        span Th&ocirc;ng tin kh&aacute;c
+      table#load-detail
+        tr
+          th M&atilde; h&agrave;ng
+          td
+        tr
+          th T&ecirc;n nh&agrave; cung c&#x1EA5;p
+          td
+        tr
+          th T&aacute;c gi&#x1EA3;
+          td
+        tr
+          th Nh&agrave; xu&#x1EA5;t b&#x1EA3;n
+          td
+        tr
+          th N&abreve;m xu&#x1EA5;t b&#x1EA3;ng
+          td
+        tr
+          th K&iacute;ch th&#x1B0;&#x1EDB;c
+          td
+        tr
+          th S&#x1ED1; trang
+          td
+        tr
+          th H&igrave;nh th&#x1EE9;c
+          td
+        tr
+          th Ng&ocirc;n ng&#x1EEF;
+          td
+  br
+  .container
+    .nhanxet-customer
+      .customer
+        h3 Kh&aacute;ch H&agrave;ng Nh&#x1EAD;n X&eacute;t
+        hr
+      .div-nhanxet
+        h4 Ti&ecirc;u &dstrok;&#x1EC1; nh&#x1EAD;n x&eacute;t
+        h4.glyphicon.glyphicon-star
+        h4.glyphicon.glyphicon-star
+        h4.glyphicon.glyphicon-star
+        h4.glyphicon.glyphicon-star
+        h4.glyphicon.glyphicon-star
+        br
+        span 0
+        span  l&#x1B0;&#x1EE3;t th&iacute;ch.
+        a.like(href='')
+          strong  Th&iacute;ch
+        span  ho&#x1EB7;c
+        a.baocao(href='')
+          strong  B&aacute;o c&aacute;o
+        br
+        br
+        span.camon(style='color: red')
+        span Nh&#x1EAD;n x&eacute;t b&#x1EDF;i
+        span(style='color: #2aabd2;')  T&ecirc;n customer
+        span  v&agrave;o ng&agrave;y (...date...)
+        br
+        br
+        span Nh&#x1EAD;n x&eacute;t...
+  br
+  .container
+    .form-nhanxet
+      .danhgiasp
+        span B&#x1EA1;n &dstrok;&aacute;nh gi&aacute; s&#x1EA3;n ph&#x1EA9;m n&agrave;y th&#x1EBF; n&agrave;o?
+        br
+        br
+        table
+          tr
+            th Ch&#x1EA5;t l&#x1B0;&#x1EE3;ng
+            th 1 sao
+            th 2 sao
+            th 3 sao
+            th 4 sao
+            th 5 sao
+          tr
+            th &Dstrok;&aacute;nh gi&aacute;
+            td
+              input(type='radio', name='1sao')
+            td
+              input(type='radio', name='2sao')
+            td
+              input(type='radio', name='3sao')
+            td
+              input(type='radio', name='4sao')
+            td
+              input(type='radio', name='5sao')
+      br
+      br
+      form(action='', method='post')
+        label T&ecirc;n c&#x1EE7;a b&#x1EA1;n
+        input.form-control(type='text', name='tenrieng', autocomplete='off', value='Thuc')
+        br
+        label Nh&#x1EAD;n x&eacute;t
+        textarea.form-control(name='nhanxet')
+      br
+      br
+      .tieuchidanhgia
+        strong Ti&ecirc;u ch&iacute; x&eacute;t duy&#x1EC7;t nh&#x1EAD;n x&eacute;t:
+        br
+        ul
+          li
+            | &Dstrok;&#x1B0;&#x1EE3;c vi&#x1EBF;t b&#x1EB1;ng ti&#x1EBF;ng Vi&#x1EC7;t, vi&#x1EBF;t hoa &dstrok;&#x1EA7;u d&ograve;ng, c&oacute; d&#x1EA5;u, kh&ocirc;ng &dstrok;&#x1B0;&#x1EE3;c vi&#x1EBF;t t&#x1EAF;t, k&yacute; t&#x1EF1; kh&ocirc;ng r&otilde; ngh&itilde;a v&agrave; kh&ocirc;ng &dstrok;&#x1B0;&#x1EE3;c tr&ugrave;ng l&#x1EB7;p.
+          li
+            | N&#x1ED9;i dung ph&#x1EA3;i do ch&iacute;nh ng&#x1B0;&#x1EDD;i g&#x1EED;i nh&#x1EAD;n x&eacute;t vi&#x1EBF;t v&agrave; ch&#x1B0;a t&#x1EEB;ng &dstrok;&#x1B0;&#x1EE3;c &dstrok;&abreve;ng tr&ecirc;n c&aacute;c website, di&#x1EC5;n &dstrok;&agrave;n kh&aacute;c.
+          li
+            | Nh&#x1EAD;n x&eacute;t ph&#x1EA3;i d&#x1EF1;a tr&ecirc;n tr&#x1EA3;i nghi&#x1EC7;m, c&#x1EA3;m nh&#x1EAD;n th&#x1EF1;c t&#x1EBF; c&#x1EE7;a kh&aacute;ch h&agrave;ng v&#x1EC1; s&#x1EA3;n ph&#x1EA9;m, n&ecirc;u r&otilde; &dstrok;i&#x1EC3;m t&#x1ED1;t ho&#x1EB7;c ch&#x1B0;a t&#x1ED1;t c&#x1EE7;a s&#x1EA3;n ph&#x1EA9;m.
+          li
+            | Nh&#x1EAD;n x&eacute;t mang t&iacute;nh qu&#x1EA3;ng c&aacute;o, k&ecirc;u g&#x1ECD;i mua s&#x1EA3;n ph&#x1EA9;m kh&ocirc;ng li&ecirc;n quan s&#x1EBD; kh&ocirc;ng &dstrok;&#x1B0;&#x1EE3;c ch&#x1EA5;p nh&#x1EAD;n.
+          li Kh&ocirc;ng nh&#x1EAD;n x&eacute;t &aacute;c &yacute;, ti&ecirc;u c&#x1EF1;c nh&#x1EB1;m b&ocirc;i x&#x1EA5;u s&#x1EA3;n ph&#x1EA9;m.
+          li
+            | B&agrave;i vi&#x1EBF;t s&#x1EBD; &dstrok;&#x1B0;&#x1EE3;c Fahasa.com ph&ecirc; duy&#x1EC7;t tr&#x1B0;&#x1EDB;c khi &dstrok;&#x1B0;&#x1EE3;c &dstrok;&abreve;ng c&ocirc;ng khai tr&ecirc;n website.
+          li
+            | M&#x1ECD;i th&#x1EAF;c m&#x1EAF;c li&ecirc;n quan &dstrok;&#x1EBF;n s&#x1EA3;n ph&#x1EA9;m ho&#x1EB7;c d&#x1ECB;ch v&#x1EE5; c&#x1EE7;a Fahasa b&#x1EA1;n vui l&ograve;ng g&#x1EED;i mail v&#x1EC1; ho&#x1EB7;c g&#x1ECD;i v&agrave;o Hotline 1900 63 64 67 &dstrok;&#x1EC3; &dstrok;&#x1B0;&#x1EE3;c h&#x1ED7; tr&#x1EE3; nhanh nh&#x1EA5;t.
+        strong Ti&ecirc;u ch&iacute; Review Hay - Nh&#x1EAD;n F-Point:
+        br
+        ul
+          li
+            | Nh&#x1EAD;n x&eacute;t t&#x1EEB; 500 k&yacute; t&#x1EF1; tr&#x1EDF; l&ecirc;n (t&iacute;nh t&#x1EEB; 250 t&#x1EEB; tr&#x1EDF; l&ecirc;n)  v&agrave; &dstrok;&#x1EA1;t ti&ecirc;u ch&iacute; x&eacute;t duy&#x1EC7;t nh&#x1B0; nh&#x1EAD;n x&eacute;t s&#x1EBD; &dstrok;&#x1B0;&#x1EE3;c t&iacute;nh l&agrave; REVIEW.
+          li
+            | B&agrave;i review h&#x1EE3;p l&#x1EC7; &dstrok;&atilde; &dstrok;&#x1B0;&#x1EE3;c x&eacute;t duy&#x1EC7;t v&agrave; hi&#x1EC3;n th&#x1ECB; tr&ecirc;n website s&#x1EBD; &dstrok;&#x1B0;&#x1EE3;c nh&#x1EAD;n th&ecirc;m 5.000 F-Point v&agrave;o t&agrave;i kho&#x1EA3;n mua h&agrave;ng t&#x1EA1;i Fahasa.com.
+          li
+            | B&agrave;i review &dstrok;&#x1B0;&#x1EE3;c nhi&#x1EC1;u l&#x1B0;&#x1EE3;t th&iacute;ch s&#x1EBD; nh&#x1EAD;n &dstrok;&#x1B0;&#x1EE3;c th&ecirc;m F-Point theo c&#x1A1; ch&#x1EBF;: T&#x1EEB; 10 l&#x1B0;&#x1EE3;t th&iacute;ch tr&#x1EDF; l&ecirc;n s&#x1EBD; nh&#x1EAD;n th&ecirc;m &dstrok;&#x1B0;&#x1EE3;c t&#x1ED1;i &dstrok;a 2.000 F-Point tr&ecirc;n m&#x1ED7;i b&agrave;i review.
+        div
+          a(href='')
+            img.img-responsive(src='uploads/images/quangcao/REVIEW-1263x80-446ae7.jpg')
+      br
+      .text-right
+        button.btn.btn-lg.btn-warning(type='button') G&#x1EED;i nh&#x1EAD;n x&eacute;t
+// /CONTENT
+include footer

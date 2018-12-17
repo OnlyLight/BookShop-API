@@ -1,0 +1,33 @@
+// LOGIN
+#login
+  .container
+    #modal-client.modal.fade(role='dialog')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') &times;
+            span.glyphicon.glyphicon-user
+            span.title-dangnhap &Dstrok;&Abreve;NG NH&#x1EAC;P
+          .modal-body
+            form(method='post')
+              .input-group
+                .input-group-addon
+                  span.glyphicon.glyphicon-envelope
+                input.form-control(type='text', name='username', placeholder='Nhập username', autocomplete='off')
+              .input-group
+                .input-group-addon
+                  span.glyphicon.glyphicon-lock
+                input.form-control(type='password', name='password', placeholder='Mật khẩu')
+              .checkbox
+                a(href='') Qu&ecirc;n m&#x1EAD;t kh&#x1EA9;u?
+              .button
+                button#btnSignIn.btn.btn-success.btn-block(type='button') &Dstrok;&Abreve;NG NH&#x1EAC;P
+              p
+                | Ch&#x1B0;a c&oacute; t&agrave;i kho&#x1EA3;n vui l&ograve;ng 
+                a(href='')  &Dstrok;&Abreve;NG K&Yacute;
+          .modal-footer
+            a(href='')
+              img(src='uploads/images/login/google.png')
+            a(href='')
+              img(src='uploads/images/login/facebook.png')
+// LOGIN

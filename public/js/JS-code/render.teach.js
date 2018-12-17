@@ -46,7 +46,7 @@ async function getListCategory() {
 function renderListCategory(items) {
 	var content = '';
 	for(var item of items) {
-		content += '<li><a href="sach-nuoi-day-con.html?category='+item.matheloai+'" class="link-left">'+item.tentheloai+'</a></li>';
+		content += '<li><a href="/category?category='+item.matheloai+'" class="link-left">'+item.tentheloai+'</a></li>';
 	}
 
 	$('.list-category').html(content);
@@ -57,7 +57,7 @@ function renderPag(items) {
 	var length = Math.ceil(items.length/4);
 	var _category = GetURLParameter('category');
 	for(var i = 0; i < length; i++) {
-		content += '<li><a href="sach-nuoi-day-con.html?category='+_category+'&_page='+(i+1)+'" class="link-page">'+(i+1)+'</a></li>';
+		content += '<li><a href="/category?category='+_category+'&_page='+(i+1)+'" class="link-page">'+(i+1)+'</a></li>';
 	}
 
 	$('#render-pag').html(content);

@@ -30,7 +30,7 @@ async function getListCategory() {
 function renderListCategory(items) {
 	var content = '';
 	for(var item of items) {
-		content += '<li><a href="sach-nuoi-day-con.html?category='+item.matheloai+'" class="link-left">'+item.tentheloai+'</a></li>';
+		content += '<li><a href="/category?category='+item.matheloai+'" class="link-left">'+item.tentheloai+'</a></li>';
 	}
 
 	$('.list-category').html(content);
@@ -39,7 +39,7 @@ function renderListCategory(items) {
 function render(items) {
 	var content = '';
 	for(var item of items) {
-		content += '<div class="item"><a href="detail-book.html?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';
+		content += '<div class="item"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';
 	}
 
 	$('#render-sachtv').html(content);
