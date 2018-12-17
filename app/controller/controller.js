@@ -39,9 +39,6 @@ exports.signup = (req, res) => {
 
 exports.signin = (req, res) => {
 	console.log("Sign-In");
-
-	res.header("Access-Control-Allow-Origin", "*");
-  	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	
 	User.findOne({
 		where: {

@@ -2,10 +2,11 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
  
 require('./app/router/router.js')(app);
+// app.use(app.router);
 
 const db = require('./app/config/db.config.js');
 
@@ -43,6 +44,14 @@ app.use("/api/users", users);
 app.use("/api/nhanxet", nhanxet);
 app.use("/api/sach", sach);
 app.use("/api/theloaisach", theloaisach);
+
+app.post('/test', function(req, res){
+	//tra ket qua cho client
+	// res.render("index");
+	req.body.duy = 'duy';
+	console.log('body: ', req.body.duy);
+  	console.log('query: ', req.query);
+});
 
 app.get('/', function(req, res){
 	//tra ket qua cho client

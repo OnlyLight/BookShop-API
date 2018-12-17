@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	// redirect('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTQ1MDE0NzU1LCJleHAiOjE1NDUxMDExNTV9.Md8P0GIz6p2bMPUEGaUBlI7xvBpZaHWO46pJa8D88ms');
-
 	$("#btnSignIn").click(function () {
 
 		checkSignIn();
@@ -10,6 +8,7 @@ $(document).ready(function() {
 function checkSignIn() {
 	var username = $("input[name*='username']").val();
 	var password = $("input[name*='password']").val();
+	console.log(username + ' - ' + password);
 
 	axios({
 		method: 'post',
@@ -35,7 +34,7 @@ function redirect(value) {
 	}).then(function (res) {
 		console.log("redirect user !!!");
 		console.log(res.data);
-		location.href = "/"
+		// location.href = "/"
 	}).catch(function (error) {
 		console.log(error);
 	});
