@@ -1,0 +1,125 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  link(rel='shortcut icon', href='img/logo/favicon.ico', type='image/x-icon')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/back-to-top.js')
+  title FAHASA.com
+  link(rel='stylesheet', href='css/CSS-code/admin.css')
+include header
+
+include login
+// CONTENT
+br
+#admin-crud.hidden-md.hidden-xs.hidden-sm
+  .container
+    .link-top
+      ul.nav.nav-pills
+        li.active
+          a(href='#admin-page', data-toggle='pill') ADMIN PAGE
+        li
+          a(href='#theloai', data-toggle='pill') TH&#x1EC2; LO&#x1EA0;I S&Aacute;CH
+        li
+          a(href='#khosach', data-toggle='pill') KHO S&Aacute;CH
+        li
+          a(href='#user', data-toggle='pill') NG&#x1AF;&#x1EDC;I D&Ugrave;NG
+        li
+          a(href='#nhanxet', data-toggle='pill') NH&#x1EAC;N X&Eacute;T C&#x1EE6;A NG&#x1AF;&#x1EDC;I D&Ugrave;NG
+    .tab-content
+      #admin-page.tab-pane.fade.in.active
+        .text-center
+          br
+          br
+          br
+          h1 Hello ADMIN!
+          h3 Ch&uacute;c b&#x1EA1;n m&#x1ED9;t ng&agrave;y l&agrave;m vi&#x1EC7;c vui v&#x1EBB;!
+          br
+          br
+          br
+      #theloai.tab-pane.fade
+        h5.text-center
+          a.btn.btn-md.btn-success(href='add-theloai.html') TH&Ecirc;M M&#x1EDA;I TH&#x1EC2; LO&#x1EA0;I
+        table.tb-theloai
+          tr
+            th M&atilde; Th&#x1EC3; Lo&#x1EA1;i
+            th T&ecirc;n Th&#x1EC3; Lo&#x1EA1;i
+            th Action
+          tr
+            td
+            td
+            td
+              a.btn.btn-sm.btn-warning(href='edit-theloai.html') EDIT
+              a.btn.btn-sm.btn-danger(href='') DELETE
+      #khosach.tab-pane.fade
+        h5.text-center
+          a.btn.btn-md.btn-success(href='add-sach.html') TH&Ecirc;M S&Aacute;CH M&#x1EDA;I
+        table.tb-khosach
+          tr
+            th ID S&aacute;ch
+            th T&ecirc;n S&aacute;ch
+            th Gi&aacute;
+            th T&ecirc;n T&aacute;c Gi&#x1EA3;
+            th H&igrave;nh Th&#x1EE9;c
+            th S&#x1ED1; Trang
+            th M&atilde; Th&#x1EC3; Lo&#x1EA1;i
+            th Action
+          tr
+            td
+            td
+            td
+            td
+            td
+            td
+            td
+            td
+              a.btn.btn-sm.btn-warning(href='edit-sach.html') EDIT
+              a.btn.btn-sm.btn-danger(href='') DELETE
+      #user.tab-pane.fade
+        h5.text-center
+          a.btn.btn-md.btn-success(href='add-admin.html') TH&Ecirc;M ADMIN
+        table.tb-khosach
+          tr
+            th Email
+            th M&#x1EAD;t Kh&#x1EA9;u
+            th H&#x1ECD; T&ecirc;n
+            th Ng&agrave;y Sinh
+            th Gi&#x1EDB;i T&iacute;nh
+            th Quy&#x1EC1;n Truy C&#x1EAD;p
+            th Action
+          tr
+            td
+            td
+            td
+            td
+            td
+            td
+            td
+              a.btn.btn-sm.btn-warning(href='edit-user.html') EDIT
+              a.btn.btn-sm.btn-danger(href='') DELETE
+      #nhanxet.tab-pane
+        br
+        table.tb-khosach
+          tr
+            th T&ecirc;n Kh&aacute;ch H&agrave;ng
+            th T&ecirc;n S&aacute;ch
+            th Ng&agrave;y Nh&#x1EAD;n X&eacute;t
+            th L&#x1EDD;i Nh&#x1EAD;n X&eacute;t
+            th Action
+          tr
+            td
+            td
+            td
+            td
+            td
+              a.btn.btn-sm.btn-danger(href='') DELETE
+// /CONTENT
+include footer

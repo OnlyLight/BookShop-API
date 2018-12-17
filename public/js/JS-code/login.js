@@ -35,7 +35,7 @@ function redirect(value) {
 	}).then(function (res) {
 		console.log("redirect user !!!");
 		console.log(res.data);
-		location.href = "http://google.com"
+		location.href = "/"
 	}).catch(function (error) {
 		console.log(error);
 	});

@@ -59,6 +59,11 @@ app.get('/category', function(req, res){
 	res.render("category");
 });
 
+app.get('/admin', function(req, res){
+	//tra ket qua cho client
+	res.render("admin-crud");
+});
+
 function initial(){
 	Role.create({
 		id: 1,
