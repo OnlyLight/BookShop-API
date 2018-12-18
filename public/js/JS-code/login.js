@@ -33,9 +33,17 @@ function redirect(value) {
 		headers: {'x-access-token': value}
 	}).then(function (res) {
 		console.log("redirect user !!!");
-		console.log(res.data);
-		// location.href = "/"
+		console.log(res.data.user.roles);
+		redirectAdmin(res.data.user.roles);
 	}).catch(function (error) {
 		console.log(error);
 	});
+}
+
+function redirectAdmin(roles) {
+	for(role of roles) {
+		if(role.id === 2) {
+			location.href = "/admin";
+		}
+	}
 }
