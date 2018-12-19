@@ -1,0 +1,99 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  link(rel='shortcut icon', href='img/logo/favicon.ico', type='image/x-icon')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/back-to-top.js')
+  title FAHASA.com
+  link(rel='stylesheet', href='css/CSS-code/admin.css')
+include header
+
+include login
+// CONTENT
+#add-theloai.hidden-xs
+  .container
+    .content
+      h3.text-center Th&ecirc;m S&aacute;ch M&#x1EDB;i
+      .row
+        .col-sm-1
+        .col-sm-10
+          form(action='', method='post')
+            .row
+              .col-sm-6
+                .input-group
+                  label T&ecirc;n S&aacute;ch
+                  input.form-control(type='text', name='tensach')
+                br
+                .input-group
+                  label H&igrave;nh &#x1EA2;nh
+                  input.form-control(type='text', name='img')
+                br
+                .input-group
+                  label Gi&aacute; S&aacute;ch
+                  input.form-control(type='text', name='gia')
+                br
+                .input-group
+                  label T&aacute;c Gi&#x1EA3;
+                  input.form-control(type='text', name='tacgia')
+                br
+                .input-group
+                  label S&#x1ED1; Trang
+                  input.form-control(type='text', name='sotrang')
+                br
+                .input-group
+                  label K&iacute;ch Th&#x1B0;&#x1EDB;c
+                  input.form-control(type='text', name='kichthuoc')
+                br
+                .input-group
+                  label H&igrave;nh Th&#x1EE9;c
+                  input.form-control(type='text', name='hinhthuc')
+                br
+              .col-sm-6
+                .input-group
+                  label T&ecirc;n Nh&agrave; Cung C&#x1EA5;p
+                  input.form-control(type='text', name='tennhacc')
+                br
+                .input-group
+                  label Nh&agrave; Xu&#x1EA5;t B&#x1EA3;n
+                  input.form-control(type='text', name='nxb')
+                br
+                .input-group
+                  label N&abreve;m Xu&#x1EA5;t B&#x1EA3;n
+                  input.form-control(type='text', name='namxb')
+                br
+                .input-group
+                  label K&iacute;ch Th&#x1B0;&#x1EDB;c
+                  input.form-control(type='text', name='kichthuoc')
+                br
+                .input-group
+                  label T&igrave;nh Tr&#x1EA1;ng
+                  input.form-control(type='text', name='tinhtrang')
+                br
+                .input-group
+                  label N&#x1ED5;i B&#x1EAD;t
+                  input.form-control(type='text', name='noibat')
+                br
+                .input-group
+                  label Th&#x1EC3; Lo&#x1EA1;i S&aacute;ch
+                  input.form-control(type='text', name='hinhthuc')
+                br
+            .row
+              .col-sm-12
+                .input-group
+                  label Review S&aacute;ch
+                  textarea.form-control(name='review')
+            br
+            .text-center
+              button.btn.btn-lg.btn-success(type='submit') Th&ecirc;m S&aacute;ch
+        .col-sm-1
+// /CONTENT
+include footer

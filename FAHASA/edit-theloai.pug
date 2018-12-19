@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  link(rel='shortcut icon', href='img/logo/favicon.ico', type='image/x-icon')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/back-to-top.js')
+  title FAHASA.com
+  link(rel='stylesheet', href='css/CSS-code/admin.css')
+include header
+
+include login
+// CONTENT
+#add-theloai.hidden-xs
+  .container
+    h3.text-center Ch&#x1EC9;nh S&#x1EED;a Lo&#x1EA1;i S&aacute;ch
+    .row
+      .col-sm-3
+      .col-sm-6
+        form(action='', method='post')
+          .input-group
+            label T&ecirc;n Th&#x1EC3; Lo&#x1EA1;i S&aacute;ch
+            br
+            .input-group
+              input.form-control(type='text', name='tentheloai', value='Value...')
+          br
+          .text-right
+            button.btn.btn-sm.btn-warning(type='submit') S&#x1EED;a
+      .col-sm-3
+// /CONTENT
+include footer

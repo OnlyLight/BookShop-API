@@ -3,6 +3,10 @@ $(document).ready(function() {
 
 		checkSignIn();
 	});
+
+	$('#dangxuat').click(function() {
+		signout();
+	});
 });
 
 function checkSignIn() {
@@ -29,21 +33,18 @@ function checkSignIn() {
 function redirect(value) {
 	axios({
 		method: 'get',
-		url: 'http://localhost:3000/api/user',
+		url: 'http://localhost:3000/api/admin',
 		headers: {'x-access-token': value}
 	}).then(function (res) {
-		console.log("redirect user !!!");
-		console.log(res.data.user.roles);
-		redirectAdmin(res.data.user.roles);
+		console.log(res.data);
+		location.href = "/admin";
+		Cookies.set('login', value, { expires: 7, path: '/' });
 	}).catch(function (error) {
 		console.log(error);
 	});
 }
 
-function redirectAdmin(roles) {
-	for(role of roles) {
-		if(role.id === 2) {
-			location.href = "/admin";
-		}
-	}
+function signout() {
+	Cookies.remove('login', { path: '/' });
+	location.href = "/";
 }

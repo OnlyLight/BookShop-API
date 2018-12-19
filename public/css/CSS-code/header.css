@@ -154,6 +154,10 @@ body {
     width: 40px;
     height: auto;
 }
+
+.hide {
+    display: none;
+}
 /*/LOGIN*/
 
 /*RESPONSIVE*/
