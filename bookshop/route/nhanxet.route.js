@@ -7,6 +7,7 @@ router.get('/list', controller.list);
 router.get('/list/:id', controller.listByID);
 
 router.get('/search', controller.searchName);
+router.get('/filter', controller.filter);
 
 router.post('/create', controller.create);
 router.put('/update/:id', controller.update);

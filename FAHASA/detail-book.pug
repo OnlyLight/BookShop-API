@@ -14,10 +14,13 @@ head
   script(src='js/Library/bootstrap.min.js')
   script(src='js/JS-code/js-pages.js')
   script(src='js/JS-code/back-to-top.js')
-  script(src='https://unpkg.com/axios/dist/axios.min.js')
+  script(src='js/Library/axios.min.js')
+  script(src='js/Library/js.cookie.min.js')
   script(src='js/JS-code/render.js')
   script(src='js/JS-code/render.detail.js')
   script(src='js/JS-code/login.js')
+  script(src='js/JS-code/checkLogin.js')
+
   title FAHASA.com
 include header
 
@@ -50,7 +53,7 @@ include login
           br
           .review
             span Review m&#x1ED9;t &dstrok;o&#x1EA1;n &dstrok;&#x1EA7;u trong cu&#x1ED1;n s&aacute;ch
-        .col-sm-3.col-right.hidden-xs
+        #list-detail.col-sm-3.col-right.hidden-xs
           br
           .link-col-right
             span T&ecirc;n Nh&agrave; cung c&#x1EA5;p: 
@@ -103,10 +106,10 @@ include login
   .container
     .nhanxet-customer
       .customer
-        h3 Kh&aacute;ch H&agrave;ng Nh&#x1EAD;n X&eacute;t
+        h3 Khách Hàng Nhận Xét
         hr
       .div-nhanxet
-        h4 Ti&ecirc;u &dstrok;&#x1EC1; nh&#x1EAD;n x&eacute;t
+        h4 Tiêu để Nhận Xét
         h4.glyphicon.glyphicon-star
         h4.glyphicon.glyphicon-star
         h4.glyphicon.glyphicon-star
@@ -114,50 +117,20 @@ include login
         h4.glyphicon.glyphicon-star
         br
         span 0
-        span  l&#x1B0;&#x1EE3;t th&iacute;ch.
-        a.like(href='')
-          strong  Th&iacute;ch
-        span  ho&#x1EB7;c
-        a.baocao(href='')
-          strong  B&aacute;o c&aacute;o
+        span  Lượt thích
         br
         br
         span.camon(style='color: red')
-        span Nh&#x1EAD;n x&eacute;t b&#x1EDF;i
-        span(style='color: #2aabd2;')  T&ecirc;n customer
-        span  v&agrave;o ng&agrave;y (...date...)
-        br
-        br
-        span Nh&#x1EAD;n x&eacute;t...
+        #nhan-xet-cua-kh
+          span Nhận xét bởi
+          span(style='color: #2aabd2;')  Tên customer
+          span  Vào Ngày (...date...)
+          br
+          br
+          span Nhận Xét
   br
   .container
     .form-nhanxet
-      .danhgiasp
-        span B&#x1EA1;n &dstrok;&aacute;nh gi&aacute; s&#x1EA3;n ph&#x1EA9;m n&agrave;y th&#x1EBF; n&agrave;o?
-        br
-        br
-        table
-          tr
-            th Ch&#x1EA5;t l&#x1B0;&#x1EE3;ng
-            th 1 sao
-            th 2 sao
-            th 3 sao
-            th 4 sao
-            th 5 sao
-          tr
-            th &Dstrok;&aacute;nh gi&aacute;
-            td
-              input(type='radio', name='1sao')
-            td
-              input(type='radio', name='2sao')
-            td
-              input(type='radio', name='3sao')
-            td
-              input(type='radio', name='4sao')
-            td
-              input(type='radio', name='5sao')
-      br
-      br
       form(action='', method='post')
         label T&ecirc;n c&#x1EE7;a b&#x1EA1;n
         input.form-control(type='text', name='tenrieng', autocomplete='off', value='Thuc')

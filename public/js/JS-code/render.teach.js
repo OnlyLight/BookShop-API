@@ -66,7 +66,7 @@ function renderPag(items) {
 function render(items) {
 	var content = '';
 	for(var item of items) {
-		content += '<div class="col-sm-3"><a href="#"><img src="'+item.hinhanh+'" class="thumbnail img-responsive"></a><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'đ</span></div></div>';
+		content += '<div class="col-sm-3"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail img-responsive"></a><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'đ</span></div></div>';
 	}
 
 	$('#render-teach').html(content);

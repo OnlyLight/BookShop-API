@@ -36,16 +36,7 @@ function renderListCategory(items) {
 	$('.list-category').html(content);
 }
 
-function checkLogin() {
-	var cookie = Cookies.get('login');
-	if(cookie) {
-		$('#dangky').addClass('hide');
-		$('#dangnhap').addClass('hide');
-	}
-}
-
 function render(items) {
-	checkLogin();
 	var content = '';
 	for(var item of items) {
 		content += '<div class="item"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';

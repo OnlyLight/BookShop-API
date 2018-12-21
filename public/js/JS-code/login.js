@@ -38,13 +38,13 @@ function redirect(value) {
 	}).then(function (res) {
 		console.log(res.data);
 		location.href = "/admin";
-		Cookies.set('login', value, { expires: 7, path: '/' });
+		Cookies.set('login-admin', value, { expires: 7, path: '/' });
 	}).catch(function (error) {
 		console.log(error);
 	});
 }
 
 function signout() {
-	Cookies.remove('login', { path: '/' });
+	Cookies.remove('login-admin', { path: '/' });
 	location.href = "/";
 }
