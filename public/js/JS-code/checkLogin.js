@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 function renderHeader() {
 	$('#admin').removeClass('hide');
+	$('#info').removeClass('hide');
 	$('#dangky').addClass('hide');
 	$('#dangnhap').addClass('hide');
 }

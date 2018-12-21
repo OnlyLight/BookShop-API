@@ -22,6 +22,17 @@ module.exports.listByID = function (req, res) {
 	});
 };
 
+module.exports.searchUser = function (req, res) {
+	var search = req.query.search;
+	var sql = "SELECT * FROM users WHERE username LIKE '%"+search+"%'";
+	con.query(sql, function(err, results) {
+		// If Error crash here
+		if (err) throw err;
+		// If don't have Error return results
+		res.json(results);
+	});
+};
+
 // Search Name Product have in list products
 module.exports.searchEmail = function (req, res) {
 	var search = req.query.search;
@@ -49,10 +60,11 @@ module.exports.filter = function (req, res) {
 // Update Product By Id
 module.exports.update = function (req, res) {
 	var id = req.params.id;
+	var username = req.body.username;
 	var email = req.body.email;
 	var name = req.body.name;
 	var gender = req.body.gender;
-	var sql = "UPDATE users SET name = '"+name+"', email = '"+email+"', gender = '"+gender+"' WHERE id = '"+id+"'";
+	var sql = "UPDATE users SET name = '"+name+"', username = '"+username+"', email = '"+email+"', gender = '"+gender+"' WHERE id = '"+id+"'";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

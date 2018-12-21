@@ -73,6 +73,11 @@ app.get('/sign-up', function(req, res){
 	res.render("dang-ki");
 });
 
+app.get('/info-user', function(req, res){
+	//tra ket qua cho client
+	res.render("info-user");
+});
+
 app.get('/admin', function(req, res){
 	//tra ket qua cho client
 	res.render("admin-crud");

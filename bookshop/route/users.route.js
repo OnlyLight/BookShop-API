@@ -7,6 +7,7 @@ router.get('/list', controller.list);
 router.get('/list/:id', controller.listByID);
 
 router.get('/search', controller.searchEmail);
+router.get('/search-user', controller.searchUser);
 
 router.get('/filter', controller.filter);
 

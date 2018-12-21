@@ -16,6 +16,7 @@ head
   script(src='js/Library/js.cookie.min.js')
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/sign-up.js')
   title FAHASA.com
 include header
 
@@ -34,23 +35,23 @@ include login
               .gachchan
                 span ĐĂNG KÍ TÀI KHOẢN
             div
-              form(method='post')
+              form#submit(onSubmit();)
                 label Họ và Tên
-                input(type='text', name='name', autocomplete='off')
+                input(type='text', name='name-sign-in', autocomplete='off')
                 br
                 label User name
-                input(type='text', name='username', autocomplete='off')
+                input(type='text', name='username-sign-in', autocomplete='off')
                 br
                 label Email
-                input(type='email', name='email', autocomplete='off')
+                input(type='email', name='email-sign-in', autocomplete='off')
                 br
                 label Mật khẩu
-                input(type='password', name='password', autocomplete='off')
+                input(type='password', name='password-sign-in', autocomplete='off')
                 br
                 label Giới tính
-                input#male(type='radio', name='gender' value='0')
+                input#male(type='radio', name='gender-sign-in' value='0')
                 label(for="male") Nam &nbsp;&nbsp;&nbsp;
-                input#female(type='radio', name='gender' value='1')
+                input#female(type='radio', name='gender-sign-in' value='1')
                 label(for="female") Nữ
                 br
                 label

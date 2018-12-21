@@ -1,0 +1,119 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  link(rel='stylesheet', href='css/CSS-code/user.css')
+  link(rel='shortcut icon', href='img/logo/favicon.ico', type='image/x-icon')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/back-to-top.js')
+  script(src='js/Library/axios.min.js')
+  script(src='js/Library/js.cookie.min.js')
+  script(src='js/JS-code/login.js')
+  script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/info-user.js')
+
+  title FAHASA.com
+  
+include header
+
+include login
+br
+// CONTENT
+#content-info-user
+  .container
+    .row
+      .col-sm-3
+        .user-left
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu-left')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            span.navbar-brand(style='color: darkred;') T&Agrave;I KHO&#x1EA2;N
+          #menu-left.collapse.navbar-collapse
+            br
+            br
+            ul.nav
+              li
+                a(href='') B&#x1EA3;ng &dstrok;i&#x1EC1;u khi&#x1EC3;n t&agrave;i kho&#x1EA3;n
+              li
+                a(href='') Th&ocirc;ng tin t&agrave;i kho&#x1EA3;n
+              li
+                a(href='') S&#x1ED1; &dstrok;&#x1ECB;a ch&#x1EC9;
+              li
+                a(href='') &Dstrok;&#x1A1;n h&agrave;ng c&#x1EE7;a t&ocirc;i
+              li
+                a(href='') Nh&#x1EAD;n x&eacute;t c&#x1EE7;a t&ocirc;i
+              li
+                a(href='') Y&ecirc;u th&iacute;ch
+              li
+                a(href='') &Dstrok;&abreve;ng k&yacute; nh&#x1EAD;n tin &dstrok;i&#x1EC7;n t&#x1EED;
+              li
+                a(href='') T&agrave;i kho&#x1EA3;n F-point
+              li
+                a(href='') M&atilde; gi&#x1EDB;i thi&#x1EC7;u
+      .col-sm-9
+        .user-right
+          h3(style='color: darkred;') B&#x1EA2;NG TH&Ocirc;NG TIN T&Agrave;I KHO&#x1EA2;N
+          .thongtin
+            #render-info
+              span H&#x1ECD; v&agrave; t&ecirc;n: Phan Tr&#x1ECD;ng Th&#x1EE9;c
+              br
+              span Email: phanthuc115@gmail.com
+              br
+              span
+                | C&#x1EA5;p &dstrok;&#x1ED9; th&agrave;nh vi&ecirc;n: 
+                strong Th&acirc;n thi&#x1EBF;t
+            br
+            h4 Th&ocirc;ng tin t&agrave;i kho&#x1EA3;n
+            hr
+            .row
+              .col-sm-4
+                span F-point
+              .col-sm-6
+                span 0&dstrok;
+              .col-sm-2
+                a.text-right(href='') Xem th&ecirc;m
+            br
+            .row
+              .col-sm-4
+                span Freeship
+              .col-sm-6
+                span 0 l&#x1EA7;n
+              .col-sm-2
+                a.text-right(href='') Xem th&ecirc;m
+            br
+            .row
+              .col-sm-4
+                span B&#x1ECD;c s&aacute;ch
+              .col-sm-6
+                span S&#x1EAF;p di&#x1EC5;n ra
+              .col-sm-2
+                a.text-right(href='') Xem th&ecirc;m
+            br
+          br
+          br
+          div
+            h3(style='color: darkred') S&#x1ED4; &Dstrok;&#x1ECA;A CH&#x1EC8;
+            hr
+            .row
+              .col-sm-6
+                h4 &Dstrok;&#x1ECA;A CH&#x1EC8; THANH TO&Aacute;N M&#x1EB6;C &Dstrok;&#x1ECA;NH
+                span B&#x1EA1;n ch&#x1B0;a khai b&aacute;o &dstrok;&#x1ECB;a ch&#x1EC9; thanh to&aacute;n m&#x1EB7;c &dstrok;&#x1ECB;nh
+                br
+                a(href='') S&#x1EED;a &dstrok;&#x1ECB;a ch&#x1EC9;
+              .col-sm-6
+                h4 &Dstrok;&#x1ECA;A CH&#x1EC8; GIAO H&Agrave;NG M&#x1EB6;T &Dstrok;&#x1ECA;NH
+                span B&#x1EA1;n ch&#x1B0;a khai b&aacute;o &dstrok;&#x1ECB;a ch&#x1EC9; giao h&agrave;ng m&#x1EB7;c &dstrok;&#x1ECB;nh
+                br
+                a(href='') S&#x1EED;a &dstrok;&#x1ECB;a ch&#x1EC9;
+// /CONTENT
+include footer
