@@ -23,15 +23,15 @@
             li.active
               a.link-menu(href='/') HOME
             li
-              a#admin.hide(href='/admin') ADMIN
+              a.admin(href='#') ADMIN
             li
-              a#dangky(href='/sign-up') ĐĂNG KÝ
+              a.dangky(href='/sign-up') ĐĂNG KÝ
             li
-              a#info.hide(href='/info-user') THÔNG TIN
+              a.info.hide(href='/info-user') THÔNG TIN
             li
-              a#dangnhap(href='#') ĐĂNG NHẬP
+              a.dangnhap(href='#') ĐĂNG NHẬP
             li
-              a#dangxuat(href='#') ĐĂNG XUẤT
+              a.dangxuat(href='#') ĐĂNG XUẤT
     .header3
       .row
         .col-sm-3
@@ -168,11 +168,15 @@
               span.glyphicon.glyphicon-align-justify
             ul.dropdown-menu.nav.list-category
               li
-                a.link-left(href='dang-ki.html') &Dstrok;&Abreve;NG K&Yacute;
+                a.dangky.link-left(href='/sign-up') ĐĂNG KÝ
               li
-                a#dangnhap-xs.link-left(href='#') &Dstrok;&Abreve;NG NH&#x1EAC;P
+                a.admin.hide(href='#') ADMIN
               li
-                a.link-left(href='') &Dstrok;&Abreve;NG XU&#x1EA4;T
+                a.info.hide(href='/info-user') THÔNG TIN
+              li
+                a.dangnhap.dangnhap-xs.link-left(href='#') ĐĂNG NHẬP
+              li
+                a.link-left(href='') ĐĂNG XUẤT
               hr
               li
                 a.link-left(href='#') H&#x1ECD;c Ngo&#x1EA1;i Ng&#x1EEF;

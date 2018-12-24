@@ -6,15 +6,33 @@ $(document).ready(function() {
 			location.href = "/";
 		}
 	} else {
-		renderHeader();
+		renderHeaderAdminLogin();
+	}
+
+	if(checkLoginUser()) {
+		renderHeaderUserLogin();
 	}
 });
 
-function renderHeader() {
-	$('#admin').removeClass('hide');
-	$('#info').removeClass('hide');
-	$('#dangky').addClass('hide');
-	$('#dangnhap').addClass('hide');
+function renderHeaderUserLogin() {
+	$('.admin').addClass('hide');
+	$('.info').removeClass('hide');
+	$('.dangky').addClass('hide');
+	$('.dangnhap').addClass('hide');
+}
+
+function renderHeaderAdminLogin() {
+	$('.dangky').addClass('hide');
+	$('.dangnhap').addClass('hide');
+}
+
+function checkLoginUser() {
+    var cookie = Cookies.get('login-user');
+    console.log(cookie);
+	if(cookie) {
+		return true;
+	}
+	return false;
 }
 
 function checkLoginAdmin() {

@@ -13,8 +13,13 @@ head
   script(src='js/Library/jquery-3.3.1.min.js')
   script(src='js/Library/bootstrap.min.js')
   script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/js-home.js')
   script(src='js/JS-code/back-to-top.js')
+  script(src='js/Library/axios.min.js')
+  script(src='js/Library/js.cookie.min.js')
+  script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/add-theloai.js')
 
   title FAHASA.com
 
@@ -24,19 +29,19 @@ include login
 // CONTENT
 #add-theloai.hidden-xs
   .container
-    h3.text-center Th&ecirc;m Th&#x1EC3; Lo&#x1EA1;i S&aacute;ch
+    h3.text-center Thêm Thể Loại Sách
     .row
       .col-sm-3
       .col-sm-6
-        form(action='', method='post')
+        form(method='post')
           .input-group
-            label T&ecirc;n Th&#x1EC3; Lo&#x1EA1;i S&aacute;ch
+            label Tên Thể Loại Sách
             br
             .input-group
               input.form-control(type='text', name='tentheloai', autocomplete='off')
           br
           .text-right
-            button.btn.btn-sm.btn-success(type='submit') Th&ecirc;m
+            button#btnAddTheLoai.btn.btn-sm.btn-success(type='button') Thêm
       .col-sm-3
 // /CONTENT
 include footer

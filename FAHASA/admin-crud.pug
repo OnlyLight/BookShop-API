@@ -18,6 +18,7 @@ head
   script(src='js/Library/js.cookie.min.js')
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/admin-crud.js')
   
   title FAHASA.com
 include header
@@ -32,13 +33,13 @@ br
         li.active
           a(href='#admin-page', data-toggle='pill') ADMIN PAGE
         li
-          a(href='#theloai', data-toggle='pill') TH&#x1EC2; LO&#x1EA0;I S&Aacute;CH
+          a(href='#theloai', data-toggle='pill') THỂ LOẠI SÁCH
         li
-          a(href='#khosach', data-toggle='pill') KHO S&Aacute;CH
+          a(href='#khosach', data-toggle='pill') KHO SÁCH
         li
-          a(href='#user', data-toggle='pill') NG&#x1AF;&#x1EDC;I D&Ugrave;NG
+          a(href='#user', data-toggle='pill') NGƯỜI DÙNG
         li
-          a(href='#nhanxet', data-toggle='pill') NH&#x1EAC;N X&Eacute;T C&#x1EE6;A NG&#x1AF;&#x1EDC;I D&Ugrave;NG
+          a(href='#nhanxet', data-toggle='pill') NHẬN XÉT CỦA NGƯỜI DÙNG
     .tab-content
       #admin-page.tab-pane.fade.in.active
         .text-center
@@ -46,17 +47,17 @@ br
           br
           br
           h1 Hello ADMIN!
-          h3 Ch&uacute;c b&#x1EA1;n m&#x1ED9;t ng&agrave;y l&agrave;m vi&#x1EC7;c vui v&#x1EBB;!
+          h3 Chúc bạn một ngày làm việc vui vẻ!
           br
           br
           br
       #theloai.tab-pane.fade
         h5.text-center
-          a.btn.btn-md.btn-success(href='add-theloai.html') TH&Ecirc;M M&#x1EDA;I TH&#x1EC2; LO&#x1EA0;I
-        table.tb-theloai
+          a.btn.btn-md.btn-success(href='/add-theloai') THÊM MỚI THỂ LOẠI
+        table#render-theloai.tb-theloai
           tr
-            th M&atilde; Th&#x1EC3; Lo&#x1EA1;i
-            th T&ecirc;n Th&#x1EC3; Lo&#x1EA1;i
+            th Mã Thể Loại
+            th Tên Thể Loại
             th Action
           tr
             td
@@ -66,16 +67,16 @@ br
               a.btn.btn-sm.btn-danger(href='') DELETE
       #khosach.tab-pane.fade
         h5.text-center
-          a.btn.btn-md.btn-success(href='add-sach.html') TH&Ecirc;M S&Aacute;CH M&#x1EDA;I
-        table.tb-khosach
+          a.btn.btn-md.btn-success(href='/add-sach') THÊM MỚI SÁCH
+        table#render-book.tb-khosach
           tr
-            th ID S&aacute;ch
-            th T&ecirc;n S&aacute;ch
-            th Gi&aacute;
-            th T&ecirc;n T&aacute;c Gi&#x1EA3;
-            th H&igrave;nh Th&#x1EE9;c
-            th S&#x1ED1; Trang
-            th M&atilde; Th&#x1EC3; Lo&#x1EA1;i
+            th ID Sách
+            th Tên Sách
+            th Giá
+            th Tên Tác Giả
+            th Hình Thức
+            th Số Trang
+            th Mã Thể Loại
             th Action
           tr
             td
@@ -90,19 +91,15 @@ br
               a.btn.btn-sm.btn-danger(href='') DELETE
       #user.tab-pane.fade
         h5.text-center
-          a.btn.btn-md.btn-success(href='add-admin.html') TH&Ecirc;M ADMIN
+          a.btn.btn-md.btn-success(href='/add-admin') THÊM ADMIN
         table.tb-khosach
           tr
             th Email
-            th M&#x1EAD;t Kh&#x1EA9;u
-            th H&#x1ECD; T&ecirc;n
-            th Ng&agrave;y Sinh
-            th Gi&#x1EDB;i T&iacute;nh
-            th Quy&#x1EC1;n Truy C&#x1EAD;p
+            th Họ Tên
+            th Giới Tính
+            th Quyền Truy Cập
             th Action
           tr
-            td
-            td
             td
             td
             td

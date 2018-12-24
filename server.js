@@ -83,6 +83,21 @@ app.get('/admin', function(req, res){
 	res.render("admin-crud");
 });
 
+app.get('/add-theloai', function(req, res){
+	//tra ket qua cho client
+	res.render("add-theloai");
+});
+
+app.get('/add-sach', function(req, res){
+	//tra ket qua cho client
+	res.render("add-sach");
+});
+
+app.get('/add-admin', function(req, res){
+	//tra ket qua cho client
+	res.render("add-admin");
+});
+
 function initial(){
 	Role.create({
 		id: 1,

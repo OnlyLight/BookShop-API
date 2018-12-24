@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    $("#dangnhap, #dangnhap-xs").click(function () {
-       $("#modal-client").modal();
-    });
+    // $("#dangnhap, #dangnhap-xs").click(function () {
+    //    $("#modal-client").modal();
+    // });
 
     $(".danhmucsach-item", this).hide();
     $(".danhmucsach").click(function () {
