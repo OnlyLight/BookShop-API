@@ -19,6 +19,7 @@ head
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
   script(src='js/JS-code/admin-crud.js')
+  script(src='js/JS-code/delete-data.js')
   
   title FAHASA.com
 include header
@@ -92,7 +93,7 @@ br
       #user.tab-pane.fade
         h5.text-center
           a.btn.btn-md.btn-success(href='/add-admin') THÊM ADMIN
-        table.tb-khosach
+        table#render-users.tb-khosach
           tr
             th Email
             th Họ Tên
@@ -109,19 +110,6 @@ br
               a.btn.btn-sm.btn-danger(href='') DELETE
       #nhanxet.tab-pane
         br
-        table.tb-khosach
-          tr
-            th T&ecirc;n Kh&aacute;ch H&agrave;ng
-            th T&ecirc;n S&aacute;ch
-            th Ng&agrave;y Nh&#x1EAD;n X&eacute;t
-            th L&#x1EDD;i Nh&#x1EAD;n X&eacute;t
-            th Action
-          tr
-            td
-            td
-            td
-            td
-            td
-              a.btn.btn-sm.btn-danger(href='') DELETE
+        table#render-feedback.tb-khosach
 // /CONTENT
 include footer

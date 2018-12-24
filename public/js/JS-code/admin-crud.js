@@ -23,12 +23,12 @@ $(document).ready(function() {
     });
     // ////////////////////////
     
-    // getFeedback().then(function(values) {
-    //     console.log(values);
-	// 	renderTheLoai(values);
-	// }).catch(function(err) {
-	// 	console.log(err);
-	// });
+    getFeedback().then(function(values) {
+        console.log(values);
+		renderFeedback(values);
+	}).catch(function(err) {
+		console.log(err);
+	});
 });
 
 async function getListCategory() {
@@ -73,13 +73,21 @@ function renderBook(items) {
 	$('#render-book').html(content);
 }
 
-
 // Continute
 function renderUsers(items) {
-	var content = '<tr><th>Email</th><th>Họ Tên</th><th>Giới Tính</th><th>Quyền Truy Cập</th><th>Action</th></tr>';
+	var content = '<tr><th>Email</th><th>Họ Tên</th><th>User name</th><th>Giới Tính</th><th>Quyền Truy Cập</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '';
+		content += '<tr><td>'+item.email+'</td><td>'+item.name+'</td><td>'+item.username+'</td><td>'+item.gender+'</td><td>'+item.role_name+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-user.html">EDIT</a><a style="width: 80px;" class="btn btn-sm btn-danger" href="">DELETE</a></td></tr>';
 	}
 
-	$('#render-book').html(content);
+	$('#render-users').html(content);
+}
+
+function renderFeedback(items) {
+	var content = '<tr><th>Tên Khách Hàng</th><th>Tên Sách</th><th>Ngày Nhận Xét</th><th>Lời Nhận Xét</th><th>Action</th></tr>';
+	for(var item of items) {
+		content += '<tr><td>'+item.hoten+'</td><td>'+item.tensach+'</td><td>'+item.ngayhientai+'</td><td>'+item.nhanxet+'</td><td><button value="'+item.idnhanxet+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteNX">DELETE</button></td></tr>';
+	}
+
+	$('#render-feedback').append(content);
 }
