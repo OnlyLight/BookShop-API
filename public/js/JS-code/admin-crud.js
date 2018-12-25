@@ -1,34 +1,15 @@
 $(document).ready(function() {
-	getListCategory().then(function(values) {
-        console.log(values);
-		renderTheLoai(values);
-	}).catch(function(err) {
-		console.log(err);
-	});
-    // async - await
-    
-    getBook().then(function(values) {
-        console.log(values);
-		renderBook(values);
-	}).catch(function(err) {
-		console.log(err);
-    });
+	getListCategoryViewAdmin();    
+
+	//////////////////////
+	getBookViewAdmin();
+	
     //////////////////////
+    gettUsersViewAdmin();
     
-    getUsers().then(function(values) {
-        console.log(values);
-		renderUsers(values);
-	}).catch(function(err) {
-		console.log(err);
-    });
     // ////////////////////////
+    getFeedBackViewAdmin();
     
-    getFeedback().then(function(values) {
-        console.log(values);
-		renderFeedback(values);
-	}).catch(function(err) {
-		console.log(err);
-	});
 });
 
 async function getListCategory() {
@@ -53,6 +34,42 @@ async function getFeedback() {
 	var url = "http://localhost:3000/api/nhanxet/list";
 	const res = await axios.get(url);
 	return res.data;
+}
+
+function getFeedBackViewAdmin() {
+	getFeedback().then(function(values) {
+        console.log(values);
+		renderFeedback(values);
+	}).catch(function(err) {
+		console.log(err);
+	});
+}
+
+function gettUsersViewAdmin() {
+	getUsers().then(function(values) {
+        console.log(values);
+		renderUsers(values);
+	}).catch(function(err) {
+		console.log(err);
+    });
+}
+
+function getBookViewAdmin() {
+	getBook().then(function(values) {
+        console.log(values);
+		renderBook(values);
+	}).catch(function(err) {
+		console.log(err);
+    });
+}
+
+function getListCategoryViewAdmin() {
+	getListCategory().then(function(values) {
+        console.log(values);
+		renderTheLoai(values);
+	}).catch(function(err) {
+		console.log(err);
+	});
 }
 
 function renderTheLoai(items) {
@@ -84,10 +101,10 @@ function renderUsers(items) {
 }
 
 function renderFeedback(items) {
-	var content = '<tr><th>Tên Khách Hàng</th><th>Tên Sách</th><th>Ngày Nhận Xét</th><th>Lời Nhận Xét</th><th>Action</th></tr>';
+	var content = '<tr><th>Tên Khách Hàng</th><th>Ngày Nhận Xét</th><th>Lời Nhận Xét</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '<tr><td>'+item.hoten+'</td><td>'+item.tensach+'</td><td>'+item.ngayhientai+'</td><td>'+item.nhanxet+'</td><td><button value="'+item.idnhanxet+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteNX">DELETE</button></td></tr>';
+		content += '<tr><td>'+item.hoten+'</td><td>'+item.ngayhientai+'</td><td>'+item.nhanxet+'</td><td><button value="'+item.idnhanxet+'" style="width: 80px;" class="btn btn-sm btn-danger btnTest">DELETE</button></td></tr></td></tr>';
 	}
 
-	$('#render-feedback').append(content);
+	$('#render-feedback').html(content);
 }

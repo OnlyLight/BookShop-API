@@ -4,7 +4,7 @@ $(document).ready(function() {
 	});
 
 	$("#btnSignIn").click(function () {
-		checkSignIn();
+		checkSignInUser();
 	});
 
 	$('.dangxuat').click(function() {
@@ -15,7 +15,7 @@ $(document).ready(function() {
 function checkSignInAdmin() {
 	var username = $("input[name*='usernameAdmin']").val();
 	var password = $("input[name*='passwordAdmin']").val();
-	console.log(username + ' - ' + password);
+	// console.log(username + ' - ' + password);
 
 	axios({
 		method: 'post',
@@ -26,6 +26,8 @@ function checkSignInAdmin() {
 		}
 	}).then(function (res) {
 		console.log(res);
+
+		Cookies.set('user-name', username, { expires: 7, path: '/' }); // set cookie to print info
 
 		redirectAdmin(res.data.accessToken);
 	}).catch(function (error) {
@@ -39,10 +41,10 @@ function checkSignInAdmin() {
 	});
 }
 
-function checkSignIn() {
+function checkSignInUser() {
 	var username = $("input[name*='username']").val();
 	var password = $("input[name*='password']").val();
-	console.log(username + ' - ' + password);
+	// console.log(username + ' - ' + password);
 
 	axios({
 		method: 'post',

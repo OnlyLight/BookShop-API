@@ -1,11 +1,15 @@
 $(document).ready(function() {
+    userInfo();
+});
+
+function userInfo() {
     getIdUser().then(function(values) {
         console.log(values); // Get ID
         renderInfoUser(values);
 	}).catch(function(err) {
 		console.log(err);
 	});
-});
+}
 
 async function getIdUser() {
     var cookieUser = Cookies.get('user-name');

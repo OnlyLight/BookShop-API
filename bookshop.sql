@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 13, 2018 lúc 07:22 PM
+-- Thời gian đã tạo: Th12 25, 2018 lúc 05:49 PM
 -- Phiên bản máy phục vụ: 10.1.36-MariaDB
 -- Phiên bản PHP: 7.2.11
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `giohang` (
-  `idgiohang` int(11) NOT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `idsach` int(11) DEFAULT NULL,
-  `soluong` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL,
+  `soluong` int(11) NOT NULL,
+  `thanhtien` int(11) NOT NULL,
+  `idsach` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -44,18 +44,19 @@ CREATE TABLE `giohang` (
 CREATE TABLE `nhanxet` (
   `idnhanxet` int(11) NOT NULL,
   `hoten` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci DEFAULT NULL,
-  `tensach` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci DEFAULT NULL,
   `nhanxet` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ngayhientai` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `ngayhientai` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `idSach` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `nhanxet`
 --
 
-INSERT INTO `nhanxet` (`idnhanxet`, `hoten`, `tensach`, `nhanxet`, `ngayhientai`) VALUES
-(1, 'Quang Minh', 'Hóa Học 12', 'Sách môn Hóa học lớp 12 dành cho học sinh ban Nâng Cao.', '2018-11-12 23:45:22'),
-(2, 'Quang Minh', 'Lịch Sử 12', 'Sách môn Lịch Sử lớp 12 dành cho học sinh ban Nâng Cao.', '2018-11-12 23:46:29');
+INSERT INTO `nhanxet` (`idnhanxet`, `hoten`, `nhanxet`, `ngayhientai`, `idSach`) VALUES
+(2, 'Quang Minh', 'Sách môn Lịch Sử lớp 12 dành cho học sinh ban Nâng Cao.', '2018-11-12 23:46:29', 2),
+(10, 'john123', 'Good Book !!', '2018-12-25 22:18:32', 13),
+(11, 'adam123', 'Good Book !!', '2018-12-25 22:19:01', 14);
 
 -- --------------------------------------------------------
 
@@ -76,8 +77,7 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 (1, 'USER', '2018-12-08 15:42:54', '2018-12-08 15:42:54'),
-(2, 'ADMIN', '2018-12-08 15:42:54', '2018-12-08 15:42:54'),
-(3, 'PM', '2018-12-08 15:42:54', '2018-12-08 15:42:54');
+(2, 'ADMIN', '2018-12-08 15:42:54', '2018-12-08 15:42:54');
 
 -- --------------------------------------------------------
 
@@ -210,7 +210,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `gender`, `createdAt`, `updatedAt`) VALUES
 (1, 'Adam', 'adam123', 'adam123@gmail.com', '$2a$08$NTFJ67FwXzXq/oR77G37SuO21fUeOaAFtnGet1871T82C4jExppJi', 0, '2018-12-08 15:48:49', '2018-12-08 15:48:49'),
 (2, 'Sunny', 'sunny123', 'sunny123@gmail.com', '$2a$08$gr.Yf3fjpVcrEm4Ly8drsOugq8LzRffi5xnLcbYjpVhVsgniZADdq', 1, '2018-12-09 13:33:58', '2018-12-09 13:33:58'),
-(3, 'John', 'john123', 'john123@gmail.com', '$2a$08$YZe2smyUgfihXF0711JOYOtM4h.fvXtcZBwdxQ3yGEWz2VEmQt6sG', 0, '2018-12-09 13:36:04', '2018-12-09 13:36:04');
+(3, 'John', 'john123', 'john123@gmail.com', '$2a$08$YZe2smyUgfihXF0711JOYOtM4h.fvXtcZBwdxQ3yGEWz2VEmQt6sG', 0, '2018-12-09 13:36:04', '2018-12-09 13:36:04'),
+(4, 'Tran Duy', 'duy123', 'duy123@gmail.com', '$2a$08$Zu7fg7vGsL3pEDAAe1c4Qu5jVjoXcnOKaQKjhHbqIvaEg9oHtK2a6', 0, '2018-12-21 16:55:46', '2018-12-21 16:55:46');
 
 -- --------------------------------------------------------
 
@@ -231,9 +232,9 @@ CREATE TABLE `user_roles` (
 
 INSERT INTO `user_roles` (`createdAt`, `updatedAt`, `roleId`, `userId`) VALUES
 ('2018-12-08 15:48:50', '2018-12-08 15:48:50', 1, 1),
-('2018-12-09 13:36:04', '2018-12-09 13:36:04', 2, 3),
-('2018-12-09 13:33:59', '2018-12-09 13:33:59', 3, 2),
-('2018-12-09 13:36:04', '2018-12-09 13:36:04', 3, 3);
+('2018-12-21 16:55:46', '2018-12-21 16:55:46', 1, 4),
+('0000-00-00 00:00:00', '0000-00-00 00:00:00', 2, 2),
+('2018-12-09 13:36:04', '2018-12-09 13:36:04', 2, 3);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -243,7 +244,7 @@ INSERT INTO `user_roles` (`createdAt`, `updatedAt`, `roleId`, `userId`) VALUES
 -- Chỉ mục cho bảng `giohang`
 --
 ALTER TABLE `giohang`
-  ADD PRIMARY KEY (`idgiohang`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `nhanxet`
@@ -291,13 +292,13 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT cho bảng `giohang`
 --
 ALTER TABLE `giohang`
-  MODIFY `idgiohang` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanxet`
 --
 ALTER TABLE `nhanxet`
-  MODIFY `idnhanxet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idnhanxet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `sach`
@@ -309,13 +310,13 @@ ALTER TABLE `sach`
 -- AUTO_INCREMENT cho bảng `theloaisach`
 --
 ALTER TABLE `theloaisach`
-  MODIFY `matheloai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `matheloai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

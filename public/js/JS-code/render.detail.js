@@ -6,12 +6,9 @@ $(document).ready(function() {
 		console.log(err);
 	});
 	// async - await
-	getFeedback().then(function(values) {
-		console.log(values);
-		renderFeedback(values);
-	}).catch(function(err) {
-		console.log(err);
-	});
+	Feedback();
+
+	addNX();
 });
 
 async function getBookDetail() {
@@ -26,6 +23,64 @@ async function getFeedback() {
 	var url = "http://localhost:3000/api/nhanxet/filter?idsach="+id+"";
 	const res = await axios.get(url);
 	return res.data;
+}
+
+async function getIdUser() {
+    var cookieUser = Cookies.get('user-name');
+	var url = "http://localhost:3000/api/users/search-user?search="+cookieUser+"";
+	const res = await axios.get(url);
+	return res.data;
+}
+
+function findUser() {
+	getIdUser().then(function(values) {
+		console.log(values); // Get ID
+		executeAddNX(values[0].username);
+	}).catch(function(err) {
+		console.log(err);
+	});
+}
+
+function Feedback() {
+	getFeedback().then(function(values) {
+		console.log(values);
+		renderFeedback(values);
+	}).catch(function(err) {
+		console.log(err);
+	});
+}
+
+function addNX() {
+	$('#btnSendNX').click(function() {
+		findUser();
+	});
+}
+
+function executeAddNX(username) {
+	var idSach = GetURLParameter('id');
+	var name = username;
+	var nhanxet = $("textarea[name*='nhanxet']").val();
+
+	console.log('name');
+	console.log(name);
+
+	axios({
+		method: 'post',
+		url: 'http://localhost:3000/api/nhanxet/create',
+		data : {
+			hoten: name,
+			nhanxet: nhanxet,
+			idsach: idSach
+		}
+	}).then(function (res) {
+		console.log(res);
+		$("textarea[name*='nhanxet']").val('');
+		alert('Sent Feedback Success !!');
+
+		Feedback();
+	}).catch(function (error) {
+		console.log(error);
+	});
 }
 
 function render(items) {

@@ -49,10 +49,9 @@ module.exports.filter = function (req, res) {
 // Insert new Product
 module.exports.create = function (req, res) {
 	var hoten = req.body.hoten;
-	var tensach = req.body.tensach;
 	var nhanxet = req.body.nhanxet;
 	var idsach = req.body.idsach;
-	var sql = "INSERT INTO nhanxet (hoten, tensach, nhanxet, idSach) VALUES ('"+hoten+"', '"+tensach+"', '"+nhanxet+"', "+idsach+")";
+	var sql = "INSERT INTO nhanxet (hoten, nhanxet, idSach) VALUES ('"+hoten+"', '"+nhanxet+"', "+idsach+")";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -65,10 +64,9 @@ module.exports.create = function (req, res) {
 module.exports.update = function (req, res) {
 	var id = req.params.id;
 	var hoten = req.body.hoten;
-	var tensach = req.body.tensach;
 	var nhanxet = req.body.nhanxet;
 	var idsach = req.body.idsach;
-	var sql = "UPDATE nhanxet SET hoten = '"+hoten+"', tensach = '"+tensach+"', nhanxet = '"+nhanxet+"', idSach = "+idsach+" WHERE idnhanxet = "+id+"";
+	var sql = "UPDATE nhanxet SET hoten = '"+hoten+"', nhanxet = '"+nhanxet+"', idSach = "+idsach+" WHERE idnhanxet = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

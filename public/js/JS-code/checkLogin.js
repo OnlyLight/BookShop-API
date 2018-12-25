@@ -28,7 +28,7 @@ function renderHeaderAdminLogin() {
 
 function checkLoginUser() {
     var cookie = Cookies.get('login-user');
-    console.log(cookie);
+    // console.log(cookie);
 	if(cookie) {
 		return true;
 	}
@@ -37,7 +37,7 @@ function checkLoginUser() {
 
 function checkLoginAdmin() {
     var cookie = Cookies.get('login-admin');
-    console.log(cookie);
+    // console.log(cookie);
 	if(cookie) {
 		return true;
 	}

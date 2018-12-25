@@ -78,6 +78,11 @@ app.get('/info-user', function(req, res){
 	res.render("info-user");
 });
 
+app.get('/cart', function(req, res){
+	//tra ket qua cho client
+	res.render("cart");
+});
+
 app.get('/admin', function(req, res){
 	//tra ket qua cho client
 	res.render("admin-crud");

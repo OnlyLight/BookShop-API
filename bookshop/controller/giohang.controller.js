@@ -2,7 +2,7 @@ var con = require('../dbconnect');
 
 // Get All Data
 module.exports.list = function (req, res) {
-	var sql = "SELECT * FROM giohang";
+	var sql = "SELECT *, sach.hinhanh, sach.tensach, sach.gia FROM giohang JOIN sach ON giohang.idsach = sach.idsach";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -14,45 +14,7 @@ module.exports.list = function (req, res) {
 // Get Data by ID
 module.exports.listByID = function (req, res) {
 	var id = req.params.id;
-	var sql = "SELECT * FROM giohang WHERE idgiohang = "+id+"";
-	con.query(sql, function(err, results) {
-		// If Error crash here
-		if (err) throw err;
-		// If don't have Error return results
-		res.json(results);
-	});
-};
-
-// Search Name Product have in list products
-module.exports.searchName = function (req, res) {
-	var search = req.query.search;
-	var sql = "SELECT * FROM giohang WHERE email LIKE '%"+search+"%'";
-	con.query(sql, function(err, results) {
-		// If Error crash here
-		if (err) throw err;
-		// If don't have Error return results
-		res.json(results);
-	});
-};
-
-// Filter product with idLoai
-module.exports.filter = function (req, res) {
-	var idSach = req.query.idSach;
-	var sql = "SELECT * FROM giohang WHERE idsach = "+idSach+"";
-	con.query(sql, function(err, results) {
-		// If Error crash here
-		if (err) throw err;
-		// If don't have Error return results
-		res.json(results);
-	});
-};
-
-// Pager Products
-module.exports.pager = function (req, res) {
-	var idSach = req.query.idSach;
-	var _limit = req.query._limit;
-	var _page = req.query._page;
-	var sql = "SELECT * FROM giohang WHERE idsach = "+idSach+" ORDER BY idgiohang DESC LIMIT "+_page+", "+_limit+"";
+	var sql = "SELECT * FROM giohang WHERE id = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -63,10 +25,10 @@ module.exports.pager = function (req, res) {
 
 // Insert new Product
 module.exports.create = function (req, res) {
-	var email = req.body.email;
-	var idSach = req.body.idsach;
 	var soluong = req.body.soluong;
-	var sql = "INSERT INTO giohang (email, idsach, soluong) VALUES ('"+email+"', "+idSach+", "+soluong+")";
+	var idSach = req.body.idsach;
+	var thanhtien = req.body.thanhtien;
+	var sql = "INSERT INTO giohang (soluong, thanhtien, idsach) VALUES ("+soluong+", "+thanhtien+", "+idSach+")";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -78,10 +40,10 @@ module.exports.create = function (req, res) {
 // Update Product By Id
 module.exports.update = function (req, res) {
 	var id = req.params.id;
-	var email = req.body.email;
-	var idSach = req.body.idsach;
 	var soluong = req.body.soluong;
-	var sql = "UPDATE giohang SET email = '"+email+"', idsach = "+idSach+", soluong = '"+soluong+"' WHERE idgiohang = "+id+"";
+	var idSach = req.body.idsach;
+	var thanhtien = req.body.thanhtien;
+	var sql = "UPDATE giohang SET soluong = "+soluong+", thanhtien = "+thanhtien+", idsach = "+idSach+" WHERE id = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -93,7 +55,7 @@ module.exports.update = function (req, res) {
 // Delete Product By Id
 module.exports.delete = function (req, res) {
 	var id = req.params.id;
-	var sql = "DELETE FROM giohang WHERE idgiohang = "+id+"";
+	var sql = "DELETE FROM giohang WHERE id = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

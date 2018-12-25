@@ -12,6 +12,7 @@ head
   link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
   script(src='js/Library/jquery-3.3.1.min.js')
   script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-home.js')
   script(src='js/JS-code/js-pages.js')
   script(src='js/JS-code/back-to-top.js')
   script(src='js/Library/axios.min.js')
@@ -131,11 +132,8 @@ include login
   br
   .container
     .form-nhanxet
-      form(action='', method='post')
-        label T&ecirc;n c&#x1EE7;a b&#x1EA1;n
-        input.form-control(type='text', name='tenrieng', autocomplete='off', value='Thuc')
-        br
-        label Nh&#x1EAD;n x&eacute;t
+      form(method='post')
+        label Nhận xét
         textarea.form-control(name='nhanxet')
       br
       br
@@ -170,6 +168,6 @@ include login
             img.img-responsive(src='uploads/images/quangcao/REVIEW-1263x80-446ae7.jpg')
       br
       .text-right
-        button.btn.btn-lg.btn-warning(type='button') G&#x1EED;i nh&#x1EAD;n x&eacute;t
+        button#btnSendNX.btn.btn-lg.btn-warning(type='button') G&#x1EED;i nh&#x1EAD;n x&eacute;t
 // /CONTENT
 include footer

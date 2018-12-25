@@ -16,6 +16,7 @@ head
   script(src='js/JS-code/back-to-top.js')
   script(src='js/Library/axios.min.js')
   script(src='js/Library/js.cookie.min.js')
+  script(src='js/JS-code/render.js')
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
   script(src='js/JS-code/admin-crud.js')
@@ -111,5 +112,17 @@ br
       #nhanxet.tab-pane
         br
         table#render-feedback.tb-khosach
+          tr
+            th Tên Khách Hàng
+            th Ngày Nhận Xét
+            th Lời Nhận Xét
+            th Action
+          tr
+            td
+            td
+            td
+            td
+              button.btn.btn-sm.btn-danger.btnTest(style='width: 80px;') DELETE
+
 // /CONTENT
 include footer
