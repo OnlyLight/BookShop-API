@@ -21,6 +21,7 @@ head
   script(src='js/JS-code/render.detail.js')
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/cart.js')
 
   title FAHASA.com
 include header
@@ -41,8 +42,8 @@ include login
           br
           div
             label S&#x1ED1; l&#x1B0;&#x1EE3;ng: 
-            input(type='number', name='soluong', value='1', autocomplete='off', maxlength='2')
-            a.mua(href='') CH&#x1ECC;N MUA
+            input(type='number', name='soluong', value='1', min="0", autocomplete='off')
+            a.mua(href='/cart') CHỌN MUA
             br
             br
             a.yeuthich(href='')

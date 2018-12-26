@@ -49,7 +49,7 @@ body {
     background: #458B00;
     border-radius: 4px;
 }
-.header3 .glyphicon-shopping-cart {
+.header3 {
     font-size: 25px;
 }
 .header3 .link-cart a {

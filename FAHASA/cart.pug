@@ -15,6 +15,7 @@ head
   script(src='js/Library/bootstrap.min.js')
   script(src='js/Library/owl.carousel.min.js')
   script(src='js/JS-code/js-home.js')
+  script(src='js/JS-code/js-pages.js')
   script(src='js/JS-code/owl-slide.js')
   script(src='js/JS-code/back-to-top.js')
   script(src='js/Library/axios.min.js')
@@ -22,265 +23,25 @@ head
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/render.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/cart.js')
+
   title FAHASA.com
-// HEADER
-#header.hidden-xs
-  .container
-    .header1
-      a(href='')
-        img.img-responsive(src='../uploads/images/quangcao/Single-Day.jpg')
-    .header2
-      .row.row2
-        .col-sm-3
-          .icon-text
-            span.glyphicon.glyphicon-earphone.icon
-            span.text Hotline
-            br
-            span.text 1900636467
-        .col-sm-3
-          .icon-text
-            span.glyphicon.glyphicon-send.icon
-            span.text Mi&#x1EC5;n ph&iacute; giao h&agrave;ng
-            br
-            span.text(style='color: #737373') T&#x1EAD;n n&#x1A1;i to&agrave;n qu&#x1ED1;c
-        .col-sm-6
-          ul.nav.navbar-nav.navbar-right
-            li.active
-              a.link-menu(href='#') HOME
-            li
-              a(href='dang-ki.html') &Dstrok;&Abreve;NG K&Yacute;
-            li
-              a#dangnhap(href='#') &Dstrok;&Abreve;NG NH&#x1EAC;P
-            li
-              a(href='#') &Dstrok;&Abreve;NG XU&#x1EA4;T
-    .header3
-      .row
-        .col-sm-3
-          a(href='home.html')
-            img.img-responsive(src='../uploads/images/logo/logo.png')
-        .col-sm-7
-          form(action='', method='post')
-            .input-group
-              input.form-control(type='text', name='search', placeholder='Tìm kiếm cuốn sách bạn mong muốn', autocomplete='off')
-              .input-group-btn
-                button.btn(type='submit')
-                  span.glyphicon.glyphicon-search
-        .col-sm-2
-          .link-cart
-            a(href='')
-              span.glyphicon.glyphicon-shopping-cart
-              |  0 S&#x1EA3;n ph&#x1EA9;m
-    br
-    .header4
-      .row
-        .col-sm-3
-          .dropdown.danhmucsach
-            span.dropdown-toggle(data-toggle='dropdown') Danh M&#x1EE5;c S&aacute;ch
-            ul.dropdown-menu.nav.drop-left
-              li
-                a.link-left(href='sach-hoc-ngoai-ngu.html') H&#x1ECD;c Ngo&#x1EA1;i Ng&#x1EEF;
-              li
-                a.link-left(href='sach-kinh-te.html') Kinh T&#x1EBF;
-              li
-                a.link-left(href='sach-khoa-hoc.html') Khoa H&#x1ECD;c K&itilde; Thu&#x1EAD;t
-              li
-                a.link-left(href='') Nu&ocirc;i D&#x1EA1;y Con
-              li
-                a.link-left(href='sach-giao-khoa.html') S&aacute;ch Gi&aacute;o Khoa - Gi&aacute;o Tr&igrave;nh
-              li
-                a.link-left(href='') S&aacute;ch Tham Kh&#x1EA3;o
-              li
-                a.link-left(href='') S&aacute;ch Thi&#x1EBF;u Nhi
-              li
-                a.link-left(href='sach-ki-nang-song.html') T&acirc;m L&yacute; - K&#x1EF9; N&abreve;ng S&#x1ED1;ng
-              li
-                a.link-left(href='#') T&#x1EEB; &Dstrok;i&#x1EC3;n
-        .col-sm-9
-          ul.nav.navbar-nav
-            li.dropdown
-              a.link-right.dropdown-toggle(href='#', data-toggle='dropdown') V&abreve;n H&#x1ECD;c
-              ul.dropdown-menu.drop-vanhoc
-                li.col-sm-5
-                  ul.nav
-                    li
-                      a(href='#') Ti&#x1EC3;u Thuy&#x1EBF;t
-                    li
-                      a(href='#') Truy&#x1EC7;n Ng&#x1EAF;n
-                    li
-                      a(href='#') Truy&#x1EC7;n Trinh Th&aacute;m, Vi&#x1EC5;n T&#x1B0;&#x1EDF;ng
-                    li
-                      a(href='#') Th&#x1A1; Ca, T&#x1EE5;c Ng&#x1EEF;, Ca Dao, Th&agrave;nh Ng&#x1EEF;
-                li.col-sm-4
-                  ul.nav
-                    li
-                      a(href='#') V&abreve;n H&#x1ECD;c D&#x1ECB;ch
-                    li
-                      a(href='#') Ph&oacute;ng S&#x1EF1;, K&yacute; S&#x1EF1;, H&#x1ED3;i K&yacute;
-                    li
-                      a(href='#') T&aacute;c Gi&#x1EA3; - T&aacute;c Ph&#x1EA9;m
-                    li
-                      a(href='#') Th&#x1EC3; Lo&#x1EA1;i Kh&aacute;c
-                li.col-sm-3
-                  a(href='#')
-                    img.img-responsive(src='../uploads/images/vanhoc/vanhoc.png')
-                br
-                li.col-sm-12
-                  a(href='#')
-                    img.img-responsive(src='../uploads/images/vanhoc/footer-van-hoc.jpg')
-            li.dropdown
-              a.link-right.dropdown-toggle(href='#', data-toggle='dropdown') Top 100 Best Seller
-              ul.dropdown-menu.drop-top-100
-                li.col-sm-3
-                  ul.nav
-                    li
-                      a(href='#') V&abreve;n H&#x1ECD;c
-                    li
-                      a(href='#') Kinh T&#x1EBF;
-                    li
-                      a(href='#') K&#x1EF9; N&abreve;ng S&#x1ED1;ng
-                    li
-                      a(href='#') Nu&ocirc;i D&#x1EA1;y Con
-                    li
-                      a(href='#') Thi&#x1EBF;u Nhi
-                    li
-                      a(href='#') Ngo&#x1EA1;i Ng&#x1EEF;
-                    li
-                      a(href='#') N&#x1EEF; C&ocirc;ng Gia Ch&aacute;nh
-                    li
-                      a(href='#') Ch&iacute;nh Tr&#x1ECB; - Tri&#x1EBF;t H&#x1ECD;c
-                li.col-sm-3
-                  ul.nav
-                    li
-                      a(href='#') Fiction
-                    li
-                      a(href='#') Romance
-                    li
-                      a(href='#') Dictionaries
-                    li
-                      a(href='#') Children&apos;s Books
-                    li
-                      a(href='#') Biography
-                    li
-                      a(href='#') Food - Drink
-                    li
-                      a(href='#') Japanese
-                    li
-                      a(href='#') Mind Body Spirit
-                li.col-sm-3
-                  a(href='#')
-                    img.img-responsive(src='../uploads/images/top-100/Top100-quoc-van.jpg')
-                li.col-sm-3
-                  a(href='#')
-                    img.img-responsive(src='../uploads/images/top-100/Top-100-ngoai-van.jpg')
-            li
-              a.link-right(href='#') Daily Deals
-// /HEADER
-// LOGIN
-#login
-  .container
-    #modal-client.modal.fade(role='dialog')
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type='button', data-dismiss='modal') &times;
-            span.glyphicon.glyphicon-user
-            span.title-dangnhap &Dstrok;&Abreve;NG NH&#x1EAC;P
-          .modal-body
-            form(action='', method='post')
-              .input-group
-                .input-group-addon
-                  span.glyphicon.glyphicon-envelope
-                input.form-control(type='email', name='email', placeholder='Nhập địa chỉ email của bạn', autocomplete='off')
-              .input-group
-                .input-group-addon
-                  span.glyphicon.glyphicon-lock
-                input.form-control(type='password', name='passclient', placeholder='Mật khẩu')
-              .checkbox
-                label
-                  input(type='checkbox', name='remember', checked='')
-                  |  L&#x1B0;u t&agrave;i kho&#x1EA3;n
-                a(href='') Qu&ecirc;n m&#x1EAD;t kh&#x1EA9;u?
-              .button
-                button.btn.btn-success.btn-block(type='submit') &Dstrok;&Abreve;NG NH&#x1EAC;P
-              p
-                | Ch&#x1B0;a c&oacute; t&agrave;i kho&#x1EA3;n vui l&ograve;ng 
-                a(href='')  &Dstrok;&Abreve;NG K&Yacute;
-          .modal-footer
-            a(href='')
-              img(src='../uploads/images/login/google.png')
-            a(href='')
-              img(src='../uploads/images/login/facebook.png')
-// LOGIN
-// HEADER-XS
-#header-xs.visible-xs
-  .header-xs-1
-    a(href='')
-      img.img-responsive(src='../uploads/images/quangcao/Single-Day.jpg')
-  .container-fluid
-    .header-xs-2
-      .row
-        .col-xs-4
-          .dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown')
-              span.glyphicon.glyphicon-align-justify
-            ul.dropdown-menu.nav
-              li
-                a.link-left(href='dang-ki.html') &Dstrok;&Abreve;NG K&Yacute;
-              li
-                a#dangnhap-xs.link-left(href='#') &Dstrok;&Abreve;NG NH&#x1EAC;P
-              li
-                a.link-left(href='') &Dstrok;&Abreve;NG XU&#x1EA4;T
-              hr
-              li
-                a.link-left(href='sach-hoc-ngoai-ngu.html') H&#x1ECD;c Ngo&#x1EA1;i Ng&#x1EEF;
-              li
-                a.link-left(href='sach-kinh-te.html') Kinh T&#x1EBF;
-              li
-                a.link-left(href='sach-khoa-hoc.html') Khoa H&#x1ECD;c K&itilde; Thu&#x1EAD;t
-              li
-                a.link-left(href='#') Nu&ocirc;i D&#x1EA1;y Con
-              li
-                a.link-left(href='sach-giao-khoa.html') S&aacute;ch Gi&aacute;o Khoa - Gi&aacute;o Tr&igrave;nh
-              li
-                a.link-left(href='#') S&aacute;ch Tham Kh&#x1EA3;o
-              li
-                a.link-left(href='#') S&aacute;ch Thi&#x1EBF;u Nhi
-              li
-                a.link-left(href='sach-ki-nang-song.html') T&acirc;m L&yacute; - K&#x1EF9; N&abreve;ng S&#x1ED1;ng
-              li
-                a.link-left(href='#') T&#x1EEB; &Dstrok;i&#x1EC3;n
-        .col-xs-4
-          a(href='home.html')
-            img.img-responsive(src='../uploads/images/logo/logo.png')
-        .col-xs-4.text-right
-          a(href='#')
-            span.glyphicon.glyphicon-briefcase
-            sup.badge 0
-    br
-    .header-xs-3
-      .row
-        .col-xs-12
-          form(action='', method='post')
-            .input-group
-              input.form-control(type='text', name='search', placeholder='Tìm kiếm cuốn sách bạn mong muốn', autocomplete='off')
-              .input-group-btn
-                button.btn(type='submit')
-                  span.glyphicon.glyphicon-search
-    br
-// HEADER-XS
+include header
+
+include login
 // CONTENT
 #content-cart.hidden-xs
   .container
     h1.giohang GI&#x1ECE; H&Agrave;NG
     br
-    table
+    table#render-cart
       tr
-        th G&#x1EE1; B&#x1ECF;
-        th H&igrave;nh &#x1EA2;nh
-        th T&ecirc;n S&#x1EA3;n Ph&#x1EA9;m
-        th Gi&aacute;
-        th S&#x1ED1; L&#x1B0;&#x1EE3;ng
-        th Th&agrave;nh Ti&#x1EC1;n
+        th Gỡ Bỏ
+        th Hình Ảnh
+        th Tên Sản Phẩm
+        th Giá
+        th Số Lượng
+        th Thành Tiền
       tr
         td
           a.btn.btn-danger(href='')
@@ -290,13 +51,11 @@ head
         td Ch&uacute;ng Ta &Dstrok;&acirc;u Ch&#x1EC9; S&#x1ED1;ng Cho Ri&ecirc;ng M&igrave;nh
         td 80.000&dstrok;
         td
-          input(type='text', value='1', maxlength='2', name='soluong')
+          input(type='number', min='0', name='soluong')
         td 80.000&dstrok;
     br
     .text-center
-      a.btn.btn-warning(href='') Mua Th&ecirc;m
-      a.btn.btn-warning(href='') X&oacute;a H&#x1EBF;t Gi&#x1ECF; H&agrave;ng
-      a.btn.btn-warning(href='') C&#x1EAD;p Nh&#x1EAD;t Gi&#x1ECF; H&agrave;ng
+      a.btn.btn-warning(href='/') Mua Thêm
     br
     .row
       .col-sm-6
@@ -305,221 +64,13 @@ head
       .col-sm-6
         .tong
           .title
-            span Gi&#x1ECF; h&agrave;ng
+            span Giỏ hàng
           br
-          .text-right
-            span Th&agrave;nh Ti&#x1EC1;n
-            span 80.000&dstrok;
-            br
-            strong T&#x1ED4;NG S&#x1ED0; TI&#x1EC0;N (G&#x1ED2;M VAT)
+          #bill.text-right
+            strong TỔNG SỐ TIỀN &nbsp;
             span 80.000&dstrok;
             br
             br
-            a.btn.btn-success(href='') THANH TO&Aacute;N
+            a.btn.btn-success(href='') THANH TOÁN
 // /CONTENT
-// FOOTER
-#footer.hidden-xs
-  .container
-    .footer1
-      .row
-        .col-md-3.col-sm-2
-        .col-md-6.col-sm-8
-          .title
-            span &Dstrok;&Abreve;NG K&Yacute; NH&#x1EAC;N B&#x1EA2;NG TIN
-          form(action='', method='post')
-            .input-group
-              .input-group-addon
-                span.glyphicon.glyphicon-pencil
-              input.form-control(type='text', name='dangkiemail', placeholder='Your email', autocomplete='off')
-              .input-group-btn
-                button.btn.btn-info(type='submit') &Dstrok;&abreve;ng k&yacute;
-        .col-md-3.col-sm-2
-    .footer2-3
-      .footer2
-        .row
-          .col-md-3.col-sm-6
-            span.title D&#x1ECA;CH V&#x1EE4;
-            ul.nav
-              li
-                a(href='') &Dstrok;i&#x1EC1;u kho&#x1EA3;n s&#x1EED; d&#x1EE5;ng
-              li
-                a(href='') Ch&iacute;nh s&aacute;ch b&#x1EA3;o m&#x1EAD;t
-              li
-                a(href='') Gi&#x1EDB;i thi&#x1EC7;u Fahasa
-              li
-                a(href='') H&#x1EC7; th&#x1ED1;ng trung t&acirc;m - nh&agrave; s&aacute;ch
-          .col-md-3.col-sm-6
-            span.title H&#x1ED6; TR&#x1EE2;
-            ul.nav
-              li
-                a(href='') Ch&iacute;nh s&aacute;ch &dstrok;&#x1ED5;i tr&#x1EA3; - ho&agrave;n ti&#x1EC1;n
-              li
-                a(href='') Ch&iacute;nh s&aacute;ch kh&aacute;ch s&#x1EC9;
-              li
-                a(href='') Ph&#x1B0;&#x1A1;ng th&#x1EE9;c v&#x1EAD;n chuy&#x1EC3;n
-              li
-                a(href='') Ph&#x1B0;&#x1A1;ng th&#x1EE9;c thanh to&aacute;n
-          .col-md-3.col-sm-6.cotduoi
-            span.title T&Agrave;I KHO&#x1EA2;N C&#x1EE6;A T&Ocirc;I
-            ul.nav
-              li
-                a(href='') &Dstrok;&abreve;ng nh&#x1EAD;p/T&#x1EA1;o m&#x1EDB;i t&agrave;i kho&#x1EA3;n
-              li
-                a(href='') Thay &dstrok;&#x1ED5;i &dstrok;&#x1ECB;a ch&#x1EC9; kh&aacute;ch h&agrave;ng
-              li
-                a(href='') Chi ti&#x1EBF;t t&agrave;i kho&#x1EA3;n
-              li
-                a(href='') L&#x1ECB;ch s&#x1EED; mua h&agrave;ng
-          .col-md-3.col-sm-6.cotduoi
-            span.title LI&Ecirc;N H&#x1EC6;
-            ul.nav
-              li
-                a(href='')
-                  span.glyphicon.glyphicon-map-marker.icon
-                  strong &Dstrok;&#x1ECB;a ch&#x1EC9;: 
-                  | Q1 - TP. HCM
-              li
-                a(href='')
-                  span.glyphicon.glyphicon-envelope.icon
-                  strong Email: 
-                  | info@fahasa.com
-              li
-                a(href='')
-                  span.glyphicon.glyphicon-earphone.icon
-                  strong Phone: 
-                  | 1900636467
-      br
-      .footer3
-        .row
-          .col-sm-4
-            .logo
-              img.img-responsive(src='../uploads/images/footer/logo.png')
-            .text
-              span L&#x1EA7;u 7, 387-389 Hai B&agrave; Tr&#x1B0;ng Qu&#x1EAD;n 3 TP HCM
-              br
-              span C&ocirc;ng Ty C&#x1ED5; Ph&#x1EA7;n Ph&aacute;t H&agrave;nh S&aacute;ch TP HCM - FAHASA
-              br
-              span 60 - 62 L&ecirc; L&#x1EE3;i, Qu&#x1EAD;n 1, TP. HCM, Vi&#x1EC7;t Nam
-              br
-              span
-                | Fahasa.com nh&#x1EAD;n &dstrok;&#x1EB7;t h&agrave;ng tr&#x1EF1;c tuy&#x1EBF;n v&agrave; giao h&agrave;ng t&#x1EAD;n n&#x1A1;i,
-                | v&agrave; KH&Ocirc;NG h&#x1ED7; tr&#x1EE3; mua v&agrave; nh&#x1EAD;n h&agrave;ng tr&#x1EF1;c ti&#x1EBF;p t&#x1EA1;i v&abreve;n ph&ograve;ng ho&#x1EB7;c trung t&acirc;m x&#x1EED; l&yacute; &dstrok;&#x1A1;n h&agrave;ng t&#x1EA1;i &dstrok;ia ch&#x1EC9; tr&ecirc;n.
-            div
-              a(href='')
-                img.img-footer(src='../uploads/images/footer/logo-da-thong-bao.png')
-          .col-sm-4
-            .row
-              .col-sm-2
-              .col-sm-10
-                .row
-                  .col-sm-2
-                    a(href='')
-                      img.img(src='../uploads/images/footer/Facebook-on.png')
-                  .col-sm-2
-                    a(href='')
-                      img.img(src='../uploads/images/footer/Insta-on.png')
-                  .col-sm-2
-                    a(href='')
-                      img.img(src='../uploads/images/footer/Youtube-on.png')
-                  .col-sm-2
-                    a(href='')
-                      img.img(src='../uploads/images/footer/tumblr-on.png')
-                  .col-sm-2
-                    a(href='')
-                      img.img(src='../uploads/images/footer/twitter-on.png')
-                  .col-sm-2
-                    a(href='')
-                      img.img(src='../uploads/images/footer/pinterest-on.png')
-                br
-                .row
-                  .col-sm-6
-                    a(href='')
-                      img.img2(src='../uploads/images/footer/android.png')
-                  .col-sm-6
-                    a(href='')
-                      img.img2(src='../uploads/images/footer/appstore.png')
-          .col-sm-4
-            .row
-              .col-md-4.col-sm-3
-              .col-md-8.col-sm-9
-                a(href='')
-                  img.img-responsive(src='../uploads/images/footer/Ninja-1.png')
-            .row
-              .col-md-4.col-sm-3
-              .col-md-8.col-sm-9
-                a(href='')
-                  img.img-responsive(src='../uploads/images/footer/Speedlink-1.png')
-            .row
-              .col-md-4.col-sm-3
-              .col-md-8.col-sm-9
-                a(href='')
-                  img.img-responsive(src='../uploads/images/footer/Vietnampost-1.png')
-        br
-        .col-sm-12.text-center
-          span.text-end-footer
-            | Gi&#x1EA5;y ch&#x1EE9;ng nh&#x1EAD;n &Dstrok;&abreve;ng k&yacute; Kinh doanh s&#x1ED1; **0304132047** do S&#x1EDF; K&#x1EBF; ho&#x1EA1;ch v&agrave; &Dstrok;&#x1EA7;u t&#x1B0; Th&agrave;nh ph&#x1ED1; H&#x1ED3; Ch&iacute; Minh c&#x1EA5;p ng&agrave;y 28/11/2012.
-        br
-    .footer4.text-center
-      span &copy; Copyright 11-2018
-      a(href='') Information Team Ocs Chos
-// /FOOTER
-// FOOTER-XS
-#footer-xs.visible-xs
-  .container-fluid
-    .footer-xs-1
-      .row
-        .col-xs-12
-          .title
-            span &Dstrok;&Abreve;NG K&Yacute; NH&#x1EAC;N B&#x1EA2;NG TIN
-          form(action='', method='post')
-            .input-group
-              .input-group-addon
-                span.glyphicon.glyphicon-pencil
-              input.form-control(type='text', name='dangkiemail', placeholder='Your email', autocomplete='off')
-              .input-group-btn
-                button.btn.btn-info(type='submit') &Dstrok;&abreve;ng k&yacute;
-    .footer-xs-2
-      div
-        img(src='../uploads/images/footer/logo.png')
-      br
-      .text
-        span L&#x1EA7;u 7, 387-389 Hai B&agrave; Tr&#x1B0;ng Qu&#x1EAD;n 3 TP HCM
-        br
-        span C&ocirc;ng Ty C&#x1ED5; Ph&#x1EA7;n Ph&aacute;t H&agrave;nh S&aacute;ch TP HCM - FAHASA
-        br
-        span 60 - 62 L&ecirc; L&#x1EE3;i, Qu&#x1EAD;n 1, TP. HCM, Vi&#x1EC7;t Nam
-        br
-        span
-          | Fahasa.com nh&#x1EAD;n &dstrok;&#x1EB7;t h&agrave;ng tr&#x1EF1;c tuy&#x1EBF;n v&agrave; giao h&agrave;ng t&#x1EAD;n n&#x1A1;i.
-          | KH&Ocirc;NG h&#x1ED7; tr&#x1EE3; &dstrok;&#x1EB7;t mua v&agrave; nh&#x1EAD;n h&agrave;ng tr&#x1EF1;c ti&#x1EBF;p t&#x1EA1;i v&abreve;n ph&ograve;ng c&utilde;ng nh&#x1B0; t&#x1EA5;t c&#x1EA3; H&#x1EC7; Th&#x1ED1;ng Fahasa tr&ecirc;n to&agrave;n qu&#x1ED1;c.
-      br
-      div
-        a(href='')
-          img.logo-dathongbao(src='../uploads/images/footer/logo-da-thong-bao.png')
-      br
-      .div-img
-        a(href='')
-          img.img(src='../uploads/images/footer/Facebook-on.png')
-        a(href='')
-          img.img(src='../uploads/images/footer/Insta-on.png')
-        a(href='')
-          img.img(src='../uploads/images/footer/Youtube-on.png')
-        a(href='')
-          img.img(src='../uploads/images/footer/tumblr-on.png')
-        a(href='')
-          img.img(src='../uploads/images/footer/twitter-on.png')
-        a(href='')
-          img.img(src='../uploads/images/footer/pinterest-on.png')
-      br
-      .div-img2
-        a(href='')
-          img.img2(src='../uploads/images/footer/android.png')
-        a(href='')
-          img.img2(src='../uploads/images/footer/android.png')
-    .footer-xs-3.text-center
-      span &copy; Copyright 11-2018
-      a(href='') Information Team Ocs Chos
-// /FOOTER-XS
-.back-top
-  button
-    span.glyphicon.glyphicon-chevron-up
+include footer

@@ -7,7 +7,7 @@ router.get('/list', controller.list);
 router.get('/list/:id', controller.listByID);
 
 router.post('/create', controller.create);
-router.put('/update/:id', controller.update);
+router.patch('/update/:id', controller.update);
 router.delete('/delete/:id', controller.delete);
 
 module.exports = router;
