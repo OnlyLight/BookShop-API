@@ -44,7 +44,6 @@ function checkSignInAdmin() {
 function checkSignInUser() {
 	var username = $("input[name*='username']").val();
 	var password = $("input[name*='password']").val();
-	// console.log(username + ' - ' + password);
 
 	axios({
 		method: 'post',
@@ -82,9 +81,10 @@ function redirectUser(value) {
 		url: 'http://localhost:3000/api/user',
 		headers: {'x-access-token': value}
 	}).then(function (res) {
-		console.log("login user");
 		console.log(res.data);
+		var id = res.data.user.roles[0].user_roles.userId;
 
+		Cookies.set('id-user-login', id, { expires: 7, path: '/' });
 		Cookies.set('login-user', value, { expires: 7, path: '/' });
 		location.href = "/";
 	}).catch(function (error) {
@@ -110,5 +110,6 @@ function signout() {
 	Cookies.remove('login-admin', { path: '/' });
 	Cookies.remove('login-user', { path: '/' });
 	Cookies.remove('user-name', { path: '/' });
+	Cookies.remove('id-user-login', { path: '/' });
 	location.href = "/";
 }

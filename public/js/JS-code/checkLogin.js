@@ -12,7 +12,19 @@ $(document).ready(function() {
 	if(checkLoginUser()) {
 		renderHeaderUserLogin();
 	}
+
+	cart();
 });
+
+function cart() {
+	$('#icon-cart, .mua').click(function() {
+		if(!checkLoginUser()) {
+			alert('You need login to buy !!');
+		} else {
+			location.href = "/cart";
+		}
+	});
+}
 
 function renderHeaderUserLogin() {
 	$('.admin').addClass('hide');
