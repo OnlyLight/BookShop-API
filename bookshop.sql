@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2018 at 07:58 AM
+-- Generation Time: Dec 27, 2018 at 06:25 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -25,6 +25,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `donhang`
+--
+
+CREATE TABLE `donhang` (
+  `id` int(11) NOT NULL,
+  `idSach` int(11) DEFAULT NULL,
+  `idUser` int(11) DEFAULT NULL,
+  `trangthai` varchar(50) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `giohang`
 --
 
@@ -42,7 +55,8 @@ CREATE TABLE `giohang` (
 INSERT INTO `giohang` (`id`, `soluong`, `idsach`, `idUser`) VALUES
 (1, 3, 1, 1),
 (2, 2, 2, 1),
-(3, 1, 9, 1);
+(3, 1, 9, 1),
+(4, 1, 30, 4);
 
 -- --------------------------------------------------------
 
@@ -52,20 +66,21 @@ INSERT INTO `giohang` (`id`, `soluong`, `idsach`, `idUser`) VALUES
 
 CREATE TABLE `nhanxet` (
   `idnhanxet` int(11) NOT NULL,
-  `hoten` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci DEFAULT NULL,
   `nhanxet` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `ngayhientai` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `idSach` int(11) DEFAULT NULL
+  `idSach` int(11) DEFAULT NULL,
+  `idUser` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `nhanxet`
 --
 
-INSERT INTO `nhanxet` (`idnhanxet`, `hoten`, `nhanxet`, `ngayhientai`, `idSach`) VALUES
-(2, 'Quang Minh', 'Sách môn Lịch Sử lớp 12 dành cho học sinh ban Nâng Cao.', '2018-11-12 23:46:29', 2),
-(10, 'john123', 'Good Book !!', '2018-12-25 22:18:32', 13),
-(11, 'adam123', 'Good Book !!', '2018-12-25 22:19:01', 14);
+INSERT INTO `nhanxet` (`idnhanxet`, `nhanxet`, `ngayhientai`, `idSach`, `idUser`) VALUES
+(2, 'Sách môn Lịch Sử lớp 12 dành cho học sinh ban Nâng Cao.', '2018-11-12 23:46:29', 2, 4),
+(10, 'Good Book !!', '2018-12-25 22:18:32', 13, 3),
+(11, 'Good Book !!', '2018-12-25 22:19:01', 14, 1),
+(14, 'Awesome !!', '2018-12-28 00:04:46', 8, 4);
 
 -- --------------------------------------------------------
 
@@ -250,6 +265,12 @@ INSERT INTO `user_roles` (`createdAt`, `updatedAt`, `roleId`, `userId`) VALUES
 --
 
 --
+-- Indexes for table `donhang`
+--
+ALTER TABLE `donhang`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `giohang`
 --
 ALTER TABLE `giohang`
@@ -260,7 +281,8 @@ ALTER TABLE `giohang`
 -- Indexes for table `nhanxet`
 --
 ALTER TABLE `nhanxet`
-  ADD PRIMARY KEY (`idnhanxet`);
+  ADD PRIMARY KEY (`idnhanxet`),
+  ADD KEY `FK_NX_USER` (`idUser`);
 
 --
 -- Indexes for table `roles`
@@ -299,16 +321,22 @@ ALTER TABLE `user_roles`
 --
 
 --
+-- AUTO_INCREMENT for table `donhang`
+--
+ALTER TABLE `donhang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `giohang`
 --
 ALTER TABLE `giohang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `nhanxet`
 --
 ALTER TABLE `nhanxet`
-  MODIFY `idnhanxet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idnhanxet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `sach`

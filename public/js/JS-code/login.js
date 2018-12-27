@@ -86,7 +86,9 @@ function redirectUser(value) {
 
 		Cookies.set('id-user-login', id, { expires: 7, path: '/' });
 		Cookies.set('login-user', value, { expires: 7, path: '/' });
-		location.href = "/";
+
+		$("#modal-client").modal('hide');
+		showHeader();
 	}).catch(function (error) {
 		console.log(error);
 	});

@@ -25,20 +25,13 @@ async function getFeedback() {
 	return res.data;
 }
 
-async function getIdUser() {
-    var cookieUser = Cookies.get('user-name');
-	var url = "http://localhost:3000/api/users/search-user?search="+cookieUser+"";
-	const res = await axios.get(url);
-	return res.data;
-}
-
 function findUser() {
-	getIdUser().then(function(values) {
-		console.log(values); // Get ID
-		executeAddNX(values[0].username);
-	}).catch(function(err) {
-		console.log(err);
-	});
+	var idUser = Cookies.get('id-user-login');
+
+	if(idUser)
+		executeAddNX(idUser);
+	else
+		alert("You need login to comment !!");
 }
 
 function Feedback() {
@@ -56,31 +49,31 @@ function addNX() {
 	});
 }
 
-function executeAddNX(username) {
+function executeAddNX(idUser) {
 	var idSach = GetURLParameter('id');
-	var name = username;
 	var nhanxet = $("textarea[name*='nhanxet']").val();
 
-	console.log('name');
-	console.log(name);
-
-	axios({
-		method: 'post',
-		url: 'http://localhost:3000/api/nhanxet/create',
-		data : {
-			hoten: name,
-			nhanxet: nhanxet,
-			idsach: idSach
-		}
-	}).then(function (res) {
-		console.log(res);
-		$("textarea[name*='nhanxet']").val('');
-		alert('Sent Feedback Success !!');
-
-		Feedback();
-	}).catch(function (error) {
-		console.log(error);
-	});
+	if(nhanxet) {
+		axios({
+			method: 'post',
+			url: 'http://localhost:3000/api/nhanxet/create',
+			data : {
+				nhanxet: nhanxet,
+				idsach: idSach,
+				idUser: idUser
+			}
+		}).then(function (res) {
+			console.log(res);
+			$("textarea[name*='nhanxet']").val('');
+			alert('Sent Feedback Success !!');
+	
+			Feedback();
+		}).catch(function (error) {
+			console.log(error);
+		});
+	} else {
+		alert("Don't have any comment !!");
+	}
 }
 
 function render(items) {
@@ -104,7 +97,7 @@ function render(items) {
 function renderFeedback(items) {
 	var nhanXet = '';
 	for(var item of items) {
-		nhanXet += '<span>Nhận xét bởi</span><span style="color: #2aabd2;"> '+item.hoten+'</span><span> Vào Ngày: '+item.ngayhientai+'</span><br/><span>Nhận Xét: '+item.nhanxet+'</span><br /><br />';
+		nhanXet += '<span>Nhận xét bởi</span><span style="color: #2aabd2;"> '+item.name+'</span><span> Vào Ngày: '+item.ngayhientai+'</span><br/><span>Nhận Xét: '+item.nhanxet+'</span><br /><br />';
 	}
 	$('#nhan-xet-cua-kh').html(nhanXet);
 }

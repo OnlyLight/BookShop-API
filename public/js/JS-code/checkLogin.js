@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	showHeader();
+	cart();
+});
+
+function showHeader() {
 	var pathname = window.location.pathname;
 	if(!checkLoginAdmin()) {
 		if(pathname === '/admin') {
@@ -12,9 +17,7 @@ $(document).ready(function() {
 	if(checkLoginUser()) {
 		renderHeaderUserLogin();
 	}
-
-	cart();
-});
+}
 
 function cart() {
 	$('#icon-cart, .mua').click(function() {

@@ -37,7 +37,7 @@ module.exports.searchName = function (req, res) {
 
 module.exports.filter = function (req, res) {
 	var idsach = req.query.idsach;
-	var sql = "SELECT * FROM nhanxet WHERE idSach = "+idsach+"";
+	var sql = "SELECT nhanxet.idnhanxet, nhanxet.nhanxet, nhanxet.ngayhientai, nhanxet.idSach, users.name FROM nhanxet JOIN users ON nhanxet.idUser = users.id WHERE idSach = "+idsach+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -48,10 +48,10 @@ module.exports.filter = function (req, res) {
 
 // Insert new Product
 module.exports.create = function (req, res) {
-	var hoten = req.body.hoten;
 	var nhanxet = req.body.nhanxet;
 	var idsach = req.body.idsach;
-	var sql = "INSERT INTO nhanxet (hoten, nhanxet, idSach) VALUES ('"+hoten+"', '"+nhanxet+"', "+idsach+")";
+	var idUser = req.body.idUser;
+	var sql = "INSERT INTO nhanxet (nhanxet, idSach, idUser) VALUES ('"+nhanxet+"', "+idsach+", "+idUser+")";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -63,10 +63,10 @@ module.exports.create = function (req, res) {
 // Update Product By Id
 module.exports.update = function (req, res) {
 	var id = req.params.id;
-	var hoten = req.body.hoten;
+	var idUser = req.body.idUser;
 	var nhanxet = req.body.nhanxet;
 	var idsach = req.body.idsach;
-	var sql = "UPDATE nhanxet SET hoten = '"+hoten+"', nhanxet = '"+nhanxet+"', idSach = "+idsach+" WHERE idnhanxet = "+id+"";
+	var sql = "UPDATE nhanxet SET nhanxet = '"+nhanxet+"', idSach = "+idsach+", idUser = "+idUser+" WHERE idnhanxet = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

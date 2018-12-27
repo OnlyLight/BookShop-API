@@ -42,7 +42,7 @@ module.exports.update = function (req, res) {
 	var id = req.params.id;
 	var soluong = req.body.soluong;
 	var thanhtien = req.body.thanhtien;
-	var sql = "UPDATE giohang SET soluong = "+soluong+", thanhtien = "+thanhtien+" WHERE id = "+id+"";
+	var sql = "UPDATE giohang SET soluong = "+soluong+" WHERE id = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

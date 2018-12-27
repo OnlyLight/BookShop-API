@@ -14,6 +14,7 @@ $(document).on('click','.btnDeleteCart', function(){
 
 $(document).ready(function() {
     getInfoCart();
+
     let soluong = $("input[name*='soluong']").val() || 1;
     let idUserCookie = Cookies.get('id-user-login');
     let idsach = GetURLParameter('id');
@@ -22,6 +23,23 @@ $(document).ready(function() {
         addProduct(soluong, idsach, idUserCookie);
     });
 });
+
+function addProduct(soluong, idsach, idUser) {
+    axios({
+		method: 'post',
+        url: 'http://localhost:3000/api/giohang/create',
+        data: {
+            soluong: soluong,
+            idsach: idsach,
+            idUser: idUser
+        }
+	}).then(function (res) {
+        console.log(res);
+        getInfoCart();
+	}).catch(function (error) {
+		console.log(error);
+	});
+}
 
 function updateQuality(id, soluong, dongia) {
     var total = soluong * dongia;
@@ -57,7 +75,6 @@ function getInfoCart() {
 		method: 'get',
 		url: 'http://localhost:3000/api/giohang/list'
 	}).then(function (res) {
-        console.log(res.data);
         renderCart(res.data);
 	}).catch(function (error) {
 		console.log(error);
@@ -86,21 +103,4 @@ function renderCart(items) {
     if(checkLoginUser()) {
         $('#icon-cart').html(iconCart);
     }
-}
-
-function addProduct(soluong, idsach, idUser) {
-    axios({
-		method: 'post',
-        url: 'http://localhost:3000/api/giohang/create',
-        data: {
-            soluong: soluong,
-            idsach: idsach,
-            idUser: idUser
-        }
-	}).then(function (res) {
-        console.log(res);
-        getInfoCart();
-	}).catch(function (error) {
-		console.log(error);
-	});
 }
