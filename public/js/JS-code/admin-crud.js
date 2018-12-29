@@ -92,9 +92,12 @@ function renderBook(items) {
 
 // Continute
 function renderUsers(items) {
+	var giotinh = '';
 	var content = '<tr><th>Email</th><th>Họ Tên</th><th>User name</th><th>Giới Tính</th><th>Quyền Truy Cập</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '<tr><td>'+item.email+'</td><td>'+item.name+'</td><td>'+item.username+'</td><td>'+item.gender+'</td><td>'+item.role_name+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-user.html">EDIT</a><a style="width: 80px;" class="btn btn-sm btn-danger" href="">DELETE</a></td></tr>';
+		if(item.gender == 0) giotinh = 'Nam';
+		else giotinh = 'Nữ';
+		content += '<tr><td>'+item.email+'</td><td>'+item.name+'</td><td>'+item.username+'</td><td>'+giotinh+'</td><td>'+item.role_name+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-user.html">EDIT</a><a style="width: 80px;" class="btn btn-sm btn-danger" href="">DELETE</a></td></tr>';
 	}
 
 	$('#render-users').html(content);
