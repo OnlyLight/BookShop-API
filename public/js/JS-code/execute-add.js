@@ -7,11 +7,10 @@ $(document).ready(function() {
 		addUser();
 	});
 
-	$('#btn-add-sach').click(function() {
-		
-		var file = $("input[name*='file']").files;
-		alert(file);
-		// addSach();
+	$("#data").submit(function (e) {
+		e.preventDefault();    
+		var formData = new FormData(this);
+		addSach(formData);
 	});
 });
 
@@ -33,43 +32,11 @@ function addTheLoai() {
 }
 
 // Do after
-function addSach() {
-	var tensach = $("input[name*='tensach']").val();
-	var file = $("input[name*='file']").files;
-	var gia = $("input[name*='gia']").val();
-	var tacgia = $("input[name*='tacgia']").val();
-	var sotrang = $("input[name*='sotrang']").val();
-	var kichthuoc = $("input[name*='kichthuoc']").val();
-	var hinhthuc = $("input[name*='hinhthuc']").val();
-	var tennhacc = $("input[name*='tennhacc']").val();
-	var nxb = $("input[name*='nxb']").val();
-	var namxb = $("input[name*='namxb']").val();
-	var tinhtrang = $("input[name*='tinhtrang']").val();
-	var noibat = $("input[name*='noibat']").val();
-	var theloai = $("input[name*='theloai']").val();
-	var review = $("input[name*='review']").val();
-	var ngonngu = $("input[name*='ngonngu']").val();
-
+function addSach(formData) {
 	axios({
 		method: 'post',
 		url: 'http://localhost:3000/api/sach/create',
-		data: {
-			tensach: tensach,
-			sotrang: sotrang,
-			file: file,
-			gia: gia,
-			tennhacc: tennhacc,
-			tacgia: tacgia,
-			nxb: nxb,
-			namxuatban: namxb,
-			kichthuoc: kichthuoc,
-			hinhthuc: hinhthuc,
-			ngonngu: ngonngu,
-			tinhtrang: tinhtrang,
-			review: review,
-			matheloai: theloai,
-			noibat: noibat
-		}
+		data: formData
 	}).then(function (res) {
 		console.log(res);
 		location.href = '/admin';

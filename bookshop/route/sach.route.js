@@ -3,7 +3,7 @@ var multer = require('multer');
 var router = express.Router();
 
 var controller = require('../controller/sach.controller');
-var upload = multer({dest: './public/uploads/images'});
+var upload = multer({dest: './public/uploads/images/sach-upload'});
 
 router.get('/list', controller.list);
 router.get('/list/:id', controller.listByID);

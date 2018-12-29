@@ -63,7 +63,7 @@ module.exports.pager = function (req, res) {
 module.exports.create = function (req, res) {
 	var tensach = req.body.tensach;
 	var sotrang = req.body.sotrang;
-	var hinhanh = req.file.path;
+	var hinhanh = req.file.path.split('\\').slice(1).join('/');
 	var gia = req.body.gia;
 	var tennhacc = req.body.tennhacc;
 	var tacgia = req.body.tacgia;
@@ -76,7 +76,7 @@ module.exports.create = function (req, res) {
 	var review = req.body.review;
 	var matheloai = req.body.matheloai;
 	var noibat = req.body.noibat;
-	var sql = "INSERT INTO sach (tensach, sotrang, hinhanh, gia, tennhacc, tacgia, nxb, namxuatban, kichthuoc, hinhthuc, ngonngu, tinhtrang, review, matheloai, noibat) VALUES ('"+tensach+"', '"+sotrang+"', '"+hinhanh+"', '"+gia+"', '"+tennhacc+"', '"+tacgia+"', '"+nxb+"', '"+namxuatban+"', '"+kichthuoc+"', '"+hinhthuc+"', '"+ngonngu+"', '"+tinhtrang+"', '"+review+"', '"+matheloai+"', '"+noibat+"')";
+	var sql = "INSERT INTO sach (tensach, sotrang, hinhanh, gia, tennhacc, tacgia, nxb, namxuatban, kichthuoc, hinhthuc, ngonngu, tinhtrang, review, matheloai, noibat) VALUES ('"+tensach+"', "+sotrang+", '"+hinhanh+"', "+gia+", '"+tennhacc+"', '"+tacgia+"', '"+nxb+"', "+namxuatban+", '"+kichthuoc+"', '"+hinhthuc+"', '"+ngonngu+"', '"+tinhtrang+"', '"+review+"', "+matheloai+", "+noibat+")";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -90,7 +90,7 @@ module.exports.update = function (req, res) {
 	var id = req.params.id;
 	var tensach = req.body.tensach;
 	var sotrang = req.body.sotrang;
-	var hinhanh = req.file.path;
+	var hinhanh = req.file.path.split('\\').slice(1).join('/');
 	var gia = req.body.gia;
 	var tennhacc = req.body.tennhacc;
 	var tacgia = req.body.tacgia;

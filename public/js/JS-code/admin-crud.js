@@ -88,7 +88,7 @@ function renderTheLoai(items) {
 function renderBook(items) {
 	var content = '<tr><th>ID Sách</th><th>Tên Sách</th><th>Giá</th><th>Tên Tác Giả</th><th>Hình Thức</th><th>Số Trang</th><th>Thể Loại</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '<tr><td>'+item.idsach+'</td><td>'+item.tensach+'</td><td>'+item.gia+'</td><td>'+item.tacgia+'</td><td>'+item.hinhthuc+'</td><td>'+item.sotrang+'</td><td>'+item.tentheloai+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-sach.html">EDIT</a><button value="'+item.idsach+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteSach">DELETE</button></td></tr>';
+		content += '<tr><td>'+item.idsach+'</td><td>'+item.tensach+'</td><td>'+item.gia+'</td><td>'+item.tacgia+'</td><td>'+item.hinhthuc+'</td><td>'+item.sotrang+'</td><td>'+item.tentheloai+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-sach.html?id='+item.idsach+'">EDIT</a><button value="'+item.idsach+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteSach">DELETE</button></td></tr>';
 	}
 
 	$('#render-book').html(content);
