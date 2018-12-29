@@ -22,7 +22,7 @@
 #add-theloai .input-group {
     width: 100%;
 }
-#add-theloai input {
+#add-theloai .input-custom {
     width: 100%;
 }
 

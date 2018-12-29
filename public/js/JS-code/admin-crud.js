@@ -65,6 +65,7 @@ function getBookViewAdmin() {
 
 function getListCategoryViewAdmin() {
 	getListCategory().then(function(values) {
+		console.log('Category');
         console.log(values);
 		renderTheLoai(values);
 	}).catch(function(err) {
@@ -73,18 +74,21 @@ function getListCategoryViewAdmin() {
 }
 
 function renderTheLoai(items) {
+	var loadCategory = '';
 	var content = '<tr><th>Mã Thể Loại</th><th>Tên Thể Loại</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '<tr><td>'+item.matheloai+'</td><td>'+item.tentheloai+'</td><td><a style="margin-right: 1rem; width: 80px;" class="btn btn-sm btn-warning" href="edit-theloai.html">EDIT</a><a style="width: 80px;" class="btn btn-sm btn-danger" href="">DELETE</a></td></tr>';
+		loadCategory += '<option value="'+item.matheloai+'">'+item.tentheloai+'</option>';
+		content += '<tr><td>'+item.matheloai+'</td><td>'+item.tentheloai+'</td><td><a style="margin-right: 1rem; width: 80px;" class="btn btn-sm btn-warning" href="edit-theloai.html">EDIT</a><button value="'+item.matheloai+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteTheLoai">DELETE</button></td></tr>';
 	}
 
 	$('#render-theloai').html(content);
+	$('#load-category').html(loadCategory);
 }
 
 function renderBook(items) {
-	var content = '<tr><th>ID Sách</th><th>Tên Sách</th><th>Giá</th><th>Tên Tác Giả</th><th>Hình Thức</th><th>Số Trang</th><th>Mã Thể Loại</th><th>Action</th></tr>';
+	var content = '<tr><th>ID Sách</th><th>Tên Sách</th><th>Giá</th><th>Tên Tác Giả</th><th>Hình Thức</th><th>Số Trang</th><th>Thể Loại</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '<tr><td>'+item.idsach+'</td><td>'+item.tensach+'</td><td>'+item.gia+'</td><td>'+item.tacgia+'</td><td>'+item.hinhthuc+'</td><td>'+item.sotrang+'</td><td>'+item.matheloai+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-sach.html">EDIT</a><a style="width: 80px;" class="btn btn-sm btn-danger" href="">DELETE</a></td></tr>';
+		content += '<tr><td>'+item.idsach+'</td><td>'+item.tensach+'</td><td>'+item.gia+'</td><td>'+item.tacgia+'</td><td>'+item.hinhthuc+'</td><td>'+item.sotrang+'</td><td>'+item.tentheloai+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-sach.html">EDIT</a><button value="'+item.idsach+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteSach">DELETE</button></td></tr>';
 	}
 
 	$('#render-book').html(content);
@@ -97,7 +101,7 @@ function renderUsers(items) {
 	for(var item of items) {
 		if(item.gender == 0) giotinh = 'Nam';
 		else giotinh = 'Nữ';
-		content += '<tr><td>'+item.email+'</td><td>'+item.name+'</td><td>'+item.username+'</td><td>'+giotinh+'</td><td>'+item.role_name+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-user.html">EDIT</a><a style="width: 80px;" class="btn btn-sm btn-danger" href="">DELETE</a></td></tr>';
+		content += '<tr><td>'+item.email+'</td><td>'+item.name+'</td><td>'+item.username+'</td><td>'+giotinh+'</td><td>'+item.role_name+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="edit-user.html">EDIT</a><button value="'+item.id+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteUser">DELETE</button></td></tr>';
 	}
 
 	$('#render-users').html(content);
@@ -106,7 +110,7 @@ function renderUsers(items) {
 function renderFeedback(items) {
 	var content = '<tr><th>Tên Khách Hàng</th><th>Ngày Nhận Xét</th><th>Lời Nhận Xét</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '<tr><td>'+item.hoten+'</td><td>'+item.ngayhientai+'</td><td>'+item.nhanxet+'</td><td><button value="'+item.idnhanxet+'" style="width: 80px;" class="btn btn-sm btn-danger btnTest">DELETE</button></td></tr></td></tr>';
+		content += '<tr><td>'+item.name+'</td><td>'+item.ngayhientai+'</td><td>'+item.nhanxet+'</td><td><button value="'+item.idnhanxet+'" style="width: 80px;" class="btn btn-sm btn-danger btnTest">DELETE</button></td></tr></td></tr>';
 	}
 
 	$('#render-feedback').html(content);

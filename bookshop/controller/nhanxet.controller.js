@@ -2,7 +2,7 @@ var con = require('../dbconnect');
 
 // Get All Data
 module.exports.list = function (req, res) {
-	var sql = "SELECT * FROM nhanxet";
+	var sql = "SELECT nhanxet.idnhanxet, nhanxet.nhanxet, nhanxet.ngayhientai, nhanxet.idSach, users.name FROM nhanxet JOIN users ON nhanxet.idUser = users.id";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

@@ -20,6 +20,7 @@ head
   script(src='js/JS-code/render.js')
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/execute-add.js')
   
   title FAHASA.com
 include header
@@ -32,34 +33,31 @@ include login
     .row
       .col-sm-3
       .col-sm-6
-        form(action='', method='post')
+        form
           .input-group
-            .input-group
-              label Email
-              input.form-control(type='text', name='email', autocomplete='off')
+            label Email
+            input.form-control.input-custom(type='email', name='email-admin', autocomplete='off')
           br
           .input-group
-            .input-group
-              label M&#x1EAD;t Kh&#x1EA9;u
-              input.form-control(type='text', name='pass', autocomplete='off')
+            label Mật Khẩu
+            input.form-control.input-custom(type='password', name='pass-admin', autocomplete='off')
           br
           .input-group
-            .input-group
-              label H&#x1ECD;c v&agrave; T&ecirc;n
-              input.form-control(type='text', name='hoten', autocomplete='off')
+            label UserName
+            input.form-control.input-custom(type='text', name='username-admin', autocomplete='off')
           br
           .input-group
-            .input-group
-              label Ng&agrave;y Sinh
-              input.form-control(type='text', name='ngaysinh', autocomplete='off')
+            label Họ Tên
+            input.form-control.input-custom(type='text', name='name-admin', autocomplete='off')
           br
-          .input-group
-            .input-group
-              label Gi&#x1EDB;i T&iacute;nh
-              input.form-control(type='text', name='gioitinh', autocomplete='off')
+          label Giới tính
           br
+          input#male(type='radio', name='gender-admin' value='0')
+          label(for="male") Nam &nbsp;&nbsp;&nbsp;
+          input#female(type='radio', name='gender-admin' value='1')
+          label(for="female") Nữ
           .text-right
-            button.btn.btn-md.btn-success(type='submit') Th&ecirc;m
+            button#btnAddAdmin.btn.btn-md.btn-success(type='button') Thêm
       .col-sm-3
 // /CONTENT
 include footer
