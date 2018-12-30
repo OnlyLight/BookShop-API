@@ -10,6 +10,7 @@ router.get('/list/:id', controller.listByID);
 
 router.get('/search', controller.searchName);
 router.get('/filter', controller.filter);
+router.get('/filter-sachnoibat', controller.filterNoiBat);
 
 router.get('/pager', controller.pager);
 

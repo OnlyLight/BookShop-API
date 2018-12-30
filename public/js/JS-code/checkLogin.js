@@ -34,6 +34,7 @@ function renderHeaderUserLogin() {
 	$('.info').removeClass('hide');
 	$('.dangky').addClass('hide');
 	$('.dangnhap').addClass('hide');
+	getInfoCart();
 }
 
 function renderHeaderAdminLogin() {

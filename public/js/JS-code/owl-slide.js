@@ -1,8 +1,4 @@
-$(document).ready(function () {
-    // $(document).on('owlCarousel','.owl-carousel', function(){
-	// 	// console.log($(this).val());
-	// 	deleteNX($(this).val());
-	// });
+$(window).on('load', function(){
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:20,

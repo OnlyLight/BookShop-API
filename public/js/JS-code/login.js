@@ -33,7 +33,7 @@ function checkSignInAdmin() {
 	}).catch(function (error) {
 		console.log(error);
 		var e = error.response.status;
-		if(e === 404) {
+		if(e === 404 || e === 500 || e === 403) {
 			confirm('You are not admin');
 		} else if(e === 401) {
 			confirm('Invalid Password!');
@@ -61,16 +61,10 @@ function checkSignInUser() {
 	}).catch(function (error) {
 		console.log(error);
 		var e = error.response.status;
-		// if(e === 404) {
-		// 	confirm('You are not admin');
-		// } else if(e === 401) {
-		// 	confirm('Invalid Password!');
-		// }
-
-		if(e === 403) {
-			confirm('Cannot login !!');
-		} else if(e === 500) {
-			confirm('Can not access User !');
+		if(e === 404 || e === 500 || e === 403) {
+			confirm('Cannot Login !!');
+		} else if(e === 401) {
+			confirm('Invalid Password!');
 		}
 	});
 }

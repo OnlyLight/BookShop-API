@@ -46,6 +46,17 @@ module.exports.filter = function (req, res) {
 	});
 };
 
+module.exports.filterNoiBat = function (req, res) {
+	var noibat = req.query.noibat;
+	var sql = "SELECT * FROM sach WHERE noibat = "+noibat+"";
+	con.query(sql, function(err, results) {
+		// If Error crash here
+		if (err) throw err;
+		// If don't have Error return results
+		res.json(results);
+	});
+};
+
 module.exports.pager = function (req, res) {
 	var matheloai = req.query.matheloai;
 	var _limit = req.query._limit;

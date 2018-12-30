@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2018 at 05:41 AM
+-- Generation Time: Dec 30, 2018 at 05:20 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -21,19 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `bookshop`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `donhang`
---
-
-CREATE TABLE `donhang` (
-  `id` int(11) NOT NULL,
-  `idSach` int(11) DEFAULT NULL,
-  `idUser` int(11) DEFAULT NULL,
-  `trangthai` varchar(50) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -209,8 +196,7 @@ INSERT INTO `theloaisach` (`matheloai`, `tentheloai`) VALUES
 (9, 'Sách Thiếu Nhi'),
 (11, 'Từ Điển'),
 (12, 'Kỹ Năng Sống'),
-(13, 'Sách Tiếng Việt'),
-(19, 'b');
+(13, 'Sách Tiếng Việt');
 
 -- --------------------------------------------------------
 
@@ -221,7 +207,7 @@ INSERT INTO `theloaisach` (`matheloai`, `tentheloai`) VALUES
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
+  `username` varchar(255) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `gender` tinyint(1) DEFAULT NULL,
@@ -269,12 +255,6 @@ INSERT INTO `user_roles` (`createdAt`, `updatedAt`, `roleId`, `userId`) VALUES
 --
 
 --
--- Indexes for table `donhang`
---
-ALTER TABLE `donhang`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `giohang`
 --
 ALTER TABLE `giohang`
@@ -292,7 +272,8 @@ ALTER TABLE `nhanxet`
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indexes for table `sach`
@@ -305,13 +286,15 @@ ALTER TABLE `sach`
 -- Indexes for table `theloaisach`
 --
 ALTER TABLE `theloaisach`
-  ADD PRIMARY KEY (`matheloai`);
+  ADD PRIMARY KEY (`matheloai`),
+  ADD UNIQUE KEY `tentheloai` (`tentheloai`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `user_roles`
@@ -323,12 +306,6 @@ ALTER TABLE `user_roles`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `donhang`
---
-ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `giohang`
