@@ -20,6 +20,9 @@ head
   script(src='js/JS-code/render.js')
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/admin-crud.js')
+  script(src='js/JS-code/getURL.js')
+  script(src='js/JS-code/execute-edit.js')
 
   title FAHASA.com
 include header
@@ -29,78 +32,85 @@ include login
 #add-theloai.hidden-xs
   .container
     .content
-      h3.text-center Th&ecirc;m S&aacute;ch M&#x1EDB;i
+      h3.text-center Chỉnh Sửa Sách
       .row
         .col-sm-1
         .col-sm-10
-          form(action='', method='post')
+          form#data(enctype="multipart/form-data")
             .row
               .col-sm-6
                 .input-group
-                  label T&ecirc;n S&aacute;ch
-                  input.form-control(type='text', name='tensach', value='Value...')
+                  label Tên Sách
+                  input.form-control(type='text', name='tensach', required)
                 br
                 .input-group
-                  label H&igrave;nh &#x1EA2;nh
-                  input.form-control(type='text', name='img')
+                  label Hình Ảnh
+                  input#file.form-control(type='file', name='file', required)
                 br
                 .input-group
-                  label Gi&aacute; S&aacute;ch
-                  input.form-control(type='text', name='gia')
+                  label Giá Sách
+                  input.form-control(type='number', min="0", name='gia', required)
                 br
                 .input-group
-                  label T&aacute;c Gi&#x1EA3;
-                  input.form-control(type='text', name='tacgia')
+                  label Tác Giả
+                  input.form-control(type='text', name='tacgia', required)
                 br
                 .input-group
-                  label S&#x1ED1; Trang
-                  input.form-control(type='text', name='sotrang')
+                  label Số Trang
+                  input.form-control(type='number', min="0", name='sotrang', required)
                 br
                 .input-group
-                  label K&iacute;ch Th&#x1B0;&#x1EDB;c
-                  input.form-control(type='text', name='kichthuoc')
+                  label Kích Thước
+                  input.form-control(type='text', name='kichthuoc', required)
                 br
                 .input-group
-                  label H&igrave;nh Th&#x1EE9;c
-                  input.form-control(type='text', name='hinhthuc')
+                  label Hình Thức
+                  input.form-control(type='text', name='hinhthuc', required)
                 br
               .col-sm-6
                 .input-group
-                  label T&ecirc;n Nh&agrave; Cung C&#x1EA5;p
-                  input.form-control(type='text', name='tennhacc', value='Value...')
+                  label Tên Nhà Cung Cấp
+                  input.form-control(type='text', name='tennhacc', required)
                 br
                 .input-group
-                  label Nh&agrave; Xu&#x1EA5;t B&#x1EA3;n
-                  input.form-control(type='text', name='nxb')
+                  label Nhà Xuất Bản
+                  input.form-control(type='text', name='nxb', required)
                 br
                 .input-group
-                  label N&abreve;m Xu&#x1EA5;t B&#x1EA3;n
-                  input.form-control(type='text', name='namxb')
+                  label Năm Xuất Bản
+                  input.form-control(type='number', min="0", name='namxuatban', required)
                 br
                 .input-group
-                  label K&iacute;ch Th&#x1B0;&#x1EDB;c
-                  input.form-control(type='text', name='kichthuoc')
+                  label Ngôn ngữ
+                  input.form-control(type='text', name='ngonngu', required)
                 br
                 .input-group
-                  label T&igrave;nh Tr&#x1EA1;ng
-                  input.form-control(type='text', name='tinhtrang')
+                  label Tình Trạng
+                  input.form-control(type='text', name='tinhtrang', required)
                 br
-                .input-group
-                  label N&#x1ED5;i B&#x1EAD;t
-                  input.form-control(type='text', name='noibat')
+                label Nổi bật
                 br
-                .input-group
-                  label Th&#x1EC3; Lo&#x1EA1;i S&aacute;ch
-                  input.form-control(type='text', name='hinhthuc')
+                input#yes(type='radio', name='noibat', value='1')
+                label(for="yes") Nổi bật &nbsp;&nbsp;&nbsp;
+                input#no(type='radio', name='noibat', value='0', checked="checked")
+                label(for="no") Không
                 br
+                br
+                label Thể Loại Sách &nbsp;&nbsp;
+                select#load-category(name='matheloai')
+                  option(value='volvo') Volvo
+                  option(value='saab') Saab
+                  option(value='mercedes') Mercedes
+                  option(value='audi') Audi
+
             .row
               .col-sm-12
                 .input-group
-                  label Review S&aacute;ch
-                  textarea.form-control(name='review')
+                  label Review Sách
+                  textarea.form-control(name='review', required)
             br
             .text-center
-              button.btn.btn-lg.btn-warning(type='submit') L&#x1B0;u L&#x1EA1;i
+              button#btn-add-sach.btn.btn-lg.btn-success(type='submit') Edit Book
         .col-sm-1
 // /CONTENT
 include footer

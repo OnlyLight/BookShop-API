@@ -36,23 +36,23 @@ include login
         form
           .input-group
             label Email
-            input.form-control.input-custom(type='email', name='email-admin', autocomplete='off')
+            input.form-control.input-custom(type='email', name='email-admin', autocomplete='off', required)
           br
           .input-group
             label Mật Khẩu
-            input.form-control.input-custom(type='password', name='pass-admin', autocomplete='off')
+            input.form-control.input-custom(type='password', name='pass-admin', autocomplete='off', required)
           br
           .input-group
             label UserName
-            input.form-control.input-custom(type='text', name='username-admin', autocomplete='off')
+            input.form-control.input-custom(type='text', name='username-admin', autocomplete='off', required)
           br
           .input-group
             label Họ Tên
-            input.form-control.input-custom(type='text', name='name-admin', autocomplete='off')
+            input.form-control.input-custom(type='text', name='name-admin', autocomplete='off', required)
           br
           label Giới tính
           br
-          input#male(type='radio', name='gender-admin' value='0')
+          input#male(type='radio', name='gender-admin' value='0', checked="checked")
           label(for="male") Nam &nbsp;&nbsp;&nbsp;
           input#female(type='radio', name='gender-admin' value='1')
           label(for="female") Nữ

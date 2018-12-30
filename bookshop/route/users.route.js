@@ -11,6 +11,7 @@ router.get('/search-user', controller.searchUser);
 
 router.get('/filter', controller.filter);
 
+router.patch('/update/:id', controller.update);
 router.delete('/delete/:id', controller.delete);
 
 module.exports = router;

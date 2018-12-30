@@ -98,6 +98,21 @@ app.get('/add-sach', function(req, res){
 	res.render("add-sach");
 });
 
+app.get('/edit-sach', function(req, res){
+	//tra ket qua cho client
+	res.render("edit-sach");
+});
+
+app.get('/edit-theloai', function(req, res){
+	//tra ket qua cho client
+	res.render("edit-theloai");
+});
+
+app.get('/edit-user', function(req, res){
+	//tra ket qua cho client
+	res.render("edit-user");
+});
+
 app.get('/add-admin', function(req, res){
 	//tra ket qua cho client
 	res.render("add-admin");

@@ -20,6 +20,8 @@ head
   script(src='js/JS-code/render.js')
   script(src='js/JS-code/login.js')
   script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/getURL.js')
+  script(src='js/JS-code/execute-edit.js')
   
   title FAHASA.com
 include header
@@ -28,19 +30,19 @@ include login
 // CONTENT
 #add-theloai.hidden-xs
   .container
-    h3.text-center Ch&#x1EC9;nh S&#x1EED;a Lo&#x1EA1;i S&aacute;ch
+    h3.text-center Chỉnh Sửa Thể Loại Sách
     .row
       .col-sm-3
       .col-sm-6
-        form(action='', method='post')
+        form#data-theloai(enctype="multipart/form-data")
           .input-group
-            label T&ecirc;n Th&#x1EC3; Lo&#x1EA1;i S&aacute;ch
+            label Tên Thể Loại Sách
             br
             .input-group
-              input.form-control(type='text', name='tentheloai', value='Value...')
+              input.form-control(type='text', name='tentheloai', autocomplete='off', required)
           br
           .text-right
-            button.btn.btn-sm.btn-warning(type='submit') S&#x1EED;a
+            button#btnAddTheLoai.btn.btn-sm.btn-success(type='button') Edit
       .col-sm-3
 // /CONTENT
 include footer

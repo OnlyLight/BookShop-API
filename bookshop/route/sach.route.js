@@ -14,7 +14,7 @@ router.get('/filter', controller.filter);
 router.get('/pager', controller.pager);
 
 router.post('/create', upload.single('file'), controller.create);
-router.put('/update/:id', upload.single('file'), controller.update);
+router.patch('/update/:id', upload.single('file'), controller.update);
 router.delete('/delete/:id', controller.delete);
 
 module.exports = router;
