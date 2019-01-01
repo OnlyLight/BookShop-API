@@ -24,7 +24,7 @@ async function getBookData() {
 }
 
 async function getBookDataKH() {
-	var url = "http://localhost:3000/api/sach/filter?matheloai=3";
+	var url = "http://localhost:3000/api/giohang/top-sellers?limit=5";
 	const res = await axios.get(url);
 	return res.data;
 }

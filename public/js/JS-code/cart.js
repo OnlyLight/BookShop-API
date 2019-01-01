@@ -12,17 +12,22 @@ $(document).on('click','.btnDeleteCart', function(){
     deleteItem(id);
 });
 
+var arrId = [];
+
 $(document).ready(function() {
     getInfoCart();
+    addProductDistint();
+});
 
-    let soluong = $("input[name*='soluong']").val() || 1;
+function addProductDistint() {
+    let soluong = 1;
     let idUserCookie = Cookies.get('id-user-login');
-    let idsach = GetURLParameter('id');
+    let idsachAdd = GetURLParameter('id');
 
     $('.mua').click(function() {
-        addProduct(soluong, idsach, idUserCookie);
+        addProduct(soluong, idsachAdd, idUserCookie);
     });
-});
+}
 
 function addProduct(soluong, idsach, idUser) {
     axios({
@@ -82,6 +87,7 @@ function getInfoCart() {
 }
 
 function renderCart(items) {
+    addProductDistint();
     var content = '<tr><th>Gỡ Bỏ</th><th>Hình Ảnh</th><th>Tên Sản Phẩm</th><th>Giá</th><th>Số Lượng</th></tr>';
     var total = 0;
     var quality = 0;

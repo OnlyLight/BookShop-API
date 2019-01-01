@@ -23,6 +23,28 @@ module.exports.listByID = function (req, res) {
 	});
 };
 
+module.exports.filter = function (req, res) {
+	var idUser = req.query.idUser;
+	var sql = "SELECT * FROM giohang WHERE idUser = "+idUser+"";
+	con.query(sql, function(err, results) {
+		// If Error crash here
+		if (err) throw err;
+		// If don't have Error return results
+		res.json(results);
+	});
+};
+
+module.exports.top = function (req, res) {
+	var limit = req.query.limit;
+	var sql = "SELECT sach.*, giohang.soluong, giohang.idsach FROM giohang JOIN sach ON giohang.idsach = sach.idsach LIMIT "+limit+"";
+	con.query(sql, function(err, results) {
+		// If Error crash here
+		if (err) throw err;
+		// If don't have Error return results
+		res.json(results);
+	});
+};
+
 // Insert new Product
 module.exports.create = function (req, res) {
 	var soluong = req.body.soluong;
