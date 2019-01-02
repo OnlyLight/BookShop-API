@@ -38,11 +38,11 @@
           a(href='/')
             img.img-responsive(src='uploads/images/logo/logo.png')
         .col-sm-7
-          form(action='', method='post')
+          form
             .input-group
               input.form-control(type='text', name='search', placeholder='Tìm kiếm cuốn sách bạn mong muốn', autocomplete='off')
               .input-group-btn
-                button.btn(type='submit')
+                button#btn-search.btn(type='button')
                   span.glyphicon.glyphicon-search
         .col-sm-2
           .link-cart

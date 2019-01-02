@@ -15,7 +15,17 @@ $(document).ready(function() {
 		console.log(err);
 	});
 	// async - await
+	$('#btn-search').click(function() {
+		getInfoSearch();
+	});
 });
+
+async function getInfoSearch() {
+	var search = $("input[name*='search']").val();
+	var url = "http://localhost:3000/api/sach/search?search="+search+"";
+	const res = await axios.get(url);
+	renderInfoSearch(res.data)
+}
 
 async function getBookData() {
 	var url = "http://localhost:3000/api/sach/filter?matheloai=13";
@@ -55,6 +65,15 @@ function loadBookDataNoiBat() {
 	}).catch(function(err) {
 		console.log(err);
 	});
+}
+
+function renderInfoSearch(items) {
+	var content = '<div><h3 class="text-center">KẾT QUẢ TÌM KIẾM</h3></div>';
+	for(var item of items) {
+		content += '<div class="col-xs-3"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" style="width:100%" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';
+	}
+
+	$('#info-search').html(content);
 }
 
 function renderBookDataKH(items) {

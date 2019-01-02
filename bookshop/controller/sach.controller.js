@@ -26,7 +26,7 @@ module.exports.listByID = function (req, res) {
 // Search Name Product have in list products
 module.exports.searchName = function (req, res) {
 	var search = req.query.search;
-	var sql = "SELECT * FROM sach WHERE tensach LIKE '%"+search+"%' OR tennhacc LIKE '%"+search+"%' OR tacgia LIKE '%"+search+"%' OR nxb LIKE '%"+search+"%' OR hinhthuc LIKE '%"+search+"%' OR ngonngu LIKE '%"+search+"%' OR tinhtrang LIKE '%"+search+"%'";
+	var sql = "SELECT * FROM sach WHERE tensach LIKE '%"+search+"%'";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

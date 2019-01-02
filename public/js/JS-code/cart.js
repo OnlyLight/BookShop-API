@@ -22,10 +22,18 @@ $(document).ready(function() {
 function addProductDistint() {
     let soluong = 1;
     let idUserCookie = Cookies.get('id-user-login');
-    let idsachAdd = GetURLParameter('id');
+    var idsachAdd = GetURLParameter('id');
 
     $('.mua').click(function() {
-        addProduct(soluong, idsachAdd, idUserCookie);
+        let arrCart = JSON.parse(localStorage.getItem('cart'));
+        // test return index in array
+        var findIndex = _.findIndex(arrCart, function(item) { return item.idsach === parseInt(idsachAdd); });
+        
+        if(findIndex === -1) {
+            addProduct(soluong, idsachAdd, idUserCookie);
+        } else {
+            updateQuality(arrCart[findIndex].id, (arrCart[findIndex].soluong + 1), arrCart[findIndex].dongia);
+        }
     });
 }
 
@@ -80,14 +88,17 @@ function getInfoCart() {
 		method: 'get',
 		url: 'http://localhost:3000/api/giohang/list'
 	}).then(function (res) {
+        console.log(res.data);
         renderCart(res.data);
+
+        let arrCart = JSON.stringify(res.data);
+        localStorage.setItem('cart', arrCart);
 	}).catch(function (error) {
 		console.log(error);
 	});
 }
 
 function renderCart(items) {
-    addProductDistint();
     var content = '<tr><th>Gỡ Bỏ</th><th>Hình Ảnh</th><th>Tên Sản Phẩm</th><th>Giá</th><th>Số Lượng</th></tr>';
     var total = 0;
     var quality = 0;
