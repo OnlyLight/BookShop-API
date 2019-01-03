@@ -1,5 +1,8 @@
 $(document).ready(function() {
     userInfo();
+    $('#btn-donhang').click(function() {
+        getInfoPay();
+    });
 });
 
 function userInfo() {
@@ -18,6 +21,12 @@ async function getIdUser() {
 	return res.data;
 }
 
+async function getInfoPay() {
+	var url = "http://localhost:3000/api/giohang/list";
+    const res = await axios.get(url);
+    renderPay(res.data);
+}
+
 function renderInfoUser(items) {
     var content = '';
     for(var item of items) {
@@ -25,4 +34,18 @@ function renderInfoUser(items) {
     }
     
     $('#render-info').html(content);
+}
+
+function renderPay(items) {
+    let idUserCookie = Cookies.get('id-user-login');
+    var content = '<div id="content-cart"><table><tr><th>Hình Ảnh</th><th>Tên Sản Phẩm</th><th>Giá</th><th>Số Lượng</th></tr>';
+    
+    for(var item of items) {
+        if(parseInt(item.pay.data[0]) === 1) {
+            if(item.idUser === parseInt(idUserCookie)) {
+                content += '<tr><td><img class="img-cart" src="'+item.hinhanh+'" /></td><td>'+item.tensach+'</td><td>'+item.gia+'</td><td><span class="ipSoLuong" style="width: 40px; height: 40px;">'+item.soluong+'</span></td></tr>';
+            }
+        }
+    }
+    $('.info-pay').html(content+'</table></div>');
 }

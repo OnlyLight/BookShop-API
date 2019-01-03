@@ -63,8 +63,19 @@ module.exports.create = function (req, res) {
 module.exports.update = function (req, res) {
 	var id = req.params.id;
 	var soluong = req.body.soluong;
-	var thanhtien = req.body.thanhtien;
 	var sql = "UPDATE giohang SET soluong = "+soluong+" WHERE id = "+id+"";
+	con.query(sql, function(err, results) {
+		// If Error crash here
+		if (err) throw err;
+		// If don't have Error return results
+		res.json({'message': 'Update Success !!'});
+	});
+};
+
+module.exports.updatePay = function (req, res) {
+	var id = req.params.id;
+	var pay = req.body.pay;
+	var sql = "UPDATE giohang SET pay = "+pay+" WHERE idUser = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

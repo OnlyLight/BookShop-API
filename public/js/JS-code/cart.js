@@ -17,7 +17,27 @@ var arrId = [];
 $(document).ready(function() {
     getInfoCart();
     addProductDistint();
+    $('#btn-pay').click(function() {
+        let idUserCookie = Cookies.get('id-user-login');
+        Pay(idUserCookie);
+    });
 });
+
+function Pay(id) {
+    var url = "http://localhost:3000/api/giohang/updatePay/"+id+"";
+    axios({
+		method: 'patch',
+        url: url,
+        data: {
+            pay: 1
+        }
+	}).then(function (res) {
+        console.log(res);
+        getInfoCart();
+	}).catch(function (error) {
+		console.log(error);
+	});
+}
 
 function addProductDistint() {
     let soluong = 1;
@@ -105,14 +125,16 @@ function renderCart(items) {
     var idUserCookie = Cookies.get('id-user-login');
 
 	for(var item of items) {
-        if(item.idUser == idUserCookie) {
-            content += '<tr><td><button value="'+item.id+'" class="btn btn-danger btnDeleteCart"><span class="glyphicon glyphicon-remove"></span></button></td><td><img class="img-cart" src="'+item.hinhanh+'" /></td><td>'+item.tensach+'</td><td>'+item.gia+'</td><td><input class="ipSoLuong" style="width: 40px; height: 40px;" type="number" value="'+item.soluong+'" data-price="'+item.gia+'" data-id="'+item.id+'" min="0" name="soluong" /></td></tr>';
-            total += item.thanhtien;
-            quality++;
+        if(parseInt(item.pay.data[0]) === 0) {
+            if(item.idUser == idUserCookie) {
+                content += '<tr><td><button value="'+item.id+'" class="btn btn-danger btnDeleteCart"><span class="glyphicon glyphicon-remove"></span></button></td><td><img class="img-cart" src="'+item.hinhanh+'" /></td><td>'+item.tensach+'</td><td>'+item.gia+'</td><td><input class="ipSoLuong" style="width: 40px; height: 40px;" type="number" value="'+item.soluong+'" data-price="'+item.gia+'" data-id="'+item.id+'" min="0" name="soluong" /></td></tr>';
+                total += item.thanhtien;
+                quality++;
+            }
         }
     }
     var iconCart = '<span class="glyphicon glyphicon-shopping-cart"> '+quality+' Sản phẩm</span>';
-    var showBill = '<strong>TỔNG SỐ TIỀN &nbsp;</strong><span>'+total+'</span><br/><br/><a class="btn btn-success" href="">THANH TOÁN</a>';
+    var showBill = '<strong>TỔNG SỐ TIỀN &nbsp;</strong><span>'+total+'</span>';
 
     $('#render-cart').html(content);
     $('#bill').html(showBill);

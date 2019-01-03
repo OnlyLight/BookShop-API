@@ -10,7 +10,10 @@ router.get('/filter', controller.filter);
 router.get('/top-sellers', controller.top);
 
 router.post('/create', controller.create);
+
 router.patch('/update/:id', controller.update);
+router.patch('/updatePay/:id', controller.updatePay);
+
 router.delete('/delete/:id', controller.delete);
 
 module.exports = router;

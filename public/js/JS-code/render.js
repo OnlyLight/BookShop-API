@@ -18,10 +18,6 @@ $(document).ready(function() {
 	$('#btn-search').click(function() {
 		getInfoSearch();
 	});
-
-	// $("input[name*='search']").input(function() {
-	// 	getInfoSearch();
-	// });
 });
 
 async function getInfoSearch() {
