@@ -40,7 +40,7 @@
         .col-sm-7
           form
             .input-group
-              input.form-control(type='text', name='search', placeholder='Tìm kiếm cuốn sách bạn mong muốn', autocomplete='off')
+              input.form-control(type='text', oninput="functionSearch()", name='search', placeholder='Tìm kiếm cuốn sách bạn mong muốn', autocomplete='off')
               .input-group-btn
                 button#btn-search.btn(type='button')
                   span.glyphicon.glyphicon-search

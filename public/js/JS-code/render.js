@@ -18,13 +18,17 @@ $(document).ready(function() {
 	$('#btn-search').click(function() {
 		getInfoSearch();
 	});
+
+	// $("input[name*='search']").input(function() {
+	// 	getInfoSearch();
+	// });
 });
 
 async function getInfoSearch() {
 	var search = $("input[name*='search']").val();
 	var url = "http://localhost:3000/api/sach/search?search="+search+"";
 	const res = await axios.get(url);
-	renderInfoSearch(res.data)
+	renderInfoSearch(res.data);
 }
 
 async function getBookData() {
@@ -49,6 +53,10 @@ async function getListCategory() {
 	var url = "http://localhost:3000/api/theloaisach/list";
 	const res = await axios.get(url);
 	return res.data;
+}
+
+function functionSearch() {
+	getInfoSearch();
 }
 
 function loadBookDataKH() {
