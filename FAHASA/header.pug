@@ -31,20 +31,20 @@
             li
               a.dangnhap(href='#') ĐĂNG NHẬP
             li
-              a.dangxuat(href='#') ĐĂNG XUẤT
+              a.dangxuat.hide(href='#') ĐĂNG XUẤT
     .header3
       .row
         .col-sm-3
           a(href='/')
             img.img-responsive(src='uploads/images/logo/logo.png')
-        .col-sm-7
+        .cart-admin.col-sm-7
           form
             .input-group
               input.form-control(type='text', oninput="functionSearch()", name='search', placeholder='Tìm kiếm cuốn sách bạn mong muốn', autocomplete='off')
               .input-group-btn
                 button#btn-search.btn(type='button')
                   span.glyphicon.glyphicon-search
-        .col-sm-2
+        .cart-admin.col-sm-2
           .link-cart
             a#icon-cart(style='cursor: pointer;')
               span.glyphicon.glyphicon-shopping-cart
@@ -199,12 +199,12 @@
         .col-xs-4
           a(href='/')
             img.img-responsive(src='uploads/images/logo/logo.png')
-        .col-xs-4.text-right
+        .cart-admin.col-xs-4.text-right
           a(href='#')
             span.glyphicon.glyphicon-briefcase
             sup.badge 0
     br
-    .header-xs-3
+    .cart-admin.header-xs-3
       .row
         .col-xs-12
           form(action='', method='post')

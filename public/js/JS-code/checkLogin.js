@@ -34,12 +34,16 @@ function renderHeaderUserLogin() {
 	$('.info').removeClass('hide');
 	$('.dangky').addClass('hide');
 	$('.dangnhap').addClass('hide');
+	$('.dangxuat').removeClass('hide');
 	getInfoCart();
 }
 
 function renderHeaderAdminLogin() {
 	$('.dangky').addClass('hide');
 	$('.dangnhap').addClass('hide');
+	$('.dangxuat').removeClass('hide');
+	$('.cart-admin').addClass('hide');
+	getInfoCart();
 }
 
 function checkLoginUser() {

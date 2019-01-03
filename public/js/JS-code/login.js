@@ -27,9 +27,7 @@ function checkSignInAdmin() {
 	}).then(function (res) {
 		console.log(res);
 
-		Cookies.set('user-name', username, { expires: 7, path: '/' }); // set cookie to print info
-
-		redirectAdmin(res.data.accessToken);
+		redirectAdmin(res.data.accessToken, username);
 	}).catch(function (error) {
 		console.log(error);
 		var e = error.response.status;
@@ -55,9 +53,7 @@ function checkSignInUser() {
 	}).then(function (res) {
 		console.log(res);
 
-		Cookies.set('user-name', username, { expires: 7, path: '/' }); // set cookie to print info
-
-		redirectUser(res.data.accessToken);
+		redirectUser(res.data.accessToken, username);
 	}).catch(function (error) {
 		console.log(error);
 		var e = error.response.status;
@@ -69,7 +65,7 @@ function checkSignInUser() {
 	});
 }
 
-function redirectUser(value) {
+function redirectUser(value, username) {
 	axios({
 		method: 'get',
 		url: 'http://localhost:3000/api/user',
@@ -78,6 +74,7 @@ function redirectUser(value) {
 		console.log(res.data);
 		var id = res.data.user.roles[0].user_roles.userId;
 
+		Cookies.set('user-name', username, { expires: 7, path: '/' }); // set cookie to print info
 		Cookies.set('id-user-login', id, { expires: 7, path: '/' });
 		Cookies.set('login-user', value, { expires: 7, path: '/' });
 
@@ -85,10 +82,16 @@ function redirectUser(value) {
 		showHeader();
 	}).catch(function (error) {
 		console.log(error);
+		var e = error.response.status;
+		if(e === 404 || e === 500 || e === 403) {
+			confirm('You are not admin');
+		} else if(e === 401) {
+			confirm('Invalid Password!');
+		}
 	});
 }
 
-function redirectAdmin(value) {
+function redirectAdmin(value, username) {
 	axios({
 		method: 'get',
 		url: 'http://localhost:3000/api/admin',
@@ -96,9 +99,16 @@ function redirectAdmin(value) {
 	}).then(function (res) {
 		console.log(res.data);
 		location.href = "/admin";
+		Cookies.set('user-name', username, { expires: 7, path: '/' }); // set cookie to print info
 		Cookies.set('login-admin', value, { expires: 7, path: '/' });
 	}).catch(function (error) {
 		console.log(error);
+		var e = error.response.status;
+		if(e === 404 || e === 500 || e === 403) {
+			confirm('You are not admin');
+		} else if(e === 401) {
+			confirm('Invalid Password!');
+		}
 	});
 }
 
