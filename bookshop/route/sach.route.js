@@ -7,6 +7,7 @@ var upload = multer({dest: './public/uploads/images/sach-upload'});
 
 router.get('/list', controller.list);
 router.get('/list/:id', controller.listByID);
+router.get('/list-kho', controller.listKho);
 
 router.get('/search', controller.searchName);
 router.get('/filter', controller.filter);

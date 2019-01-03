@@ -43,7 +43,6 @@ function renderHeaderAdminLogin() {
 	$('.dangnhap').addClass('hide');
 	$('.dangxuat').removeClass('hide');
 	$('.cart-admin').addClass('hide');
-	getInfoCart();
 }
 
 function checkLoginUser() {

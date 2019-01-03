@@ -43,6 +43,8 @@ br
           a(href='#user', data-toggle='pill') NGƯỜI DÙNG
         li
           a(href='#nhanxet', data-toggle='pill') NHẬN XÉT CỦA NGƯỜI DÙNG
+        li
+          a(href='#kho', data-toggle='pill') TỒN KHO
     .tab-content
       #admin-page.tab-pane.fade.in.active
         .text-center
@@ -124,6 +126,18 @@ br
             td
             td
               button.btn.btn-sm.btn-danger.btnTest(style='width: 80px;') DELETE
+      #kho.tab-pane.fade
+        br
+        table#render-kho.tb-theloai
+          tr
+            th Tên sách
+            th Hình ảnh
+            th Giá
+            th Số lượng
+          tr
+            td
+            td
+            td
 
 // /CONTENT
 include footer

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	getKho();
 	getListCategoryViewAdmin();    
 
 	//////////////////////
@@ -11,6 +12,12 @@ $(document).ready(function() {
     getFeedBackViewAdmin();
     
 });
+
+async function getKho() {
+	var url = "http://localhost:3000/api/sach/list-kho";
+	const res = await axios.get(url);
+	renderKho(res.data);
+}
 
 async function getListCategory() {
 	var url = "http://localhost:3000/api/theloaisach/list";
@@ -108,10 +115,24 @@ function renderUsers(items) {
 }
 
 function renderFeedback(items) {
-	var content = '<tr><th>Tên Khách Hàng</th><th>Ngày Nhận Xét</th><th>Lời Nhận Xét</th><th>Action</th></tr>';
+	var content = '<tr><th>Tên Khách Hàng</th><th>Tên Sách</th><th>Ngày Nhận Xét</th><th>Lời Nhận Xét</th><th>Action</th></tr>';
 	for(var item of items) {
-		content += '<tr><td>'+item.name+'</td><td>'+item.ngayhientai+'</td><td>'+item.nhanxet+'</td><td><button value="'+item.idnhanxet+'" style="width: 80px;" class="btn btn-sm btn-danger btnTest">DELETE</button></td></tr></td></tr>';
+		content += '<tr><td>'+item.name+'</td><td>'+item.tensach+'</td><td>'+item.ngayhientai+'</td><td>'+item.nhanxet+'</td><td><button value="'+item.idnhanxet+'" style="width: 80px;" class="btn btn-sm btn-danger btnTest">DELETE</button></td></tr></td></tr>';
 	}
 
 	$('#render-feedback').html(content);
+}
+
+function renderKho(items) {
+	let content = '<tr><th>Tên sách</th><th>Hình ảnh</th><th>Giá</th><th>Số Lượng Còn Lại</th></tr>';
+	for(var item of items) {
+		content += '<tr><td>'+item.tensach+'</td><td><div class="col-sm-4"></div><img class="img-responsive col-sm-4" src="'+item.hinhanh+'" /><div class="col-sm-4"></div></td><td>'+item.gia+'</td>';
+		if(item.soluongton != null) {
+			content += '<td>'+item.soluongton+'</td></tr>';
+		} else {
+			content += '<td>'+item.soluong+'</td></tr>';
+		}
+	}
+
+	$('#render-kho').html(content);
 }

@@ -98,9 +98,13 @@ function redirectAdmin(value, username) {
 		headers: {'x-access-token': value}
 	}).then(function (res) {
 		console.log(res.data);
-		location.href = "/admin";
+		var id = res.data.user.roles[0].user_roles.userId;
+
+		Cookies.set('id-user-login', id, { expires: 7, path: '/' });
 		Cookies.set('user-name', username, { expires: 7, path: '/' }); // set cookie to print info
 		Cookies.set('login-admin', value, { expires: 7, path: '/' });
+
+		location.href = "/admin";
 	}).catch(function (error) {
 		console.log(error);
 		var e = error.response.status;

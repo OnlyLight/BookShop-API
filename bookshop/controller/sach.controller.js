@@ -11,10 +11,20 @@ module.exports.list = function (req, res) {
 	});
 };
 
+module.exports.listKho = function (req, res) {
+	var sql = "SELECT sach.*, sach.soluong-giohang.soluong AS soluongton FROM sach LEFT JOIN giohang ON giohang.idsach = sach.idsach";
+	con.query(sql, function(err, results) {
+		// If Error crash here
+		if (err) throw err;
+		// If don't have Error return results
+		res.json(results);
+	});
+};
+
 // Get Data by ID
 module.exports.listByID = function (req, res) {
 	var id = req.params.id;
-	var sql = "SELECT * FROM sach WHERE idsach = "+id+"";
+	var sql = "SELECT sach.*, theloaisach.tentheloai FROM sach JOIN theloaisach ON sach.matheloai = theloaisach.matheloai WHERE sach.idsach = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -83,11 +93,11 @@ module.exports.create = function (req, res) {
 	var kichthuoc = req.body.kichthuoc;
 	var hinhthuc = req.body.hinhthuc;
 	var ngonngu = req.body.ngonngu;
-	var tinhtrang = req.body.tinhtrang;
 	var review = req.body.review;
 	var matheloai = req.body.matheloai;
 	var noibat = req.body.noibat;
-	var sql = "INSERT INTO sach (tensach, sotrang, hinhanh, gia, tennhacc, tacgia, nxb, namxuatban, kichthuoc, hinhthuc, ngonngu, tinhtrang, review, matheloai, noibat) VALUES ('"+tensach+"', "+sotrang+", '"+hinhanh+"', "+gia+", '"+tennhacc+"', '"+tacgia+"', '"+nxb+"', "+namxuatban+", '"+kichthuoc+"', '"+hinhthuc+"', '"+ngonngu+"', '"+tinhtrang+"', '"+review+"', "+matheloai+", "+noibat+")";
+	var soluong = req.body.soluong;
+	var sql = "INSERT INTO sach (tensach, sotrang, hinhanh, gia, tennhacc, tacgia, nxb, namxuatban, kichthuoc, hinhthuc, ngonngu, review, matheloai, noibat, soluong) VALUES ('"+tensach+"', "+sotrang+", '"+hinhanh+"', "+gia+", '"+tennhacc+"', '"+tacgia+"', '"+nxb+"', "+namxuatban+", '"+kichthuoc+"', '"+hinhthuc+"', '"+ngonngu+"', '"+review+"', "+matheloai+", "+noibat+", "+soluong+")";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -110,11 +120,11 @@ module.exports.update = function (req, res) {
 	var kichthuoc = req.body.kichthuoc;
 	var hinhthuc = req.body.hinhthuc;
 	var ngonngu = req.body.ngonngu;
-	var tinhtrang = req.body.tinhtrang;
 	var review = req.body.review;
 	var matheloai = req.body.matheloai;
 	var noibat = req.body.noibat;
-	var sql = "UPDATE sach SET tensach = '"+tensach+"', sotrang = "+sotrang+", hinhanh = '"+hinhanh+"', gia = '"+gia+"', tennhacc = '"+tennhacc+"', tacgia = '"+tacgia+"', nxb = '"+nxb+"', namxuatban = '"+namxuatban+"', kichthuoc = '"+kichthuoc+"', hinhthuc = '"+hinhthuc+"', ngonngu = '"+ngonngu+"', tinhtrang = '"+tinhtrang+"', review = '"+review+"', matheloai= '"+matheloai+"', noibat = '"+noibat+"' WHERE idsach = "+id+"";
+	var soluong = req.body.soluong;
+	var sql = "UPDATE sach SET tensach = '"+tensach+"', sotrang = "+sotrang+", hinhanh = '"+hinhanh+"', gia = '"+gia+"', tennhacc = '"+tennhacc+"', tacgia = '"+tacgia+"', nxb = '"+nxb+"', namxuatban = '"+namxuatban+"', kichthuoc = '"+kichthuoc+"', hinhthuc = '"+hinhthuc+"', ngonngu = '"+ngonngu+"', review = '"+review+"', matheloai= "+matheloai+", noibat = "+noibat+", soluong = "+soluong+" WHERE idsach = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

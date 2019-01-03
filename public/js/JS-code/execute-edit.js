@@ -70,6 +70,7 @@ function loadDataToBooks(item) {
 	$("input[name*='namxuatban']").val(item.namxuatban);
 	$("input[name*='ngonngu']").val(item.ngonngu);
 	$("input[name*='tinhtrang']").val(item.tinhtrang);
+	$("input[name*='soluong']").val(item.soluong);
 	$("textarea[name*='review']").val(item.review);
 	$("input:radio[name*='noibat']").filter('[value="'+item.noibat+'"]').attr('checked', true);
 	$("#load-category option[value='"+item.matheloai+"']").prop('selected', true);
