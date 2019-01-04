@@ -128,11 +128,15 @@ function renderKho(items) {
 	for(var item of items) {
 		content += '<tr><td>'+item.tensach+'</td><td><div class="col-sm-4"></div><img class="img-responsive col-sm-4" src="'+item.hinhanh+'" /><div class="col-sm-4"></div></td><td>'+item.gia+'</td>';
 		if(item.soluongton != null) {
-			content += '<td>'+item.soluongton+'</td></tr>';
+			if(parseInt(item.pay.data[0]) === 1)
+				content += '<td>'+item.soluongton+'</td>';
+			else {
+				content += '<td>'+item.soluong+'</td>';
+			}
 		} else {
-			content += '<td>'+item.soluong+'</td></tr>';
+			content += '<td>'+item.soluong+'</td>';
 		}
 	}
 
-	$('#render-kho').html(content);
+	$('#render-kho').html(content + '</tr>');
 }

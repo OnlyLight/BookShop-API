@@ -12,7 +12,7 @@ module.exports.list = function (req, res) {
 };
 
 module.exports.listKho = function (req, res) {
-	var sql = "SELECT sach.*, sach.soluong-giohang.soluong AS soluongton FROM sach LEFT JOIN giohang ON giohang.idsach = sach.idsach";
+	var sql = "SELECT sach.*, sach.soluong-giohang.soluong AS soluongton, giohang.pay FROM sach LEFT JOIN giohang ON giohang.idsach = sach.idsach";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;
@@ -24,7 +24,7 @@ module.exports.listKho = function (req, res) {
 // Get Data by ID
 module.exports.listByID = function (req, res) {
 	var id = req.params.id;
-	var sql = "SELECT sach.*, theloaisach.tentheloai FROM sach JOIN theloaisach ON sach.matheloai = theloaisach.matheloai WHERE sach.idsach = "+id+"";
+	var sql = "SELECT sach.*, theloaisach.tentheloai, sach.soluong-giohang.soluong AS soluongton FROM sach JOIN theloaisach ON sach.matheloai = theloaisach.matheloai LEFT JOIN giohang ON giohang.idsach = sach.idsach WHERE sach.idsach = "+id+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

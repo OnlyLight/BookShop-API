@@ -19,7 +19,10 @@ $(document).ready(function() {
     addProductDistint();
     $('#btn-pay').click(function() {
         let idUserCookie = Cookies.get('id-user-login');
-        Pay(idUserCookie);
+        let pay = confirm('Do you want buy it');
+        if (pay == true) {
+            Pay(idUserCookie);
+        }        
     });
 });
 
@@ -134,6 +137,7 @@ function renderCart(items) {
         }
     }
     var iconCart = '<span class="glyphicon glyphicon-shopping-cart"> '+quality+' Sản phẩm</span>';
+    let iconCartXS = '<span class="glyphicon glyphicon-briefcase"></span><sup class="badge">'+quality+'</sup>';
     var showBill = '<strong>TỔNG SỐ TIỀN &nbsp;</strong><span>'+total+'</span>';
 
     $('#render-cart').html(content);
@@ -141,5 +145,12 @@ function renderCart(items) {
 
     if(checkLoginUser()) {
         $('#icon-cart').html(iconCart);
+        
+        $(window).resize(function() {
+            var width = $(window).width();
+            if (width < 768){
+                $('#icon-cart-xs').html(iconCartXS);
+            }
+        });
     }
 }

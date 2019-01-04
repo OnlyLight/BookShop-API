@@ -65,11 +65,20 @@ function renderPag(items) {
 
 function render(items) {
 	var content = '';
+	let contentXS = '';
 	for(var item of items) {
 		content += '<div class="col-sm-3"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail img-responsive"></a><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'đ</span></div></div>';
+		contentXS += '<div class="col-xs-6"><a href="/detail-book?id='+item.idsach+'"><img class="thumbnail img-responsive" src="'+item.hinhanh+'"/><div class="caption"><span>'+item.tensach+'</span><br/><span>'+item.gia+'đ</span></div></a></div>';
 	}
 
 	$('#render-teach').html(content);
+	
+	$(window).resize(function() {
+		var width = $(window).width();
+		if (width < 768){
+			$('#render-list-xs').html(contentXS);
+		}
+	});
 }
 
 function GetURLParameter(sParam) {

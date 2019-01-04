@@ -20,7 +20,7 @@ function showHeader() {
 }
 
 function cart() {
-	$('#icon-cart, .mua').click(function() {
+	$('#icon-cart, .mua, #icon-cart-xs').click(function() {
 		if(!checkLoginUser()) {
 			alert('You need login to buy !!');
 		} else {

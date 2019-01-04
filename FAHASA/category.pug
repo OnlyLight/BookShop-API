@@ -31,7 +31,7 @@ include login
 // CONTENT
 #content-sachnuoidaycon.hidden-xs
   br
-  .container
+  .container#info-search
     .row
       .col-sm-3
         .stv-left
@@ -111,34 +111,11 @@ include login
         .stv-right
           br
           #render-teach.row
-            .col-sm-3
-              a(href='')
-                img.thumbnail.img-responsive(src='img/sachnuoidaycon/deconduocom.jpg')
-              .caption
-                span &Dstrok;&#x1EC3; Con &Dstrok;&#x1B0;&#x1EE3;c &#x1ED0;m
-                br
-                span 76.000&dstrok;
-            .col-sm-3
-              a(href='')
-                img.thumbnail.img-responsive(src='img/sachnuoidaycon/vocungtannhanvocungyeuthuong.jpg')
-              .caption
-                span V&ocirc; C&ugrave;ng T&agrave;n Nh&#x1EAB;n V&ocirc; C&ugrave;ng Y&ecirc;u Th&#x1B0;&#x1A1;ng
-                br
-                span 82.000&dstrok;
-            .col-sm-3
-              a(href='')
-                img.thumbnail.img-responsive(src='img/sachnuoidaycon/nguoimetothonlanguoithaytot.jpg')
-              .caption
-                span Ng&#x1B0;&#x1EDD;i M&#x1EB9; T&#x1ED1;t H&#x1A1;n L&agrave; Ng&#x1B0;&#x1EDD;i Th&#x1EA7;y T&#x1ED1;t
-                br
-                span 67.000&dstrok;
-            .col-sm-3
-              a(href='')
-                img.thumbnail.img-responsive(src='img/sachnuoidaycon/connghidimekhongbiet.jpg')
-              .caption
-                span Con Ngh&itilde; &Dstrok;i M&#x1EB9; Kh&ocirc;ng Bi&#x1EBF;t
-                br
-                span 77.000&dstrok;
+          .row
+            br
+            .col-xs-12
+              ul.pagination.pull-right#render-pag
+            
 #content-stv-xs.visible-xs
   .container-fluid
     .sach-top-xs
@@ -167,7 +144,7 @@ include login
                 a(href='') M&#x1EDB;i nh&#x1EA5;t
       br
       br
-      .row
+      .row#render-list-xs
         .col-xs-6
           a(href='')
             img.thumbnail.img-responsive(src='img/sachnuoidaycon/deconduocom.jpg')
@@ -202,17 +179,7 @@ include login
       .row
         br
         .col-xs-12
-          ul.pagination.navbar-right
-            li.active
-              a.link-page(href='') 1
-            li
-              a.link-page(href='') 2
-            li
-              a.link-page(href='') 3
-            li
-              a.link-page(href='') 4
-            li
-              a.link-page(href='') 5
+          ul.pagination.pull-right#render-pag
     .sach-bottom-xs
       .stv-left
         .title

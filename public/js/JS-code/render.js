@@ -72,7 +72,7 @@ function loadBookDataNoiBat() {
 }
 
 function renderInfoSearch(items) {
-	var content = '<div><h3 class="text-center">KẾT QUẢ TÌM KIẾM</h3></div>';
+	var content = '<div><h3 class="text-center">KẾT QUẢ TÌM KIẾM</h3></div><div><span>Tìm được '+items.length+' kết quả</span></div>';
 	for(var item of items) {
 		content += '<div class="col-xs-3"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" style="width:100%" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';
 	}

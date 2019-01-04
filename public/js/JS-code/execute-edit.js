@@ -60,6 +60,7 @@ function getDataBooksByID() {
 function loadDataToBooks(item) {
 	$("input[name*='tensach']").val(item.tensach);
 	$("#show-img").attr("src",""+item.hinhanh+"");
+	// $("input[name*='file']").val(item.hinhanh);
 	$("input[name*='gia']").val(item.gia);
 	$("input[name*='tacgia']").val(item.tacgia);
 	$("input[name*='sotrang']").val(item.sotrang);
