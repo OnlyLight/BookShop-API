@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	loadBookDataNoiBat();
-	loadBookDataKH();
 	getBookData().then(function(values) {
 		// console.log(values);
 		render(values);
@@ -18,6 +16,10 @@ $(document).ready(function() {
 	$('#btn-search').click(function() {
 		getInfoSearch();
 	});
+
+	loadBookDataNoiBat();
+	loadBookDataKH();
+	loadArrayRecent();
 });
 
 async function getInfoSearch() {
@@ -114,4 +116,48 @@ function render(items) {
 	}
 
 	$('#render-sachtv').html(content);
+}
+
+function loadArrayRecent() {
+	let arrRecent = JSON.parse(localStorage.getItem('arr-recent'));
+	let idRecent = parseInt(localStorage.getItem('id-book-recent'));
+	// if(!idRecent) idRecent = 1;
+
+	if(arrRecent) {
+		if(idRecent) {
+			var findIndex = _.findIndex(arrRecent, function(item) { return item === idRecent; });
+			if(findIndex === -1) {
+				arrRecent.push(idRecent);
+			}	
+		}		
+		
+		if(arrRecent.length > 5) {
+			arrRecent.shift();
+		}
+		localStorage.setItem('arr-recent', JSON.stringify(arrRecent));
+	} else {
+		if(idRecent) {
+			localStorage.setItem('arr-recent', JSON.stringify([idRecent]));
+		}
+	}
+
+	let length = arrRecent.length;
+	let content = '';
+
+	if(length > 0) {
+		for(let i = 0; i < length; i++) {
+			axios({
+				method: 'get',
+				url: 'http://localhost:3000/api/sach/list/'+arrRecent[i]+''
+			}).then(function (res) {
+				console.log(res.data);
+	
+				let item = res.data[0];
+				content += '<div class="item"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';
+				$('#render-recent').html(content);
+			}).catch(function (error) {
+				console.log(error);
+			});
+		}
+	}
 }

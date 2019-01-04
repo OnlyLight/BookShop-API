@@ -19,6 +19,9 @@ async function getBookDataLienQuan(matheloai) {
 
 async function getBookDetail() {
 	var id = GetURLParameter('id');
+	
+	localStorage.setItem('id-book-recent', id);
+
 	var url = "http://localhost:3000/api/sach/list/"+id+"";
 	const res = await axios.get(url);
 	return res.data;
