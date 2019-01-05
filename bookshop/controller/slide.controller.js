@@ -38,7 +38,8 @@ module.exports.create = function (req, res) {
 module.exports.update = function (req, res) {
 	var id = req.params.id;
 	var hinhanh = req.file.path.split('\\').slice(1).join('/');
-	var sql = "UPDATE slide SET hinhanh = '"+hinhanh+"' WHERE id = '"+id+"'";
+	var active = req.body.active;
+	var sql = "UPDATE slide SET hinhanh = '"+hinhanh+"', active = "+active+" WHERE id = '"+id+"'";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

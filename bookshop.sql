@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 05, 2019 lúc 03:54 PM
+-- Thời gian đã tạo: Th1 05, 2019 lúc 05:22 PM
 -- Phiên bản máy phục vụ: 10.1.36-MariaDB
 -- Phiên bản PHP: 7.2.11
 
@@ -123,7 +123,7 @@ CREATE TABLE `sach` (
 --
 
 INSERT INTO `sach` (`idsach`, `tensach`, `sotrang`, `hinhanh`, `gia`, `tennhacc`, `tacgia`, `nxb`, `namxuatban`, `kichthuoc`, `hinhthuc`, `ngonngu`, `review`, `matheloai`, `noibat`, `soluong`) VALUES
-(1, 'Hóa Học 12', 208, 'uploads/images/sachgiaokhoa/HH12.clsbi', 600000, 'Cty Sách & Thiết Bị Giáo Dục Miền Nam', 'Nguyễn Xuân Trường - Phạm Văn Hoan - Từ Vọng Nghi - Đỗ Đình Rãng - Nguyễn Phú Tuấn', 'NXB Giáo Dục Việt Nam', 2016, '	20.5 x 29', 'Bìa Mềm', '	Sách tiếng Việt', 'Nội dung bộ sách được biên soạn, biên dịch theo đúng cấu trúc, nội dung và chương trình của sách giáo khoa đang được NXBGDVN xuất bản, phát hành hiện nay và sẽ giúp các em từng bước làm quen với việc học toán bằng tiếng Anh: từ việc biết đọc từ toán, biết viết các phép tính đến việc tận dụng vốn kiến thức toán đã học vào việc học toán và các môn học khác; Do vậy bộ sách hoàn toàn phù hợp cho việc dạy và học trong nhà trường.', 1, b'1', 100),
+(1, 'Hóa Học 12', 208, 'uploads/images/sach-upload/1106deb5e73cf0e9bf23ed5f317f67f3', 600000, 'Cty Sách & Thiết Bị Giáo Dục Miền Nam', 'Nguyễn Xuân Trường - Phạm Văn Hoan - Từ Vọng Nghi - Đỗ Đình Rãng - Nguyễn Phú Tuấn', 'NXB Giáo Dục Việt Nam', 2016, '	20.5 x 29', 'Bìa Mềm', '	Sách tiếng Việt', 'Nội dung bộ sách được biên soạn, biên dịch theo đúng cấu trúc, nội dung và chương trình của sách giáo khoa đang được NXBGDVN xuất bản, phát hành hiện nay và sẽ giúp các em từng bước làm quen với việc học toán bằng tiếng Anh: từ việc biết đọc từ toán, biết viết các phép tính đến việc tận dụng vốn kiến thức toán đã học vào việc học toán và các môn học khác; Do vậy bộ sách hoàn toàn phù hợp cho việc dạy và học trong nhà trường.', 1, b'0', 100),
 (2, 'Lịch Sử 12', 208, 'uploads/images/sachgiaokhoa/LS12.clsbi', 600000, 'Cty Sách & Thiết Bị Giáo Dục Miền Nam', 'Nguyễn Xuân Trường - Phạm Văn Hoan - Từ Vọng Nghi - Đỗ Đình Rãng - Nguyễn Phú Tuấn', 'NXB Giáo Dục Việt Nam', 2016, '	20.5 x 29', 'Bìa Mềm', '	Sách tiếng Việt', 'Nội dung bộ sách được biên soạn, biên dịch theo đúng cấu trúc, nội dung và chương trình của sách giáo khoa đang được NXBGDVN xuất bản, phát hành hiện nay và sẽ giúp các em từng bước làm quen với việc học toán bằng tiếng Anh: từ việc biết đọc từ toán, biết viết các phép tính đến việc tận dụng vốn kiến thức toán đã học vào việc học toán và các môn học khác; Do vậy bộ sách hoàn toàn phù hợp cho việc dạy và học trong nhà trường.', 1, b'1', 100),
 (3, 'Lịch Sử Nâng Cao 12', 208, 'uploads/images/sachgiaokhoa/LSNC12.clsbi', 600000, 'Cty Sách & Thiết Bị Giáo Dục Miền Nam', 'Nguyễn Xuân Trường - Phạm Văn Hoan - Từ Vọng Nghi - Đỗ Đình Rãng - Nguyễn Phú Tuấn', 'NXB Giáo Dục Việt Nam', 2016, '	20.5 x 29', 'Bìa Mềm', '	Sách tiếng Việt', 'Nội dung bộ sách được biên soạn, biên dịch theo đúng cấu trúc, nội dung và chương trình của sách giáo khoa đang được NXBGDVN xuất bản, phát hành hiện nay và sẽ giúp các em từng bước làm quen với việc học toán bằng tiếng Anh: từ việc biết đọc từ toán, biết viết các phép tính đến việc tận dụng vốn kiến thức toán đã học vào việc học toán và các môn học khác; Do vậy bộ sách hoàn toàn phù hợp cho việc dạy và học trong nhà trường.', 1, b'1', 100),
 (4, 'Ngữ Văn 12', 208, 'uploads/images/sachgiaokhoa/NV12.clsbi', 600000, 'Cty Sách & Thiết Bị Giáo Dục Miền Nam', 'Nguyễn Xuân Trường - Phạm Văn Hoan - Từ Vọng Nghi - Đỗ Đình Rãng - Nguyễn Phú Tuấn', 'NXB Giáo Dục Việt Nam', 2016, '	20.5 x 29', 'Bìa Mềm', '	Sách tiếng Việt', 'Nội dung bộ sách được biên soạn, biên dịch theo đúng cấu trúc, nội dung và chương trình của sách giáo khoa đang được NXBGDVN xuất bản, phát hành hiện nay và sẽ giúp các em từng bước làm quen với việc học toán bằng tiếng Anh: từ việc biết đọc từ toán, biết viết các phép tính đến việc tận dụng vốn kiến thức toán đã học vào việc học toán và các môn học khác; Do vậy bộ sách hoàn toàn phù hợp cho việc dạy và học trong nhà trường.', 1, b'1', 100),
@@ -179,23 +179,24 @@ INSERT INTO `sach` (`idsach`, `tensach`, `sotrang`, `hinhanh`, `gia`, `tennhacc`
 
 CREATE TABLE `slide` (
   `id` int(11) NOT NULL,
-  `hinhanh` varchar(200) NOT NULL
+  `hinhanh` varchar(200) NOT NULL,
+  `active` bit(1) NOT NULL DEFAULT b'1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Đang đổ dữ liệu cho bảng `slide`
 --
 
-INSERT INTO `slide` (`id`, `hinhanh`) VALUES
-(1, 'uploads/images/slide/DAIGIA-1.jpg'),
-(2, 'uploads/images/slide/MuaSam-2.png'),
-(3, 'uploads/images/slide/Thu3-3.jpg'),
-(4, 'uploads/images/slide/Cung-hoang-dao-4.jpg'),
-(5, 'uploads/images/slide/NCC-BachViet-5.jpg'),
-(6, 'uploads/images/slide/NCC-IPM-mua-mua-sam-dien-cuong-6.jpg'),
-(7, 'uploads/images/slide/New-Arrivals-7.jpg'),
-(8, 'uploads/images/slide/BTS-8.jpg'),
-(9, 'uploads/images/slide-upload/36b280df7314f45ab5a988b01dc1e978');
+INSERT INTO `slide` (`id`, `hinhanh`, `active`) VALUES
+(1, 'uploads/images/slide/DAIGIA-1.jpg', b'1'),
+(2, 'uploads/images/slide/MuaSam-2.png', b'1'),
+(3, 'uploads/images/slide/Thu3-3.jpg', b'1'),
+(4, 'uploads/images/slide/Cung-hoang-dao-4.jpg', b'1'),
+(5, 'uploads/images/slide/NCC-BachViet-5.jpg', b'1'),
+(6, 'uploads/images/slide/NCC-IPM-mua-mua-sam-dien-cuong-6.jpg', b'1'),
+(7, 'uploads/images/slide/New-Arrivals-7.jpg', b'1'),
+(8, 'uploads/images/slide/BTS-8.jpg', b'1'),
+(9, 'uploads/images/slide-upload/e0357cafb5378bab83495bda4adf2883', b'1');
 
 -- --------------------------------------------------------
 

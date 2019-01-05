@@ -88,10 +88,15 @@ function getListCategoryViewAdmin() {
 }
 
 function renderSlide(items) {
-	var content = '<tr><th>Hiển Thị</th><th>Action</th></tr>';
+	var content = '<tr><th>Hiển Thị</th><th>Active</th><th>Action</th></tr>';
 
 	for(var item of items) {
-		content += '<tr><td><div class="col-sm-4"></div><img class="img-responsive col-sm-4" src="'+item.hinhanh+'" /><div class="col-sm-4"></div></td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="/edit-slide?id='+item.id+'">EDIT</a></td></tr>';
+		let showActive = '';
+		let active = parseInt(item.active.data[0]);
+		if(active === 1) showActive = 'Hiện';
+		else showActive = 'Ẩn';
+
+		content += '<tr><td><div class="col-sm-4"></div><img class="img-responsive col-sm-4" src="'+item.hinhanh+'" /><div class="col-sm-4"></div></td><td><b>'+showActive+'</b></td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="/edit-slide?id='+item.id+'">EDIT</a></td></tr>';
 	}
 
 	$('#render-slide').html(content);

@@ -61,12 +61,15 @@ async function getSlide() {
 }
 
 function renderSlide(items) {
-	var content = '<div class="item active"><a href="#"><img class="img-responsive" src="'+items[0].hinhanh+'"/></a></div>';
+	let content = '';
+	if(parseInt(items[0].active.data[0]) === 1)
+		content = '<div class="item active"><a href="#"><img class="img-responsive" src="'+items[0].hinhanh+'"/></a></div>';
 
 	let length = items.length
 	for(let i = 0; i < length; i++) {
 		if(i > 0) {
-			content += '<div class="item"><a href="#"><img class="img-responsive" src="'+items[i].hinhanh+'"/></a></div>';
+			if(parseInt(items[i].active.data[0]) === 1)
+				content += '<div class="item"><a href="#"><img class="img-responsive" src="'+items[i].hinhanh+'"/></a></div>';
 		}
 	}
 
