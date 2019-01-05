@@ -40,7 +40,7 @@ include login
               .gachchan
                 span ĐĂNG KÍ TÀI KHOẢN
             div
-              form#submit
+              form(method='post')
                 label Họ và Tên
                 input(type='text', name='name-sign-in', autocomplete='off', required)
                 br
@@ -60,7 +60,7 @@ include login
                 label(for="female") Nữ
                 br
                 label
-                button#btn-sign-up ĐĂNG KÝ
+                button#btn-sign-up(type='button') ĐĂNG KÝ
         .col-sm-4
           .dangki-right
             .text-center

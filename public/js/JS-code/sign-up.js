@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("#submit").submit(function (e) {
+	$("#btn-sign-up").click(function () {
         var url = 'http://localhost:3000/api/auth/signup';
         signup(url);
 	});
@@ -25,8 +25,17 @@ function signup(url) {
         }
     }).then(function (res) {
         console.log(res);
-        confirm('Sign Up Success !!');        
+        alert('Sign up Success !!');
+        location.href = '/';
     }).catch(function (error) {
         console.log(error);
+        let e = error.response.status;
+		if(e === 404 || e === 500 || e === 403) {
+			alert('You are not admin');
+		} else if(e === 401) {
+			alert('Invalid Password!');
+		} else if(e === 400) {
+            alert('User name or email is already in use !!');
+        }
     });
 }

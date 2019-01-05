@@ -12,7 +12,26 @@ $(document).ready(function() {
 		var formData = new FormData(this);
 		addSach(formData);
 	});
+
+	$("#data-slide").submit(function (e) {
+		e.preventDefault();    
+		var formData = new FormData(this);
+		addSlide(formData);
+	});
 });
+
+function addSlide(formData) {
+	axios({
+		method: 'post',
+		url: 'http://localhost:3000/api/slide/create',
+		data: formData
+	}).then(function (res) {
+		console.log(res);
+		location.href = '/admin';
+	}).catch(function (error) {
+		console.log(error);
+	});
+}
 
 function addTheLoai() {
 	var tentheloai = $("input[name*='tentheloai']").val();

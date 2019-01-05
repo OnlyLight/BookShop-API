@@ -45,6 +45,8 @@ br
           a(href='#nhanxet', data-toggle='pill') NHẬN XÉT CỦA NGƯỜI DÙNG
         li
           a(href='#kho', data-toggle='pill') TỒN KHO
+        li
+          a(href='#slide', data-toggle='pill') SLIDE
     .tab-content
       #admin-page.tab-pane.fade.in.active
         .text-center
@@ -138,6 +140,17 @@ br
             td
             td
             td
+      #slide.tab-pane.fade
+        h5.text-center
+          a.btn.btn-md.btn-success(href='/add-slide') THÊM HÌNH
+        table#render-slide.tb-theloai
+          tr
+            th Hiển Thị
+            th Action
+          tr
+            td
+            td
+              a.btn.btn-sm.btn-warning(href='/edit-slide') EDIT
 
 // /CONTENT
 include footer

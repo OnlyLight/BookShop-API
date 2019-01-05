@@ -20,6 +20,7 @@ $(document).ready(function() {
 	loadBookDataNoiBat();
 	loadBookDataKH();
 	loadArrayRecent();
+	getSlide();
 });
 
 async function getInfoSearch() {
@@ -51,6 +52,25 @@ async function getListCategory() {
 	var url = "http://localhost:3000/api/theloaisach/list";
 	const res = await axios.get(url);
 	return res.data;
+}
+
+async function getSlide() {
+	var url = "http://localhost:3000/api/slide/list";
+	const res = await axios.get(url);
+	renderSlide(res.data);
+}
+
+function renderSlide(items) {
+	var content = '<div class="item active"><a href="#"><img class="img-responsive" src="'+items[0].hinhanh+'"/></a></div>';
+
+	let length = items.length
+	for(let i = 0; i < length; i++) {
+		if(i > 0) {
+			content += '<div class="item"><a href="#"><img class="img-responsive" src="'+items[i].hinhanh+'"/></a></div>';
+		}
+	}
+
+	$('#show-slide').html(content);
 }
 
 function functionSearch() {
@@ -140,6 +160,8 @@ function loadArrayRecent() {
 			localStorage.setItem('arr-recent', JSON.stringify([idRecent]));
 		}
 	}
+
+	arrRecent = JSON.parse(localStorage.getItem('arr-recent'));
 
 	let length = arrRecent.length;
 	let content = '';

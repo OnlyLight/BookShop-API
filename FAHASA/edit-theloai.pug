@@ -34,7 +34,7 @@ include login
     .row
       .col-sm-3
       .col-sm-6
-        form#data-theloai(enctype="multipart/form-data")
+        form
           .input-group
             label Tên Thể Loại Sách
             br
@@ -42,7 +42,7 @@ include login
               input.form-control(type='text', name='tentheloai', autocomplete='off', required)
           br
           .text-right
-            button#btnAddTheLoai.btn.btn-sm.btn-success(type='button') Edit
+            button#btnEditTheLoai.btn.btn-sm.btn-success(type='button') Edit
       .col-sm-3
 // /CONTENT
 include footer

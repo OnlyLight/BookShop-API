@@ -10,13 +10,20 @@ $(document).ready(function() {
     
     // ////////////////////////
     getFeedBackViewAdmin();
-    
+	
+	getSlide();
 });
 
 async function getKho() {
 	var url = "http://localhost:3000/api/sach/list-kho";
 	const res = await axios.get(url);
 	renderKho(res.data);
+}
+
+async function getSlide() {
+	var url = "http://localhost:3000/api/slide/list";
+	const res = await axios.get(url);
+	renderSlide(res.data);
 }
 
 async function getListCategory() {
@@ -78,6 +85,16 @@ function getListCategoryViewAdmin() {
 	}).catch(function(err) {
 		console.log(err);
 	});
+}
+
+function renderSlide(items) {
+	var content = '<tr><th>Hiển Thị</th><th>Action</th></tr>';
+
+	for(var item of items) {
+		content += '<tr><td><div class="col-sm-4"></div><img class="img-responsive col-sm-4" src="'+item.hinhanh+'" /><div class="col-sm-4"></div></td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="/edit-slide?id='+item.id+'">EDIT</a></td></tr>';
+	}
+
+	$('#render-slide').html(content);
 }
 
 function renderTheLoai(items) {

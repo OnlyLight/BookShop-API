@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 03, 2019 at 06:47 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th1 05, 2019 lúc 03:54 PM
+-- Phiên bản máy phục vụ: 10.1.36-MariaDB
+-- Phiên bản PHP: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bookshop`
+-- Cơ sở dữ liệu: `bookshop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `giohang`
+-- Cấu trúc bảng cho bảng `giohang`
 --
 
 CREATE TABLE `giohang` (
@@ -37,7 +37,7 @@ CREATE TABLE `giohang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `giohang`
+-- Đang đổ dữ liệu cho bảng `giohang`
 --
 
 INSERT INTO `giohang` (`id`, `soluong`, `idsach`, `idUser`, `pay`) VALUES
@@ -45,12 +45,13 @@ INSERT INTO `giohang` (`id`, `soluong`, `idsach`, `idUser`, `pay`) VALUES
 (2, 2, 2, 1, b'0'),
 (3, 1, 9, 1, b'0'),
 (4, 1, 30, 4, b'1'),
-(5, 2, 11, 4, b'1');
+(5, 2, 11, 4, b'1'),
+(6, 5, 42, 8, b'1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nhanxet`
+-- Cấu trúc bảng cho bảng `nhanxet`
 --
 
 CREATE TABLE `nhanxet` (
@@ -62,7 +63,7 @@ CREATE TABLE `nhanxet` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `nhanxet`
+-- Đang đổ dữ liệu cho bảng `nhanxet`
 --
 
 INSERT INTO `nhanxet` (`idnhanxet`, `nhanxet`, `ngayhientai`, `idSach`, `idUser`) VALUES
@@ -74,7 +75,7 @@ INSERT INTO `nhanxet` (`idnhanxet`, `nhanxet`, `ngayhientai`, `idSach`, `idUser`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roles`
+-- Cấu trúc bảng cho bảng `roles`
 --
 
 CREATE TABLE `roles` (
@@ -85,7 +86,7 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `roles`
+-- Đang đổ dữ liệu cho bảng `roles`
 --
 
 INSERT INTO `roles` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
@@ -95,7 +96,7 @@ INSERT INTO `roles` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sach`
+-- Cấu trúc bảng cho bảng `sach`
 --
 
 CREATE TABLE `sach` (
@@ -118,7 +119,7 @@ CREATE TABLE `sach` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `sach`
+-- Đang đổ dữ liệu cho bảng `sach`
 --
 
 INSERT INTO `sach` (`idsach`, `tensach`, `sotrang`, `hinhanh`, `gia`, `tennhacc`, `tacgia`, `nxb`, `namxuatban`, `kichthuoc`, `hinhthuc`, `ngonngu`, `review`, `matheloai`, `noibat`, `soluong`) VALUES
@@ -173,7 +174,33 @@ INSERT INTO `sach` (`idsach`, `tensach`, `sotrang`, `hinhanh`, `gia`, `tennhacc`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `theloaisach`
+-- Cấu trúc bảng cho bảng `slide`
+--
+
+CREATE TABLE `slide` (
+  `id` int(11) NOT NULL,
+  `hinhanh` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Đang đổ dữ liệu cho bảng `slide`
+--
+
+INSERT INTO `slide` (`id`, `hinhanh`) VALUES
+(1, 'uploads/images/slide/DAIGIA-1.jpg'),
+(2, 'uploads/images/slide/MuaSam-2.png'),
+(3, 'uploads/images/slide/Thu3-3.jpg'),
+(4, 'uploads/images/slide/Cung-hoang-dao-4.jpg'),
+(5, 'uploads/images/slide/NCC-BachViet-5.jpg'),
+(6, 'uploads/images/slide/NCC-IPM-mua-mua-sam-dien-cuong-6.jpg'),
+(7, 'uploads/images/slide/New-Arrivals-7.jpg'),
+(8, 'uploads/images/slide/BTS-8.jpg'),
+(9, 'uploads/images/slide-upload/36b280df7314f45ab5a988b01dc1e978');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `theloaisach`
 --
 
 CREATE TABLE `theloaisach` (
@@ -182,7 +209,7 @@ CREATE TABLE `theloaisach` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `theloaisach`
+-- Đang đổ dữ liệu cho bảng `theloaisach`
 --
 
 INSERT INTO `theloaisach` (`matheloai`, `tentheloai`) VALUES
@@ -200,7 +227,7 @@ INSERT INTO `theloaisach` (`matheloai`, `tentheloai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -215,7 +242,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `gender`, `createdAt`, `updatedAt`) VALUES
@@ -223,12 +250,18 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `gender`, `c
 (2, 'Sunny', 'sunny123', 'sunny123@gmail.com', '$2a$08$gr.Yf3fjpVcrEm4Ly8drsOugq8LzRffi5xnLcbYjpVhVsgniZADdq', 1, '2018-12-09 13:33:58', '2018-12-09 13:33:58'),
 (3, 'John', 'john123', 'john123@gmail.com', '$2a$08$YZe2smyUgfihXF0711JOYOtM4h.fvXtcZBwdxQ3yGEWz2VEmQt6sG', 0, '2018-12-09 13:36:04', '2018-12-09 13:36:04'),
 (4, 'Tran Duy', 'duy123', 'duy123@gmail.com', '$2a$08$Zu7fg7vGsL3pEDAAe1c4Qu5jVjoXcnOKaQKjhHbqIvaEg9oHtK2a6', 0, '2018-12-21 16:55:46', '2018-12-21 16:55:46'),
-(7, 'hoa123', 'hoa123', 'hoanguyen123@gmail.com', '$2a$08$aE63KMvB22PF0fcyezJoDeWzhmPr2Q4VhEPhoVv/oDqiDarA2uYsS', 0, '2018-12-29 04:47:39', '2018-12-29 04:47:39');
+(7, 'hoa123', 'hoa123', 'hoanguyen123@gmail.com', '$2a$08$aE63KMvB22PF0fcyezJoDeWzhmPr2Q4VhEPhoVv/oDqiDarA2uYsS', 0, '2018-12-29 04:47:39', '2018-12-29 04:47:39'),
+(8, 'David', 'david123', 'david123@gmail.com', '$2a$08$.yByx5ERapHm6cGhiOTvD.9VoTZIRiiHlhZ5ys5NFOIGkVTHrBYNe', 0, '2019-01-05 14:28:52', '2019-01-05 14:28:52'),
+(9, 'abc', 'abc', 'abc@gmail.com', '$2a$08$651c22enHclvUTeERYsu.OfASHrdDq2gV5HdMrXFv1NEK3fGUfg.2', 0, '2019-01-05 14:31:35', '2019-01-05 14:31:35'),
+(10, 'a', 'a', 'a@gmail.com', '$2a$08$KbEEYMO.FMIgNO4XIb495OgMhiRlcByKEZqO/cYm5fcFrEY3ky5Em', 0, '2019-01-05 14:34:55', '2019-01-05 14:34:55'),
+(11, 'b', 'b', 'b@gmail.com', '$2a$08$WjVwmidGogg8XXgg2l4V7.Z3Tb1l0BIpA4jmIjwUIguiwQZwSHySy', 0, '2019-01-05 14:38:26', '2019-01-05 14:38:26'),
+(12, 'c', 'c', 'c@gmail.com', '$2a$08$gRA1VSJQnbC00R8GqgvOO.eDApLahBH.Zsv7w/1DLkqU2FbbYJE.m', 0, '2019-01-05 14:46:36', '2019-01-05 14:46:36'),
+(13, 'd', 'd', 'd@gmail.com', '$2a$08$wmNZob6bj40abIhqfMESqexfc5tIUSSuxIDbffO6HE4ZAHk01zRJ.', 0, '2019-01-05 14:48:35', '2019-01-05 14:48:35');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_roles`
+-- Cấu trúc bảng cho bảng `user_roles`
 --
 
 CREATE TABLE `user_roles` (
@@ -239,115 +272,133 @@ CREATE TABLE `user_roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user_roles`
+-- Đang đổ dữ liệu cho bảng `user_roles`
 --
 
 INSERT INTO `user_roles` (`createdAt`, `updatedAt`, `roleId`, `userId`) VALUES
 ('2018-12-08 15:48:50', '2018-12-08 15:48:50', 1, 1),
 ('2018-12-21 16:55:46', '2018-12-21 16:55:46', 1, 4),
+('2019-01-05 14:28:52', '2019-01-05 14:28:52', 1, 8),
+('2019-01-05 14:31:35', '2019-01-05 14:31:35', 1, 9),
+('2019-01-05 14:34:55', '2019-01-05 14:34:55', 1, 10),
+('2019-01-05 14:38:26', '2019-01-05 14:38:26', 1, 11),
+('2019-01-05 14:46:36', '2019-01-05 14:46:36', 1, 12),
+('2019-01-05 14:48:35', '2019-01-05 14:48:35', 1, 13),
 ('0000-00-00 00:00:00', '0000-00-00 00:00:00', 2, 2),
 ('2018-12-09 13:36:04', '2018-12-09 13:36:04', 2, 3),
 ('2018-12-29 04:47:39', '2018-12-29 04:47:39', 2, 7);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `giohang`
+-- Chỉ mục cho bảng `giohang`
 --
 ALTER TABLE `giohang`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_vendor` (`idUser`);
 
 --
--- Indexes for table `nhanxet`
+-- Chỉ mục cho bảng `nhanxet`
 --
 ALTER TABLE `nhanxet`
   ADD PRIMARY KEY (`idnhanxet`),
   ADD KEY `FK_NX_USER` (`idUser`);
 
 --
--- Indexes for table `roles`
+-- Chỉ mục cho bảng `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Indexes for table `sach`
+-- Chỉ mục cho bảng `sach`
 --
 ALTER TABLE `sach`
   ADD PRIMARY KEY (`idsach`),
   ADD KEY `fk_sachnhanxet` (`tensach`);
 
 --
--- Indexes for table `theloaisach`
+-- Chỉ mục cho bảng `slide`
+--
+ALTER TABLE `slide`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `theloaisach`
 --
 ALTER TABLE `theloaisach`
   ADD PRIMARY KEY (`matheloai`),
   ADD UNIQUE KEY `tentheloai` (`tentheloai`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `user_roles`
+-- Chỉ mục cho bảng `user_roles`
 --
 ALTER TABLE `user_roles`
   ADD PRIMARY KEY (`roleId`,`userId`),
   ADD KEY `userId` (`userId`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `giohang`
+-- AUTO_INCREMENT cho bảng `giohang`
 --
 ALTER TABLE `giohang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `nhanxet`
+-- AUTO_INCREMENT cho bảng `nhanxet`
 --
 ALTER TABLE `nhanxet`
   MODIFY `idnhanxet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `sach`
+-- AUTO_INCREMENT cho bảng `sach`
 --
 ALTER TABLE `sach`
   MODIFY `idsach` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
--- AUTO_INCREMENT for table `theloaisach`
+-- AUTO_INCREMENT cho bảng `slide`
+--
+ALTER TABLE `slide`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT cho bảng `theloaisach`
 --
 ALTER TABLE `theloaisach`
   MODIFY `matheloai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `giohang`
+-- Các ràng buộc cho bảng `giohang`
 --
 ALTER TABLE `giohang`
   ADD CONSTRAINT `fk_vendor` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `user_roles`
+-- Các ràng buộc cho bảng `user_roles`
 --
 ALTER TABLE `user_roles`
   ADD CONSTRAINT `user_roles_ibfk_1` FOREIGN KEY (`roleId`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

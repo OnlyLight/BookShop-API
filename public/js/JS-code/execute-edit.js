@@ -9,11 +9,17 @@ $(document).ready(function() {
 		editSach(formData);
 	});
 
-	$("#btnAddTheLoai").click(function () {
+	$("#data-slide").submit(function (e) {
+		e.preventDefault();
+		var formData = new FormData(this);
+		editSlide(formData);
+	});
+
+	$("#btnEditTheLoai").click(function () {
 		editTheLoai();
 	});
 
-	$('#btnAddAdmin').click(function() {
+	$('#btnEditAdmin').click(function() {
 		editUsers();
 	});
 });
@@ -125,6 +131,20 @@ function editTheLoai() {
 		data: {
 			tentheloai: tentheloai
 		}
+	}).then(function (res) {
+		console.log(res);
+		location.href = '/admin';
+	}).catch(function (error) {
+		console.log(error);
+	});
+}
+
+function editSlide(formData) {
+    var id = GetURLParameter('id');
+	axios({
+		method: 'patch',
+		url: 'http://localhost:3000/api/slide/update/'+id+'',
+		data: formData
 	}).then(function (res) {
 		console.log(res);
 		location.href = '/admin';

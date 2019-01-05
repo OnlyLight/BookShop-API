@@ -1,0 +1,46 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='css/Library/bootstrap.min.css')
+  link(rel='stylesheet', href='css/Library/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='css/CSS-code/header.css')
+  link(rel='stylesheet', href='css/CSS-code/footer.css')
+  link(rel='stylesheet', href='css/CSS-code/back-to-top.css')
+  link(rel='stylesheet', href='css/CSS-code/admin.css')
+  link(rel='shortcut icon', href='img/logo/favicon.ico', type='image/x-icon')
+  script(src='js/Library/jquery-3.3.1.min.js')
+  script(src='js/Library/bootstrap.min.js')
+  script(src='js/JS-code/js-home.js')
+  script(src='js/JS-code/js-pages.js')
+  script(src='js/JS-code/back-to-top.js')
+  script(src='js/Library/axios.min.js')
+  script(src='js/Library/js.cookie.min.js')
+  script(src='js/JS-code/render.js')
+  script(src='js/JS-code/login.js')
+  script(src='js/JS-code/checkLogin.js')
+  script(src='js/JS-code/execute-add.js')
+  script(src='js/JS-code/getURL.js')
+  
+  title FAHASA.com
+include header
+
+include login
+// CONTENT
+#add-theloai.hidden-xs
+  .container
+    h3.text-center THÊM SLIDE
+    .row
+      .col-sm-3
+      .col-sm-6
+        form#data-slide(enctype="multipart/form-data")
+          .input-group
+            label Hình Ảnh
+            input.form-control.input-custom(type='file', name='file-slide', autocomplete='off', required)
+          br
+          .text-right
+            button#btnAddSlide.btn.btn-md.btn-success(type='submit') Thêm
+      .col-sm-3
+// /CONTENT
+include footer

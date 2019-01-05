@@ -25,6 +25,7 @@ var users = require('./bookshop/route/users.route'); // done
 var nhanxet = require('./bookshop/route/nhanxet.route'); // done
 var sach = require('./bookshop/route/sach.route');
 var theloaisach = require('./bookshop/route/theloaisach.route');
+var silde = require('./bookshop/route/slide.route');
 
 app.use(express.static("public")); // vào đây để tìm file
 
@@ -44,6 +45,7 @@ app.use("/api/users", users);
 app.use("/api/nhanxet", nhanxet);
 app.use("/api/sach", sach);
 app.use("/api/theloaisach", theloaisach);
+app.use("/api/slide", silde);
 
 app.post('/test', function(req, res){
 	//tra ket qua cho client
@@ -96,6 +98,16 @@ app.get('/add-theloai', function(req, res){
 app.get('/add-sach', function(req, res){
 	//tra ket qua cho client
 	res.render("add-sach");
+});
+
+app.get('/add-slide', function(req, res){
+	//tra ket qua cho client
+	res.render("add-slide");
+});
+
+app.get('/edit-slide', function(req, res){
+	//tra ket qua cho client
+	res.render("edit-slide");
 });
 
 app.get('/edit-sach', function(req, res){
