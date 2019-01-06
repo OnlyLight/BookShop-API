@@ -130,7 +130,7 @@ function renderUsers(items) {
 	for(var item of items) {
 		if(item.gender == 0) giotinh = 'Nam';
 		else giotinh = 'Nữ';
-		content += '<tr><td>'+item.email+'</td><td>'+item.name+'</td><td>'+item.username+'</td><td>'+giotinh+'</td><td>'+item.role_name+'</td><td><a style="width: 80px;" class="btn btn-sm btn-warning" href="/edit-user?id='+item.id+'">EDIT</a><button value="'+item.id+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteUser">DELETE</button></td></tr>';
+		content += '<tr><td>'+item.email+'</td><td>'+item.name+'</td><td>'+item.username+'</td><td>'+giotinh+'</td><td>'+item.role_name+'</td><td><a style="margin-right: 1rem; width: 80px;" class="btn btn-sm btn-warning" href="/edit-user?id='+item.id+'">EDIT</a><button value="'+item.id+'" style="width: 80px;" class="btn btn-sm btn-danger btnDeleteUser">DELETE</button></td></tr>';
 	}
 
 	$('#render-users').html(content);

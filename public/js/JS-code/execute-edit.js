@@ -2,6 +2,7 @@ $(document).ready(function() {
 	getDataTheLoaiByID();
 	getDataUsersByID();
 	getDataBooksByID();
+	getDataSlidesByID();
 
     $("#data").submit(function (e) {
 		e.preventDefault();
@@ -63,6 +64,19 @@ function getDataBooksByID() {
 	});
 }
 
+function getDataSlidesByID() {
+	var id = GetURLParameter('id');
+	axios({
+		method: 'get',
+		url: 'http://localhost:3000/api/slide/list/'+id+''
+	}).then(function (res) {
+		console.log(res.data);
+		loadDataEditSlide(res.data[0]);
+	}).catch(function (error) {
+		console.log(error);
+	});
+}
+
 function loadDataToBooks(item) {
 	$("input[name*='tensach']").val(item.tensach);
 	$("#show-img").attr("src",""+item.hinhanh+"");
@@ -81,6 +95,11 @@ function loadDataToBooks(item) {
 	$("textarea[name*='review']").val(item.review);
 	$("input:radio[name*='noibat']").filter('[value="'+item.noibat+'"]').attr('checked', true);
 	$("#load-category option[value='"+item.matheloai+"']").prop('selected', true);
+}
+
+function loadDataEditSlide(item) {
+	$("#load-status option[value='"+parseInt(item.active.data[0])+"']").prop('selected', true);
+	$("#show-slide").attr("src",""+item.hinhanh+"");
 }
 
 function loadDataToUsers(item) {

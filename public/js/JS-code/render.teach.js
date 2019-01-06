@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	getSize().then(function(values) {
 		// console.log(values.length);
-		renderPag(values)
+		renderPag(values);
 	}).catch(function(err) {
 		console.log(err);
 	});
@@ -25,7 +25,19 @@ $(document).ready(function() {
 async function getDetail() {
 	var _page = GetURLParameter('_page') || 1;
 	var _category = GetURLParameter('category');
-	var url = "http://localhost:3000/api/sach/pager?matheloai="+_category+"&_limit=4&_page="+(_page-1)+"";
+	let total = parseInt(localStorage.getItem('total'));
+
+	if (_page > total){
+		_page = total;
+	}
+	else if (_page < 1){
+		_page = 1;
+	}
+	 
+	// Tìm Start
+	let start = (_page - 1) * 4;
+
+	var url = "http://localhost:3000/api/sach/pager?matheloai="+_category+"&_limit=4&_page="+start+"";
 	const res = await axios.get(url);
 	return res.data;
 }
@@ -55,7 +67,9 @@ function renderListCategory(items) {
 function renderPag(items) {
 	var content = '';
 	var length = Math.ceil(items.length/4);
+	localStorage.setItem('total', length);
 	var _category = GetURLParameter('category');
+
 	for(var i = 0; i < length; i++) {
 		content += '<li><a href="/category?category='+_category+'&_page='+(i+1)+'" class="link-page">'+(i+1)+'</a></li>';
 	}

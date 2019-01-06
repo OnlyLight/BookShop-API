@@ -38,10 +38,12 @@ include login
         form#data-slide(enctype="multipart/form-data")
           .input-group
             label Hình Ảnh
+            br
+            img#show-slide.img-responsive.col-sm-4(src='uploads/images/slide/NCC-BachViet-5.jpg')
             input.form-control.input-custom(type='file', name='file-slide', autocomplete='off', required)
           br
           label Trạng Thái &nbsp;&nbsp;
-          select(name='active')
+          select#load-status(name='active')
             option(value='1') Hiện
             option(value='0') Ẩn
           br
