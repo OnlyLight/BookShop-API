@@ -150,9 +150,13 @@ function renderKho(items) {
 	for(var item of items) {
 		content += '<tr><td>'+item.tensach+'</td><td><div class="col-sm-4"></div><img class="img-responsive col-sm-4" src="'+item.hinhanh+'" /><div class="col-sm-4"></div></td><td>'+item.gia+'</td>';
 		if(item.soluongton != null) {
-			if(parseInt(item.pay.data[0]) === 1)
-				content += '<td>'+item.soluongton+'</td>';
-			else {
+			if(parseInt(item.pay.data[0]) === 1) {
+				if(parseInt(item.soluongton) < 0) {
+					content += '<td>0</td>';
+				} else {
+					content += '<td>'+item.soluongton+'</td>';
+				}
+			} else {
 				content += '<td>'+item.soluong+'</td>';
 			}
 		} else {

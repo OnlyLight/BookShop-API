@@ -36,7 +36,7 @@ module.exports.filter = function (req, res) {
 
 module.exports.top = function (req, res) {
 	var limit = req.query.limit;
-	var sql = "SELECT sach.*, giohang.soluong, giohang.idsach FROM giohang JOIN sach ON giohang.idsach = sach.idsach LIMIT "+limit+"";
+	var sql = "SELECT sach.*, giohang.soluong, giohang.idsach, giohang.pay FROM giohang JOIN sach ON giohang.idsach = sach.idsach WHERE giohang.pay = 1 LIMIT "+limit+"";
 	con.query(sql, function(err, results) {
 		// If Error crash here
 		if (err) throw err;

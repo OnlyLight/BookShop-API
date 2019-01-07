@@ -108,7 +108,7 @@ function renderInfoSearch(items) {
 function renderBookDataKH(items) {
 	var content = '';
 	for(var item of items) {
-		content += '<div class="item"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';
+		content += '<div class="item"><a href="/detail-book?id='+item.idsach+'"><img src="'+item.hinhanh+'" class="thumbnail"><div class="caption"><span>'+item.tensach+'</span><br><span>'+item.gia+'</span></div></a></div>';	
 	}
 
 	$('#render-sachkh').html(content);
@@ -154,7 +154,7 @@ function loadArrayRecent() {
 			}	
 		}		
 		
-		if(arrRecent.length > 5) {
+		if(arrRecent.length > 6) {
 			arrRecent.shift();
 		}
 		localStorage.setItem('arr-recent', JSON.stringify(arrRecent));
